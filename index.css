@@ -1,3 +1,89 @@
+:root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+.main-container{
+
+width: 100%;
+border:2px solid ;
+
+}
+
+
+
+.grid-container {
+  display: grid;
+  gap: 10px;  
+  padding: 10px;
+  border: 5px solid red;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 300px 300px 300px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+ 
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+}
+
+.item1 {
+ background-color:#F2533D; 
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item2 {
+background-color:#F2F0E0; 
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+}
+.item3 {
+background-color:#B6D9C9; 
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
+
+.item4 {
+background-color:#214c4f;
+
+}
+.item6 {
+background-color:#F2533D; 
+height: 250px; /* Establece la altura del elemento en 100 píxeles */
+}
+
+.item8 {
+background-color:#fee400;
+}
+
+.item7 {
+background-color:#fa8778;
+}
+
+.item5 {
+background-color:#fabd4d;
+}
+
+
+
 .carrusel {
   display: flex;
   justify-content: center;
@@ -717,6 +803,7 @@
   font-weight: 300;
 }
 .image-caption3 {
+  width: 200px;
   background-color: var(--color-darkslategray-100);
   overflow: hidden;
   display: flex;
@@ -1154,7 +1241,7 @@
   font-family: var(--link-text);
 }
 .testimonial1 {
-  width: 448px;
+  width: 400px;
   border: 2px solid var(--black);
   box-sizing: border-box;
   overflow: hidden;
@@ -1191,7 +1278,7 @@
   font-family: var(--link-text);
 }
 .testimonial2 {
-  width: 448px;
+  width: 400px;
   border: 2px solid var(--black);
   box-sizing: border-box;
   overflow: hidden;
@@ -1754,3 +1841,7 @@
     box-sizing: border-box;
   }
 }
+
+
+
+
