@@ -86,12 +86,14 @@ border:2px solid ;
 
 .item2 {
   background-color: #F2F0E0;
-  background-image: url('./assets/img/foodhero.png'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen de fondo */
+  /* background-image: url('./assets/img/foodhero.png');  */
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
   background-position: center; /* Centra la imagen dentro del contenedor */
   grid-column: 2 / span 2;
   grid-row: 1 / span 2;
+  background-image: url('https://raw.githubusercontent.com/delmonicoCL/JuegoBuscaPalabra/main/assets/images/13.png');  
 }
+
 .item3 {
 background-color:#B6D9C9; 
   grid-column: 1;
