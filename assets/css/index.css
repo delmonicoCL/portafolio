@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  -bs-accordion-active-bg: #ff0000 !important; /* Cambia el color a tu preferencia */
+
 }
 
 body {
@@ -40,7 +40,7 @@ border:2px solid ;
   display: grid;
   gap: 10px;  
   padding: 10px;
-  border: 5px solid red;
+  
   grid-template-columns: auto auto auto;
   grid-template-rows: 300px 300px 300px;
 }
@@ -85,7 +85,10 @@ border:2px solid ;
 }
 
 .item2 {
-background-color:#F2F0E0; 
+  background-color: #F2F0E0;
+  background-image: url('./assets/img/foodhero.png'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+  background-position: center; /* Centra la imagen dentro del contenedor */
   grid-column: 2 / span 2;
   grid-row: 1 / span 2;
 }
