@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -bs-accordion-active-bg: #ff0000 !important; /* Cambia el color a tu preferencia */
 }
 
 body {
@@ -19,28 +20,19 @@ border:2px solid ;
 
 }
 
+.accordion-label {
+  border-radius: 2rem !important;
 
-
-.accordion-button-container {
-  cursor: pointer;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  background-color: #fd7878;
-  transition: background-color 0.3s ease;
-  width:100%; 
 }
 
-.accordion-button-container:hover {
-  background-color: #e0e0e0;
+.accordion-button {
+
+  background-color: #FFFFFF;
 }
 
-
-.subtitulo-pequeno {
-  font-size: 14px;
-  /* Ajusta el tamaño de la fuente según sea necesario */
-  margin-right: 8px;
-  /* Ajusta el espaciado derecho según sea necesario */
+.accordion-button:not(.collapsed) {
+  background-color:  #72bc9e;
+  color: #FFFFFF;
 }
 
 
@@ -59,6 +51,25 @@ border:2px solid ;
   padding: 20px;
   font-size: 30px;
  
+}
+
+.subtitulo-accordion {
+  color: #f2533d;
+
+}
+
+.texto-accordion {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: var(--link-text);
+}
+
+
+.accordion-button:hover {
+  /* Estilos que deseas aplicar al hacer hover */
+  background-color:  #fabd4d; /* Cambia el color de fondo al hacer hover */
+  color: #333; /* Cambia el color del texto al hacer hover */
+  /* Agrega cualquier otra propiedad que desees cambiar */
 }
 
 @media (max-width: 768px) {
@@ -287,7 +298,7 @@ background-color:#fabd4d;
 }
 .navigation {
   margin-left: -5px;
-  margin-bottom: 206px;
+  /* margin-bottom: 206px; */
   align-self: stretch;
   background-color: var(--white);
   border-bottom: 1px solid var(--grey);
@@ -506,7 +517,7 @@ background-color:#fabd4d;
 .paragraph1 {
   align-self: stretch;
   position: relative;
-  font-size: 20px;
+  font-size: 22px;
   /* line-height: 142%; */
   font-weight: 300;
   font-family: var(--link-text);
@@ -668,7 +679,6 @@ background-color:#fabd4d;
   overflow: hidden;
   max-height: 100%;
   object-fit: cover;
-  border-radius: 50px;
 }
 .link,
 .testimonial-slide {
@@ -676,23 +686,21 @@ background-color:#fabd4d;
   max-width: 100%;
 }
 .link {
-  height: 700px;
+  height: 565px;
   width: 431px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
   padding: 0 0 var(--padding-7xs);
   box-sizing: border-box;
-  min-width: 4px;
- 
+  min-width: 431px;
 }
 .testimonial-slide {
   align-self: stretch;
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  border-radius: 20px;
-  gap: 40px;
+  gap: 115px;
 }
 .image-gallery {
   flex: 1;
@@ -1747,7 +1755,7 @@ background-color:#fabd4d;
   background-color: var(--smoke-white);
   overflow: hidden;
   align-items: flex-start;
-  padding: var(--padding-10xl) 0 0;
+  /* padding: var(--padding-10xl) 0 0; */
   gap: 15px;
   min-height: 5350px;
   line-height: normal;

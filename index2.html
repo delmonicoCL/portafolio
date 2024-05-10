@@ -5,8 +5,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-  <link rel="stylesheet" href="./global.css" />
-  <link rel="stylesheet" href="./index.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton:wght@400&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre Baskerville:wght@400;700&display=swap" />
@@ -19,11 +17,16 @@
     crossorigin="anonymous" />
   <!-- Bootstrap Icons CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./index.css" />
 
 </head>
 
 <body>
   <div class="marcelo-website">
+    
+    <!-- menu navegacion -->
     <header class="navigation">
       <nav class="nav-link-wrapper">
         <div class="nav-link">Sobre MI</div>
@@ -42,103 +45,22 @@
           <div class="text">¿Hablemos?</div>
         </div>
       </div>
+      
     </header>
-    <section class="testimonials-container-wrapper">
-      <div class="testimonials-container">
-        <div class="smiley-face">
-          <h1 class="heading-1">Web Developer</h1>
-          <div class="slider-squares-wrapper">
-            <div class="paragraph">desarrollando tu linea de codigo</div>
-          </div>
-        </div>
-        <div class="header-underline-wrapper">
-          <img class="header-underline-icon" loading="lazy" alt="" src="./public/header-underline.svg" />
-        </div>
-        <div class="snaptech-logo">
-          <button class="button1">
-            <div class="misc-element">Descubre mi viaje</div>
-          </button>
-        </div>
-      </div>
-    </section>
-    <section class="call-to-action-button-wrapper">
-      <div class="call-to-action-button">
-        <img class="image-9-icon" loading="lazy" alt="" src="./public/image-9@2x.png" />
 
-        <img class="image-10-icon" loading="lazy" alt="" src="./public/image-10@2x.png" />
-      </div>
-    </section>
-    <section class="carrusel mb-5">
+     
+    
+<!-- video  -->
+<section>
+  <video autoplay loop width="100%">
+      <source src="/public/hola.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+  </video>
+</section>
+
+    <section class="carrusel mt-5 mb-2">
       <div class="frame-parent">
-        <div class="image-4-parent">
-          <img class="image-4-icon" loading="lazy" alt="" src="./public/image-4@2x.png" />
-
-          <img class="image-column-icon" loading="lazy" alt="" src="./public/image-column@2x.png" />
-
-          <img class="image-5-icon" loading="lazy" alt="" src="./public/image-5@2x.png" />
-        </div>
-        <div class="input-icon">
-          <div class="image-gallery">
-            <div class="background-element">
-              <img class="drawn-misc-icon" loading="lazy" alt="" src="./public/drawn-misc.svg" />
-            </div>
-            <div class="testimonial-slide">
-              <div class="accordion">
-                <div class="about-header">
-                  <h1 class="heading-2">Hola! Soy Marcelo Carvajal</h1>
-                  <div class="paragraph1">
-                    <p class="soy-estudiante-de">
-                      Soy estudiante de desarrollo web y mi trayectoria
-                      profesional previa se ha centrado en la hostelería,
-                      donde he desempeñado roles como Chef de cocina,
-                      Emprendedor y Comunicador.
-                    </p>
-                    <p class="blank-line">&nbsp;</p>
-                    <p class="este-trasfondo-diverso">
-                      Este trasfondo diverso me ha brindado habilidades únicas
-                      en liderazgo, creatividad y comunicación. Actualmente,
-                      estoy inmerso en el mundo del desarrollo web y diseño de
-                      aplicaciones.
-                    </p>
-                  </div>
-                </div>
-                <div class="dropdowns-wrapper">
-                  <div class="dropdown-open">
-                    <div class="dropdown-header">
-                      <div class="heading-3">Mi Historia</div>
-                      <img class="close-icon" alt="" src="./public/close-icon.svg" />
-                    </div>
-                    <div class="small-paragraph">
-                      Mi viaje profesional comenzo en la hosteleria,
-                      desarrollando la carrera de alta cocina, pudiendo
-                      desarrollar en distintas escuelas....
-                    </div>
-                  </div>
-                  <div class="dropdown-header1">
-                    <div class="heading-31">Mis Habilidades</div>
-                    <img class="open-icon" loading="lazy" alt="" src="./public/open-icon.svg" />
-                  </div>
-                  <div class="dropdown-header2">
-                    <div class="heading-32">Mis Estudios</div>
-                    <img class="open-icon1" alt="" src="./public/open-icon.svg" />
-                  </div>
-                  <div class="dropdown-header3">
-                    <div class="heading-33">Mi Experiencia</div>
-                    <img class="open-icon2" alt="" src="./public/open-icon.svg" />
-                  </div>
-                </div>
-              </div>
-              <div class="link">
-                <img class="banner-icon" loading="lazy" alt="" src="./public/banner@2x.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="carrusel mb-5">
-      <div class="frame-parent">
-        <div class="input-icon mt-5 mb-5">
+        <div class="input-icon mb-2">
           <div class="image-gallery">
             <div class="background-element">
               <img class="drawn-misc-icon" loading="lazy" alt="" src="./public/drawn-misc.svg" />
@@ -148,257 +70,164 @@
               <h1 class="heading-2">Hola! Soy Marcelo Carvajal</h1>
               <div class="paragraph1 mt-4">
                 <p class="">
-                  Mi trayectoria profesional previa se ha centrado en la
-                  hostelería, donde he desempeñado roles como Chef de cocina,
-                  Emprendedor y Comunicador. Este trasfondo diverso me ha
-                  brindado habilidades únicas en liderazgo, creatividad y
-                  comunicación.
+                 
                 </p>
                 <p>
-                  Actualmente, estoy inmerso en el mundo del desarrollo web y
-                  diseño de aplicaciones, creando soluciones innovadoras y
-                  funcionales.
+                  Emprendedor, Cocinero y Desarrollador Web especializado en <strong>HTML, CSS, JavaScript y PHP</strong> . 
+                  Trabajo bajo la <strong>metodología UX y metodologías agiles</strong> .  Te invito a conocer con mayor 
+                  detalle mi historia, habilidades, estudios y experiencia. 
                 </p>
-                <!-- <p class="blank-line">&nbsp;</p> -->
-                <p class="">
-                  Te invito a explorar los proyectos que estoy desarrollando
-                  en este portafolio. ¡Descubre cómo mis habilidades y
-                  experiencia pueden aportar valor a tu próximo proyecto!
-                </p>
+
               </div>
             </div>
 
-            <div class="testimonial-slide mt-5">
+            <div class="testimonial-slide mt-5 mb-5">
               <div class="container">
-                <div class="accordion">
+               
+                <div class="row">
+                  <div class="col-8">
+                    <div class="accordion">
 
-                  <!-- Accordion bootstrap -->
-                  <div class="accordion-item">
-                    <div class="accordion-header" id="headingOne">
-                      <!-- <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                          aria-expanded="true" aria-controls="collapseOne">
-                          Historia    1234     567
-                        </button>   -->
+                      <!-- ACCORDION HISTORIA -->
+     
+                       <div class="accordion-button collapsed ideas accordion-label " data-bs-toggle="collapse"
+                         data-bs-target="#accordionHistoria" aria-expanded="true" aria-controls="collapseOne">
+                         <div class="row d-flex justify-content-between">
+                           <div>
+                             <h2 class="mt-2">Historia</h2>
+                           </div>
+                           <div class="d-flex">
+                             <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
+                             <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
+                             <span class="subtitulo-accordion me-2 ">#Reconversion</span>
+                             <span class="subtitulo-accordion">#Desarrollador</span>
+                           </div>
+                         </div>
+                       </div>
+     
+                       <div id="accordionHistoria" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                         <div class="accordion-body">
+                           <div class=" ">
+                             <h5 class="texto-accordion"> Mi trayectoria profesional previa se ha centrado en la
+                              hostelería, donde he desempeñado roles como Chef de cocina,
+                              Emprendedor y Comunicador. Este trasfondo diverso me ha
+                              brindado habilidades únicas en liderazgo, creatividad y
+                              comunicación.
+                             </h5>
+                           </div>
+                         </div>
+                       </div>
+     
+                       <!-- ACCORDION Habilidades -->
+     
+                       <div class="accordion-button collapsed accordion-label" data-bs-toggle="collapse"
+                         data-bs-target="#accordionHabilidades" aria-expanded="true" aria-controls="collapseOne">
+                         <div class="row d-flex justify-content-between">
+                           <div>
+                             <h2 class="mt-2">Habilidades</h2>
+                           </div>
+                           <div class="d-flex">
+                             <span class="subtitulo-accordion me-2 ">#Comunincacion</span>
+                             <span class="subtitulo-accordion me-2 ">#Liderazgo</span>
+                             <span class="subtitulo-accordion ">#Creatividad</span>
+                           </div>
+                         </div>
+                       </div>
+     
+                       <div id="accordionHabilidades" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                         <div class="accordion-body">
+                           <div class="">
+                             <h5 class="texto-accordion">XXXX Habilidades
+                             </h5>
+                           </div>
+                         </div>
+                       </div>
+     
+                       <!-- ACCORDION Estudios -->
+     
+                       <div class="accordion-button collapsed  accordion-label" data-bs-toggle="collapse"
+                         data-bs-target="#accordionEstudios" aria-expanded="true" aria-controls="collapseOne">
+                         <div class="row d-flex justify-content-between">
+                           <div>
+                             <h2 class="mt-2">Estudios</h2>
+                           </div>
+                           <div class="d-flex">
+                             <span class="subtitulo-accordion me-2  ">#Hosteleria</span>
+                             <span class="subtitulo-accordion me-2  ">#Emprendimiento</span>
+                             <span class="subtitulo-accordion me-2  ">#Reconversion</span>
+                             <span class="subtitulo-accordion me-5">#Desarrollador</span>
+                           </div>
+                         </div>
+                       </div>
+     
+                       <div id="accordionEstudios" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                         <div class="accordion-body">
+                           <div class="">
+                             <h5 class="texto-accordion">XXXX estudios
+                             </h5>
+                           </div>
+                         </div>
+                       </div>
+     
+                       <!-- ACCORDION Experiencia -->
+                       <div class="accordion-button collapsed ideas  accordion-label" data-bs-toggle="collapse"
+                         data-bs-target="#accordionExperiencia" aria-expanded="true" aria-controls="collapseOne">
+                         <div class="row d-flex justify-content-between">
+                           <div>
+                             <h2 class="mt-2">Experiencia</h2>
+                           </div>
+                           <div class="d-flex">
+                             <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
+                             <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
+                             <span class="subtitulo-accordion ">#Desarrollador</span>
+                           </div>
+                         </div>
+                       </div>
+     
+                       <div id="accordionExperiencia" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                         <div class="accordion-body">
+                           <div class="">
+                             <h5 class="texto-accordion">XXXX EXPERIENCIA
+                           </div>
+                         </div>
+                       </div>
+     
+     
+                     </div>
 
-                      <!-- <div class="accordion-button-container col" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                          aria-controls="collapseOne">
-                          <div class="row">
-                            <div class="col-3">
-                              <h2 class="mt-2">Historia</h2>
-                            </div>
-                            <div class="col-9 mt-3 d-flex">
-                              <span class="subtitulo-pequeno ">#Hosteleria</span>
-                              <span class="subtitulo-pequeno ">#Emprendimiento</span>
-                              <span class="subtitulo-pequeno ">#Reconversion</span>
-                              <span class="subtitulo-pequeno">#Desarrollador</span>
-                              <span class="subtitulo-pequeno"> <i class="bi bi-chevron-down"></i></span>
-                            </div>
-                          </div>
-                        </div> -->
-                    </div>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <!-- <div class="">
-                          <h5>Mi viaje profesional comenzó en la hostelería, desarrollando la carrera de alta cocina,
-                            pudiendo desarrollar
-                            </h5>
-                        </div>                       -->
 
-                      </div>
-                    </div>
                   </div>
-                  <!-- Accordion original-->
-
-                  <div class=" accordion-button collapsed ideas" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    <div class="row">
-                      <div class="col-3">
-                        <h2 class="mt-2">Historia</h2>
-                      </div>
-                      <div class="col-9 mt-3 d-flex">
-                        <span class="subtitulo-pequeno ">#Hosteleria</span>
-                        <span class="subtitulo-pequeno ">#Emprendimiento</span>
-                        <span class="subtitulo-pequeno ">#Reconversion</span>
-                        <span class="subtitulo-pequeno me-5">#Desarrollador</span>
-
-                      </div>
-                    </div>
+                  <div class="col-4">
+                    <img src="/public/file.png" alt="">
                   </div>
 
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <div class="">
-                        <h5>XXXX Mi viaje profesional comenzó en la hostelería, desarrollando la carrera de alta cocina,
-                          pudiendo desarrollar
-                        </h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- Respaldo section Accordion -->
-    <section class="carrusel mb-5">
-      <div class="frame-parent">
-        <div class="input-icon mt-5 mb-5">
-          <div class="image-gallery">
-            <div class="background-element">
-              <img class="drawn-misc-icon" loading="lazy" alt="" src="./public/drawn-misc.svg" />
-            </div>
-
-            <div class="about-header mt-5 mb-2">
-              <h1 class="heading-2">Hola! Soy Marcelo Carvajal</h1>
-              <div class="paragraph1 mt-4">
-                <p class="">
-                  Mi trayectoria profesional previa se ha centrado en la
-                  hostelería, donde he desempeñado roles como Chef de cocina,
-                  Emprendedor y Comunicador. Este trasfondo diverso me ha
-                  brindado habilidades únicas en liderazgo, creatividad y
-                  comunicación.
-                </p>
-                <p>
-                  Actualmente, estoy inmerso en el mundo del desarrollo web y
-                  diseño de aplicaciones, creando soluciones innovadoras y
-                  funcionales.
-                </p>
-                <!-- <p class="blank-line">&nbsp;</p> -->
-                <p class="">
-                  Te invito a explorar los proyectos que estoy desarrollando
-                  en este portafolio. ¡Descubre cómo mis habilidades y
-                  experiencia pueden aportar valor a tu próximo proyecto!
-                </p>
-              </div>
-            </div>
-
-            <div class="testimonial-slide mt-5">
-              <div class="container">
-                <div class="accordion">
-                  <div class="accordion-item" id="question1">
-                    <a class="accordion-link" href="#question1">
-                      <div class="flex">
-                        <h2 class="titulo-accordion">Historia</h2>
-                        <ul>
-                          <li>#Hosteleria</li>
-                          <li>#Emprendimiento</li>
-                          <li>#Reconversion</li>
-                          <li>#Desarrollador</li>
-                        </ul>
-                      </div>
-                      <img class="open-icon2" alt="" src="./public/open-icon.svg" />
-                    </a>
-                    <div class="answer">
-                      <p>
-                        Mi viaje profesional comenzo en la hosteleria,
-                        desarrollando la carrera de alta cocina, pudiendo
-                        desarrollar en distintas escuelas....
-                      </p>
-                      <p>
-                        Mi viaje profesional comenzo en la hosteleria,
-                        desarrollando la carrera de alta cocina, pudiendo
-                        desarrollar en distintas escuelas....
-                      </p>
-                    </div>
-                    <hr />
-                  </div>
-                  <div class="accordion-item" id="question2">
-                    <a class="accordion-link" href="#question2">
-                      <div class="flex">
-                        <h2 class="titulo-accordion">Habilidades</h2>
-                        <ul>
-                          <li>#Comunicacion</li>
-                          <li>#Liderazgo</li>
-                          <li>#Creatividad</li>
-                          <li>#Innovacion</li>
-                        </ul>
-                      </div>
-                      <img class="open-icon2" alt="" src="./public/open-icon.svg" />
-                    </a>
-                    <div class="answer">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum.
-                      </p>
-                    </div>
-                    <hr />
-                  </div>
-                  <div class="accordion-item" id="question3">
-                    <a class="accordion-link" href="#question3">
-                      <div class="flex">
-                        <h2 class="titulo-accordion">Estudios</h2>
-                        <ul>
-                          <li>#HTML</li>
-                          <li>#CSS</li>
-                          <li>#JS</li>
-                          <li>#SQL</li>
-                          <li>#UX</li>
-                        </ul>
-                      </div>
-                      <img class="open-icon2" alt="" src="./public/open-icon.svg" />
-                    </a>
-                    <div class="answer">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum.
-                      </p>
-                    </div>
-                    <hr />
-                  </div>
-                  <div class="accordion-item" id="question4">
-                    <a class="accordion-link" href="#question4">
-                      <div>
-                        <h2 class="titulo-accordion">Experiencia</h2>
-                        <ul>
-                          <li>#Hosteleria</li>
-                          <li>#Emprendimiento</li>
-                          <li>#Innovacion</li>
-                        </ul>
-                      </div>
-                      <img class="open-icon2" alt="" src="./public/open-icon.svg" />
-                    </a>
-                    <div class="answer">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum.
-                      </p>
-                    </div>
-                    <hr />
-                  </div>
                 </div>
               </div>
-              <div class="link">
-                <img class="banner-icon" loading="lazy" alt="" src="./public/banner@2x.png" />
-              </div>
+
             </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <div class="heading-2-wrapper mt-5 mb-5">
-      <h1 class="heading-21">Conoce algunos de mis trabajos ASDAS</h1>
-    </div>
+
+   
     <section class="container galeriaTrabajos">
+      
+      <div class="mt-5">
+        <h1 class="heading-2 mb-5">PORTAFOLIO</h1>
+        <div class="paragraph1 mt-5 mb-5">
+          <p>Te invito a explorar los proyectos que estoy desarrollando en este portafolio. ¡Descubre cómo mis habilidades y experiencia pueden aportar valor a tu próximo proyecto!</p>
+        </div>
+        
+      
+      </div>
+      
       <div class="grid-container">
         <div class="grid-item item1">1</div>
         <div class="grid-item item2">
