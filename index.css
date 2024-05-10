@@ -21,6 +21,29 @@ border:2px solid ;
 
 
 
+.accordion-button-container {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: #fd7878;
+  transition: background-color 0.3s ease;
+  width:100%; 
+}
+
+.accordion-button-container:hover {
+  background-color: #e0e0e0;
+}
+
+
+.subtitulo-pequeno {
+  font-size: 14px;
+  /* Ajusta el tamaño de la fuente según sea necesario */
+  margin-right: 8px;
+  /* Ajusta el espaciado derecho según sea necesario */
+}
+
+
 .grid-container {
   display: grid;
   gap: 10px;  
@@ -645,6 +668,7 @@ background-color:#fabd4d;
   overflow: hidden;
   max-height: 100%;
   object-fit: cover;
+  border-radius: 50px;
 }
 .link,
 .testimonial-slide {
@@ -652,21 +676,23 @@ background-color:#fabd4d;
   max-width: 100%;
 }
 .link {
-  height: 565px;
+  height: 700px;
   width: 431px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
   padding: 0 0 var(--padding-7xs);
   box-sizing: border-box;
-  min-width: 431px;
+  min-width: 4px;
+ 
 }
 .testimonial-slide {
   align-self: stretch;
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  gap: 115px;
+  border-radius: 20px;
+  gap: 40px;
 }
 .image-gallery {
   flex: 1;
