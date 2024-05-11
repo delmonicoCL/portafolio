@@ -91,7 +91,8 @@ border:2px solid ;
   background-position: center; /* Centra la imagen dentro del contenedor */
   grid-column: 2 / span 2;
   grid-row: 1 / span 2;
-  background-image: url('https://raw.githubusercontent.com/delmonicoCL/JuegoBuscaPalabra/main/assets/images/13.png');  
+  background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/foodhero.png');  
+
 }
 
 .item3 {
