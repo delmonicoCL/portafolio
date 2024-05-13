@@ -569,11 +569,11 @@
   flex-shrink: 0;
 }
 .image-caption {
-  width: 157px;
+  width: 250px;
   background-color: var(--color-darkslategray-100);
   overflow: hidden;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   padding: var(--padding-5xl) var(--padding-xl) var(--padding-5xl)
     var(--padding-5xl);
   gap: var(--gap-5xs);
