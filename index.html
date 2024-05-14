@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton:wght@400&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Libre Baskerville:wght@400;700&display=swap" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="/assets/img/favicon-32x32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+
+    <title>Portafolio - Marcelo Carvajal</title>
+</head>
+<style>
+    body {
+        font-family: "Century Gothic", 'Lato', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .border-me {
+        border-radius: 35px;
+
+    }
+
+    .et-hero-tabs,
+    .et-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+        background: #eee;
+        text-align: center;
+        /* padding: 0 2em; */
+    }
+
+    .barraTitulos {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+        position: relative;
+        background: #f61b26;
+        text-align: center;
+    }
+
+    .et-hero-tabs h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+    }
+
+    .et-hero-tabs h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+
+    .testimonial:hover,
+    .testimonial1:hover,
+    .testimonial2:hover {
+        background-color: #72bc9e;
+        /* Cambia este color al que prefieras */
+        font-size: 1.1em;
+        /* Cambia este valor al que prefieras */
+    }
+
+
+    .fondo {
+        background: #222021;
+
+    }
+
+    .fondo1 {
+
+        background: #F2F0E0;
+    }
+
+    .fondo2 {
+
+        background: #fa8778;
+    }
+
+    .fondo3 {
+
+        background: #F2F0E0;
+    }
+
+
+    .fondo4 {
+
+        background: #264a48;
+        ;
+    }
+
+    .fondo5 {
+
+        background: #FFFFFF;
+        ;
+    }
+
+    .fondo6 {
+
+        background: #B6D9C9;
+        ;
+    }
+
+    .et-hero-tabs-container {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background: #F2F0E0;
+        z-index: 10;
+    }
+
+    .et-hero-tabs-container--top {
+        position: fixed;
+        top: 0;
+    }
+
+    .et-hero-tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #000;
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 1.4rem;
+    }
+
+    .et-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #000;
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 1.4rem;
+
+    }
+
+    .et-hero-tab:hover {
+        color: white;
+        background: #B6D9C9;
+        transition: all 0.5s ease;
+    }
+
+    .et-hero-tab-slider {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 4px;
+        background: #72bc9e;
+        transition: left 0.3s ease;
+    }
+
+
+
+
+    @media (min-width: 800px) {
+        .et-hero-tabs {
+            font-size: 1rem;
+        }
+
+        .et-hero-tabs h3 {
+            font-size: 1rem;
+        }
+
+        .et-hero-tab {
+            font-size: 1.4rem;
+        }
+    }
+
+    /* SOBRE MI */
+</style>
+
+<body>
+
+    <!-- Hero -->
+    <section id="tab-video" class="et-hero-tabs">
+        <video autoplay loop width="100%">
+            <source src="./assets/img/hola.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </section>
+
+    <div class="et-hero-tabs-container">
+        <a class="et-hero mt-2" href="#tab-video"><img class="logo" src="./assets/img/logo.png"  width="100" 
+                alt="Marcelo Carvajal"></a>
+        <a class="et-hero-tab" href="#tab-flexbox">Sobre Mi</a>
+        <a class="et-hero-tab" href="#tab-react">Portafolio</a>
+        <a class="et-hero-tab" href="#tab-angular">Testimonios</a>
+        <a class="et-hero-tab" href="#tab-other">¿Hablemos?</a>
+        <span class="et-hero-tab-slider"></span>
+    </div>
+    </section>
+
+<!-- Main -->
+    <main class="et-main">
+  <!-- Section SOBRE MI -->
+        <section class="et-slide fondo3" id="tab-flexbox">
+            <div class=" mb-5">
+                <img class="" loading="lazy" alt="" src="./public/drawn-misc.svg" />
+            </div>
+
+            <div class="container ">
+                <div class=" container mb-2 fondo3 border-me">
+                    <h1 class="p-3 ">Hola! Soy Marcelo Carvajal</h1>
+                    <div class=" mt-1 p-2">
+
+                        <p class="texto">
+                            Emprendedor, Cocinero y Desarrollador Web especializado en <strong class="">HTML,
+                                CSS, JavaScript y PHP</strong> .
+                            Trabajo bajo la <strong>metodología UX y metodologías agiles</strong> . Te invito a conocer
+                            con mayor
+                            detalle mi historia y experiencia.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-8">
+                        <div class="accordion">
+
+                            <!-- ACCORDION HISTORIA -->
+
+                            <div class="accordion-button collapsed ideas accordion-label " data-bs-toggle="collapse"
+                                data-bs-target="#accordionHistoria" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="row d-flex justify-content-between">
+                                    <div>
+                                        <h2 class="mt-2">Historia</h2>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
+                                        <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
+                                        <span class="subtitulo-accordion me-2 ">#Reconversion</span>
+                                        <span class="subtitulo-accordion">#Desarrollador</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="accordionHistoria" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <h5 class="texto-accordion mb-3">Mi trayectoria profesional se ha centrado en
+                                            la hostelería, donde he desempeñado roles como Chef,
+                                            Emprendedor y Comunicador. Este trasfondo diverso me ha brindado habilidades
+                                            únicas en <span>liderazgo, creatividad y
+                                                comunicación.</span> </h5>
+                                        <h5 class="texto-accordion">Actualmente, estoy inmerso en el mundo del
+                                            desarrollo web. Este cambio de rumbo representa mi compromiso con el
+                                            aprendizaje continuo y la búsqueda de desafíos
+                                            que me permitan crecer profesionalmente. </h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ACCORDION Habilidades -->
+
+                            <div class="accordion-button collapsed accordion-label" data-bs-toggle="collapse"
+                                data-bs-target="#accordionHabilidades" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="row d-flex justify-content-between">
+                                    <div>
+                                        <h2 class="mt-2">Habilidades</h2>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span class="subtitulo-accordion me-2 ">#Comunincacion</span>
+                                        <span class="subtitulo-accordion me-2 ">#Liderazgo</span>
+                                        <span class="subtitulo-accordion ">#Creatividad</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="accordionHabilidades" class="accordion-collapse collapse"
+                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div>
+
+                                        <ul class="texto-accordion">
+                                            <li>Planificación objetivos/metas</li>
+                                            <li>Liderazgo y manejo de equipos </li>
+                                            <li>Proactivo y analítico</li>
+
+                                            <li>Comunicación efectiva</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ACCORDION Estudios -->
+
+                            <div class="accordion-button collapsed  accordion-label" data-bs-toggle="collapse"
+                                data-bs-target="#accordionEstudios" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="row d-flex justify-content-between">
+                                    <div>
+                                        <h2 class="mt-2">Estudios</h2>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span class="subtitulo-accordion me-2  ">#Hosteleria</span>
+                                        <span class="subtitulo-accordion me-2  ">#Emprendimiento</span>
+                                        <span class="subtitulo-accordion me-2  ">#Reconversion</span>
+                                        <span class="subtitulo-accordion me-5">#Desarrollador</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="accordionEstudios" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div>
+
+                                        <ul class="texto-accordion">
+                                            <li>Cocina y Administracion Internacional - INACAP</li>
+                                            <li>Master de Emprendimiento e Innovacion - </li>
+                                            <li>Desarrollo de Aplicaciones Web</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ACCORDION Experiencia -->
+                            <!-- <div class="accordion-button collapsed ideas  accordion-label" data-bs-toggle="collapse"
+                                    data-bs-target="#accordionExperiencia" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="row d-flex justify-content-between">
+                                        <div>
+                                            <h2 class="mt-2">Experiencia</h2>
+                                        </div>
+                                        <div class="d-flex">
+                                            <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
+                                            <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
+                                            <span class="subtitulo-accordion ">#Desarrollador</span>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div id="accordionExperiencia" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="">
+                                            <h5 class="texto-accordion">XXXX EXPERIENCIA
+                                        </div>
+                                    </div>
+                                </div> -->
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <img src="./assets/img/file.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  <!-- Section PORTAFOLIO -->
+        <section class=" fondo3" id="tab-react">
+            <div class="grid-container">
+
+                <div class="grid-item item7 d-flex justify-content-end align-items-end ">
+                    <div class="image-caption ">
+                        <h4 class="heading">Autoevaluacion</h4>
+                        <p class="caption">Aplicacion web desarrollada en Lavarel, Vue y Html. Permite gestionar BD de Alumnos</p>
+                    </div>
+                </div>
+
+                <div class="grid-item item2 imagen d-flex justify-content-end align-items-end ">
+                    <div class="image-caption  ">
+                        <h4 class="heading">Food Hero</h4>
+                        <p class="caption">Aplicacion web para proyecto voluntariado, desarrollado en Laravel, JS, y Html</p>
+                    </div>
+                </div>
+                <div class="grid-item item3 d-flex justify-content-start align-items-end ">
+                    <div class="image-caption ">
+                        <h4 class="heading">KANPOM</h4>
+                        <p class="caption">Aplicacion en JS que permite organizar tus tareas y planificar tu tiempo con tecnica Pomodoro/Kanbam</p>
+                    </div>
+                </div>
+                <div class="grid-item item5 d-flex justify-content-end align-items-end ">
+                    <div class="image-caption ">
+                        <h4 class="heading">Buscapalabras</h4>
+                        <p class="caption">Juego para niños, desarrollado en JS, buscando la palabra oculta</p>
+                    </div>
+                </div>
+                <div class="grid-item item5 d-flex justify-content-end align-items-end ">
+                    <div class="image-caption ">
+                        <h4 class="heading">Rompecabezas</h4>
+                        <p class="caption">Juego para niños educativo, desarrollado en JS, de armar rompecabezas de energias renovables</p>
+                    </div>
+                </div>
+
+                <div class="grid-item item6">6</div>
+                <div class="grid-item item7">7</div>
+                <div class="grid-item item8">8</div>
+            </div>
+        </section>
+
+  <!-- Section TESTIMONIOS -->
+        <section class="et-slide fondo5 " id="tab-angular">
+                <div class="testimonials" style="padding:90px;">
+                    <div class="">
+                        <div class="col-10">
+                            <h1 class="mb-3">Testimonios</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <h3 class="mb-5 ">Se dice de Mi...</h3>
+                            </div>
+                            <div class="col-2">
+                                <div class="smiley-face-wrapper">
+                                    <img class="smiley-face-icon" loading="lazy" alt=""
+                                        src="./public/smiley-face.svg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials-slide-wrapper">
+                        <div class="testimonials-slide">
+                            <div class="testimonial">
+                                <div class="testimonial-text">
+                                    “Trabajar con Marcelo ha sido una experiencia excepcional. Su
+                                    atención al detalle y su habilidad para capturar la esencia de
+                                    nuestra marca nos ha impresionado. ¡Recomiendo a Marcelo a
+                                    cualquiera que busque un servicio de desarrollo web de primera
+                                    clase!”
+                                </div>
+                                <div class="testimonial-info">
+                                    <div class="testimonial-author">Javiera Escobar,</div>
+                                    <div class="testimonial-details">Owner - Espacio Tierra</div>
+                                </div>
+                            </div>
+                            <div class="testimonial1">
+                                <div class="testimonial-text1">
+                                    "Como tutor he visto el desarrollo de Marcelo, sus ideas son pura
+                                    creatividad, mejorando la experiencia del usuario. Talento y pasión. Si necesitas
+                                    diseño web, él es tu profesional."
+                                </div>
+                                <div class="testimonial-info1">
+                                    <div class="testimonial-author1">Antonio Domingo</div>
+                                    <div class="testimonial-details1">
+                                        Tutor. Politecnics Barcelona
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial2">
+                                <div class="testimonial-text2">
+                                    Marcelo es un verdadero profesional en el desarrollo web. Su
+                                    creatividad y habilidad técnica han llevado nuestro sitio web
+                                    a un nuevo nivel. La facilidad de navegación y el diseño
+                                    innovador han recibido elogios constantes de nuestros
+                                    clientes.”
+                                </div>
+                                <div class="testimonial-info2">
+                                    <div class="testimonial-author2">Matias Riffo,</div>
+                                    <div class="testimonial-details2">Chef - Eventos Riffo</div>
+                                </div>
+
+                            </div>
+                            <div class="testimonial1">
+                                <div class="testimonial-text1">
+                                    "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y
+                                    profesionalismo!""
+                                </div>
+                                <div class="testimonial-info1">
+                                    <div class="testimonial-author1">Cristobal Quintana</div>
+                                    <div class="testimonial-details1">
+                                        Diseñador. Quintana
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+  <!-- Section BARRA COMUNICATE -->
+        <!-- <section class="barraTitulos fondo3 " id="tab-angular">
+                <div class=" d-flex justify-content-center">
+                    <h1>COMUNICATE </h1>
+                </div>
+        </section> -->
+
+  <!-- Section FORMULARIO -->
+        <section class="et-slide fondo " id="tab-other">
+                <div class="contact-wrapper">
+                    <div class="contact">
+                        <div class="contact-header">
+                            <img class="misc-icon" loading="lazy" alt="" src="./public/misc.svg" />
+
+                            <h1 class="heading-23">
+                                <span class="tu-y-yo">¿Interesado en trabajar juntos?</span>
+                                <!-- <span class="tu-y-yo">comunicate </span> -->
+                            </h1>
+                            <!-- <div class="paragraph2">
+                         Comunicate y hablemos
+                    </div> -->
+
+                            <div class="paragraph2 mt-3">
+
+                                <ul class="list-inline ">
+                                    <li class="list-inline-item me-2">
+                                        <img src="/assets/img/instagram.png" alt="Instagram" width="50" height="50">
+                                        <a class="text-white" href="https://www.instagram.com/marceloenbcn/"
+                                            target="_blank">
+                                            @marceloenbcn
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <img src="/assets/img/linkedin.png" alt="LinkedIn" width="50" height="50">
+                                        <a class="text-white" href="https://www.linkedin.com/in/mcarvajal/"
+                                            target="_blank">
+                                            MarceloCarvajal
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                          
+
+                            <h1 class="heading-23">
+                                <img class="misc-icon" loading="lazy" alt="" src="./public/misc.svg" />
+                                <span class="">¿hablemos?</span>
+                                <!-- <span class="tu-y-yo">comunicate </span> -->
+                            </h1>
+
+
+                            <div class="input">
+                                <input class="input-field" placeholder="Nombre" type="text" />
+
+                                <img class="input-icon1" alt="" src="./public/input-icon.svg" />
+                            </div>
+                            <div class="input1">
+                                <input class="input-field1" placeholder="Email " type="text" />
+
+                                <img class="input-icon2" alt="" src="./public/input-icon.svg" />
+                            </div>
+                            <div class="input2">
+                                <input class="input-field2" placeholder="Telefono" type="text" />
+                            </div>
+                            <textarea class="message-input" placeholder="Mensaje" rows="{16}" cols="{28}">
+                      </textarea>
+                            <button class="button2">
+                                <div class="text1">Enviar</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+  <!-- Section FOOTER -->
+        <section>
+                <footer class="footer">
+                    <div class="small-paragraph1 mt-2">Todos los derechos reservados 2024</div>
+
+                    <div class="links-wrapper mt-2">
+                        <div class="link2">Marcelo Carvajal</div>
+
+                    </div>
+
+                </footer>
+        </section>
+        
+    </main>
+</body>
+
+</html>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script>
+
+    class StickyNavigation {
+
+        constructor() {
+            this.currentId = null;
+            this.currentTab = null;
+            this.tabContainerHeight = 70;
+            let self = this;
+            $('.et-hero-tab').click(function () {
+                self.onTabClick(event, $(this));
+            });
+            $(window).scroll(() => { this.onScroll(); });
+            $(window).resize(() => { this.onResize(); });
+        }
+
+        onTabClick(event, element) {
+            event.preventDefault();
+            let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+            $('html, body').animate({ scrollTop: scrollTop }, 600);
+        }
+
+        onScroll() {
+            this.checkTabContainerPosition();
+            this.findCurrentTabSelector();
+        }
+
+        onResize() {
+            if (this.currentId) {
+                this.setSliderCss();
+            }
+        }
+
+        checkTabContainerPosition() {
+            let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+            if ($(window).scrollTop() > offset) {
+                $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
+            }
+            else {
+                $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
+            }
+        }
+
+        findCurrentTabSelector(element) {
+            let newCurrentId;
+            let newCurrentTab;
+            let self = this;
+            $('.et-hero-tab').each(function () {
+                let id = $(this).attr('href');
+                let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+                    newCurrentId = id;
+                    newCurrentTab = $(this);
+                }
+            });
+            if (this.currentId != newCurrentId || this.currentId === null) {
+                this.currentId = newCurrentId;
+                this.currentTab = newCurrentTab;
+                this.setSliderCss();
+            }
+        }
+
+        setSliderCss() {
+            let width = 0;
+            let left = 0;
+            if (this.currentTab) {
+                width = this.currentTab.css('width');
+                left = this.currentTab.offset().left;
+            }
+            $('.et-hero-tab-slider').css('width', width);
+            $('.et-hero-tab-slider').css('left', left);
+        }
+
+    }
+
+    new StickyNavigation();
+</script>

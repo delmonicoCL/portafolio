@@ -33,7 +33,7 @@ section {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #fa8778;
+  background-color: #B6D9C9;
   color: #FFFFFF;
 }
 
@@ -60,11 +60,13 @@ section {
 .texto {
 
   font-size: 22px;
- 
+
 
 }
+
 .subtitulo-accordion {
   color: #f2533d;
+  font-weight: 600;
 
 }
 
@@ -96,7 +98,7 @@ section {
 
 .image-caption {
   width: 250px;
-  background-color: var(--color-darkslategray-100);
+  background-color: #72bc9e;
   overflow: hidden;
   flex-direction: column;
   /* align-items: flex-start; */
@@ -122,20 +124,21 @@ section {
   /* Muestra el contenedor al pasar el ratón por encima */
 }
 
-.logo{
+.logo {
 
- 
-    width: 120px;
-   
-}
-
-.nav-text{
-
-font-family:Monserrat ;
-font-size: 25px;
-
+  margin-top: 20px;
+  width: 120px;
 
 }
+
+.nav-text {
+
+  font-family: Monserrat;
+  font-size: 25px;
+
+
+}
+
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: auto;
@@ -152,29 +155,97 @@ font-size: 25px;
 
 }
 
-.item2 {
+/* .item2 {
   background-color: #F2F0E0;
-
   background-size: contain;
-  /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+  
   background-position: center;
-  /* Centra la imagen dentro del contenedor */
+  
   grid-column: 2 / span 2;
   grid-row: 1 / span 2;
   background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/foodhero.png');
 
+}  */
+
+.item2 {
+  position: relative;
+  /* Añade posición relativa para poder posicionar el pseudoelemento */
+  background-color: #F2F0E0;
+  background-size: contain;
+  background-position: center;
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
 }
+
+.item2::before {
+  content: "";
+  /* Agrega un pseudoelemento antes del contenido */
+  position: absolute;
+  /* Posiciona el pseudoelemento en relación con el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/foodhero.png');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  /* Agrega transición para el cambio de filtro */
+}
+
+.item2:hover::before {
+  filter: grayscale(0%);
+  /* Elimina la escala de grises al hacer hover */
+}
+
 
 .item3 {
-  background-color: #B6D9C9;
-  background-size: cover;
-  /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+  position: relative;
+  /* Añade posición relativa para poder posicionar el pseudoelemento */
+  background-color: #F2F0E0;
+  background-size: contain;
   background-position: center;
-  /* Centra la imagen dentro del contenedor */
-
   grid-column: 1;
   grid-row: 2 / span 2;
+
 }
+
+.item3::before {
+  content: "";
+  /* Agrega un pseudoelemento antes del contenido */
+  position: absolute;
+  /* Posiciona el pseudoelemento en relación con el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/foodhero.png'); */
+  background-image: url('/assets/img/buscapalabras.png');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  /* Agrega transición para el cambio de filtro */
+}
+
+.item3:hover::before {
+  filter: grayscale(0%);
+  /* Elimina la escala de grises al hacer hover */
+}
+
+
+
+
+
+
+/* .item3 {
+  background-color: #B6D9C9;
+  background-size: cover;
+  background-position: center;
+  grid-column: 1;
+  grid-row: 2 / span 2;
+} */
 
 .item4 {
   background-color: #72bc9e;
@@ -198,16 +269,24 @@ font-size: 25px;
 
 .item8 {
   background-size: cover;
-  /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
   background-position: center;
-  /* Centra la imagen dentro del contenedor */
   background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/eventos-riffo.png');
   background-color: #fee400;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #FFFFFF;
+  filter: grayscale(100%);
+  /* Aplica el efecto de escala de grises al 100% */
+  transition: filter 0.5s ease;
+  /* Agrega una transición suave al efecto */
 }
+
+.item8:hover {
+  filter: grayscale(0%);
+  /* Elimina el efecto de escala de grises al hacer hover */
+}
+
 
 .item7 {
   background-color: #fa8778;
@@ -329,6 +408,7 @@ font-size: 25px;
 .accordion-item:target .accordion-link .ion-md-arrow-down {
   display: block;
 }
+
 /* 
 
 .nav-link,
@@ -537,7 +617,7 @@ font-size: 25px;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
- 
+
   max-width: 100%;
 }
 
@@ -953,8 +1033,8 @@ font-size: 25px;
 }
 
 .caption {
-  font-size: var(--caption-size);
-  line-height: 17px;
+  font-size: 15px;
+  line-height: 20px;
   font-weight: 300;
   min-width: 71px;
 }
@@ -976,7 +1056,7 @@ font-size: 25px;
   font-size: var(--caption-size);
   letter-spacing: -0.03em;
   line-height: 140%;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .image-caption1,
@@ -1886,7 +1966,7 @@ font-size: 25px;
   cursor: pointer;
   border: 0;
   padding: var(--padding-xl);
-  background-color: var(--yellow);
+  /* background-color: var(--yellow); */
   align-self: stretch;
   border-radius: var(--br-29xl);
   display: flex;
@@ -1920,7 +2000,7 @@ font-size: 25px;
 
 .contact {
   flex: 1;
-  background-color: #264a48;
+
   flex-wrap: wrap;
   align-items: center;
   padding: var(--padding-101xl) 150px var(--padding-101xl) 148px;
@@ -2279,5 +2359,3 @@ font-size: 25px;
     box-sizing: border-box;
   }
 }
-
-
