@@ -29,6 +29,11 @@
         text-decoration: none;
     }
 
+    .border-me{
+        border-radius: 35px;
+
+    }
+
     .et-hero-tabs,
     .et-slide {
         display: flex;
@@ -48,7 +53,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: vh;
+        height: 25vh;
         position: relative;
         background: #f61b26;
         text-align: center;
@@ -65,8 +70,13 @@
         letter-spacing: 0.3rem;
         opacity: 0.6;
     }
+    .testimonial:hover,
+    .testimonial1:hover,
+    .testimonial2:hover {
+    background-color:  #F2F0E0; /* Cambia este color al que prefieras */
+    font-size: 1.1em; /* Cambia este valor al que prefieras */
+}
 
- 
 
     .fondo{
 background: #1e0000;
@@ -100,6 +110,12 @@ background:#FFFFFF;
 ;
     }
 
+           .fondo6{
+
+background:#B6D9C9;
+;
+    }
+
     .et-hero-tabs-container {
         display: flex;
         flex-direction: row;
@@ -108,7 +124,7 @@ background:#FFFFFF;
         width: 100%;
         height: 70px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-       background: #fdf9f8;
+       background: #F2F0E0;
         z-index: 10;
     }
 
@@ -125,12 +141,12 @@ background:#FFFFFF;
         color: #000;
         letter-spacing: 0.1rem;
         transition: all 0.5s ease;
-        font-size: 0.8rem;
+        font-size: 2rem;
     }
 
     .et-hero-tab:hover {
         color: white;
-        background: rgba(102, 177, 241, 0.8);
+        background: #B6D9C9;
         transition: all 0.5s ease;
     }
 
@@ -138,8 +154,8 @@ background:#FFFFFF;
         position: absolute;
         bottom: 0;
         width: 0;
-        height: 6px;
-        background: #66B1F1;
+        height: 4px;
+        background: #72bc9e;
         transition: left 0.3s ease;
     }
 
@@ -147,7 +163,7 @@ background:#FFFFFF;
 
 
     @media (min-width: 800px) {
-        .et-hero-tabs h1 {
+        .et-hero-tabs {
             font-size: 3rem;
         }
 
@@ -156,7 +172,7 @@ background:#FFFFFF;
         }
 
         .et-hero-tab {
-            font-size: 1rem;
+            font-size: 1.4rem;
         }
     }
 
@@ -170,16 +186,15 @@ background:#FFFFFF;
 <body>
 
     <!-- Hero -->
-    <section class="et-hero-tabs">
-    
-            <video autoplay loop width="100%">
-                <source src="./assets/img/hola.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-       
-        </section>
+    <section id="tab-video" class="et-hero-tabs">
+        <video autoplay loop width="100%">
+            <source src="./assets/img/hola.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </section>
   
         <div class="et-hero-tabs-container">
-            <a class="et-hero-tab mt-2" href="#tab-es6"><img class="logo" src="./assets/img/logo1.png" alt="Marcelo Carvajal"></a>
+            <a class="et-hero-tab mt-2" href="#tab-video"><img class="logo" src="./assets/img/logo1.png" alt="Marcelo Carvajal"></a>
             <a class="et-hero-tab" href="#tab-flexbox">Sobre Mi</a>
             <a class="et-hero-tab" href="#tab-react">Portafolio</a>
             <a class="et-hero-tab" href="#tab-angular">Testimonios</a>
@@ -194,19 +209,19 @@ background:#FFFFFF;
             <h1>ES6</h1>
             <h3>something about es6</h3>
         </section> -->
-        <section class="et-slide fondo1" id="tab-flexbox">
+        <section class="et-slide fondo6" id="tab-flexbox">
             <!-- <div class="">
                 <img class="" loading="lazy" alt="" src="./public/drawn-misc.svg" />
             </div> -->
               
-                <div class="container"> 
-                    <div class=" container mb-2">
-                        <h1 class="">Hola! Soy Marcelo Carvajal</h1>
-                        <div class=" mt-4">
+                <div class="container "> 
+                    <div class=" container mb-2 fondo3 border-me">
+                        <h1 class="p-3 ">Hola! Soy Marcelo Carvajal</h1>
+                        <div class=" mt-1 p-2">
                             
                             <p class="texto">
-                                Emprendedor, Cocinero y Desarrollador Web especializado en <strong>HTML, CSS, JavaScript y PHP</strong> .
-                                Trabajo bajo la <strong>metodología UX y metodologías agiles</strong> . Te invito a conocer con mayor
+                                Emprendedor, Cocinero y Desarrollador Web especializado en <strong class="text-white">HTML, CSS, JavaScript y PHP</strong> .
+                                Trabajo bajo la <strong >metodología UX y metodologías agiles</strong> . Te invito a conocer con mayor
                                 detalle mi historia y experiencia.
                             </p>
                     
@@ -236,13 +251,13 @@ background:#FFFFFF;
                                 <div id="accordionHistoria" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <div class=" ">
-                                            <h5 class="texto-accordion"> Mi trayectoria profesional previa se ha centrado en la
-                                                hostelería, donde he desempeñado roles como Chef de cocina,
-                                                Emprendedor y Comunicador. Este trasfondo diverso me ha
-                                                brindado habilidades únicas en liderazgo, creatividad y
-                                                comunicación.
-                                            </h5>
+                                        <div class="">
+                                            <h5 class="texto-accordion">Mi trayectoria profesional previa se ha centrado en la hostelería, donde he desempeñado roles como Chef de cocina,
+                                            Emprendedor y Comunicador. Este trasfondo diverso me ha brindado habilidades únicas en liderazgo, creatividad y
+                                            comunicación. </h5>
+                                            <h5 class="texto-accordion">Actualmente, estoy inmerso en el mundo del desarrollo web y diseño de aplicaciones. Me apasiona fusionar mi creatividad
+                                            con la tecnología. Este cambio de rumbo representa mi compromiso con el aprendizaje continuo y la búsqueda de desafíos
+                                            que me permitan crecer profesionalmente. </h5>
                                         </div>
                                     </div>
                                 </div>
@@ -266,10 +281,16 @@ background:#FFFFFF;
                                 <div id="accordionHabilidades" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <div class="">
-                                            <h5 class="texto-accordion">XXXX Habilidades
-                                            </h5>
-                                        </div>
+                                    <div>
+                                    
+                                        <ul class="texto-accordion">
+                                            <li>Planificación objetivos/metas</li>
+                                            <li>Liderazgo y manejo de equipos </li>
+                                            <li>Proactivo y analítico</li>
+                                            
+                                            <li>Comunicación efectiva</li>
+                                        </ul>
+                                    </div>
                                     </div>
                                 </div>
             
@@ -293,15 +314,19 @@ background:#FFFFFF;
                                 <div id="accordionEstudios" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <div class="">
-                                            <h5 class="texto-accordion">XXXX estudios
-                                            </h5>
-                                        </div>
+                                    <div>
+                                        
+                                        <ul class="texto-accordion">
+                                            <li>Cocina y Administracion Internacional - INACAP</li>
+                                            <li>Master de Emprendimiento e Innovacion - </li>
+                                            <li>Desarrollo de Aplicaciones Web</li>
+                                        </ul>
+                                    </div>
                                     </div>
                                 </div>
             
                                 <!-- ACCORDION Experiencia -->
-                                <div class="accordion-button collapsed ideas  accordion-label" data-bs-toggle="collapse"
+                                <!-- <div class="accordion-button collapsed ideas  accordion-label" data-bs-toggle="collapse"
                                     data-bs-target="#accordionExperiencia" aria-expanded="true" aria-controls="collapseOne">
                                     <div class="row d-flex justify-content-between">
                                         <div>
@@ -322,7 +347,7 @@ background:#FFFFFF;
                                             <h5 class="texto-accordion">XXXX EXPERIENCIA
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
             
             
                             </div>      
@@ -333,8 +358,6 @@ background:#FFFFFF;
                         </div>            
                     </div>
                 </div>            
-          
-
         </section>
 
       
@@ -380,13 +403,20 @@ background:#FFFFFF;
       
       
        
-        <section class="et-slide fondo5 d-flex justify-content-center" id="tab-angular">
+        <section class="et-slide fondo5 " id="tab-angular">
                 <div class="testimonials" style="padding:90px;">
-                    <div class="frame-group">
-                        <div class="heading-2-parent">
-                            <h1 class="mb-5">Testimonios</h1>
-                            <div class="smiley-face-wrapper">
-                                <img class="smiley-face-icon" loading="lazy" alt="" src="./public/smiley-face.svg" />
+                    <div class="">
+                        <div class="col-10">
+                            <h1 class="mb-3">Testimonios</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <h3 class="mb-5 ">Se dice de Mi...</h3>
+                            </div>
+                            <div class="col-2">
+                                <div class="smiley-face-wrapper">
+                                    <img class="smiley-face-icon" loading="lazy" alt="" src="./public/smiley-face.svg" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -407,9 +437,8 @@ background:#FFFFFF;
                             </div>
                             <div class="testimonial1">
                                 <div class="testimonial-text1">
-                                    "I hired Marcelo for a personal photoshoot, and he exceeded
-                                    all expectations. His work is not just photography; it's
-                                    storytelling at its finest."
+                                    "Como tutor he visto el desarrollo de Marcelo, sus ideas son pura
+                                    creatividad, mejorando la experiencia del usuario. Talento y pasión. Si necesitas diseño web, él es tu profesional."
                                 </div>
                                 <div class="testimonial-info1">
                                     <div class="testimonial-author1">Antonio Domingo</div>
@@ -430,17 +459,16 @@ background:#FFFFFF;
                                     <div class="testimonial-author2">Matias Riffo,</div>
                                     <div class="testimonial-details2">Chef - Eventos Riffo</div>
                                 </div>
+                                
                             </div>
                             <div class="testimonial1">
                                 <div class="testimonial-text1">
-                                    "I hired Marcelo for a personal photoshoot, and he exceeded
-                                    all expectations. His work is not just photography; it's
-                                    storytelling at its finest."
+                                "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y profesionalismo!""
                                 </div>
                                 <div class="testimonial-info1">
-                                    <div class="testimonial-author1">Antonio Domingo</div>
+                                    <div class="testimonial-author1">Cristobal Quintana</div>
                                     <div class="testimonial-details1">
-                                        Tutor. Politecnics Barcelona
+                                        Diseñador. Quintana
                                     </div>
                                 </div>
                             </div>
@@ -450,9 +478,10 @@ background:#FFFFFF;
 
         </section>
   
-    <section class="barraTitulos fondo2 " id="tab-angular">
-            <div class=" d-flex justify-content-center mt-5">
-                <h1>COMUNICATE</h1>
+    <section class="barraTitulos fondo3 " id="tab-angular">
+            <div class=" d-flex justify-content-center">
+                <h1>COMUNICATE </h1>
+             
 
             </div>
       </section>
@@ -465,15 +494,41 @@ background:#FFFFFF;
                     <img class="misc-icon" loading="lazy" alt="" src="./public/misc.svg" />
         
                     <h1 class="heading-23">
-                        <span>Hablemos</span>
-                        <span class="tu-y-yo"> tu y yo?</span>
+                        <span  class="tu-y-yo">¿Interesado en trabajar juntos?</span>
+                        
+                        <!-- <span class="tu-y-yo">comunicate </span> -->
+
                     </h1>
-                    <div class="paragraph2">
-                        Si necesitas comunicarte conmigo, puedes escribirme en el
-                        siguiente formulario
+                    <!-- <div class="paragraph2">
+                         Comunicate y hablemos
+                    </div> -->
+                  
+                    <div class="paragraph2 mt-3">
+                    
+                        <ul class="list-inline ">
+                            <li class="list-inline-item me-2">
+                                <img src="/assets/img/instagram.png" alt="Instagram" width="60" height="60">
+                                <a class="text-white" href="https://www.instagram.com/marceloenbcn/" target="_blank">
+                                    @marceloenbcn
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="/assets/img/linkedin.png" alt="LinkedIn" width="60" height="60">
+                                <a class="text-white"href="https://www.linkedin.com/in/mcarvajal/" target="_blank">
+                                    Mcarvajal
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="contact-form">
+                    <img class="misc-icon" loading="lazy" alt="" src="./public/misc.svg" />
+                    
+                    <h1 class="d-flex justify-content-end mb-3 align-self-end">
+                        <span>¿Hablemos?</span>
+                    </h1>
+                   
+                    
                     <div class="input">
                         <input class="input-field" placeholder="Nombre" type="text" />
         
@@ -519,10 +574,6 @@ background:#FFFFFF;
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
-
-
-
 <script>
 
     class StickyNavigation {

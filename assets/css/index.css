@@ -22,6 +22,8 @@ section {
 
 .accordion-label {
   border-radius: 2rem !important;
+  height: 125px;
+
 
 }
 
@@ -31,7 +33,7 @@ section {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #72bc9e;
+  background-color: #fa8778;
   color: #FFFFFF;
 }
 
@@ -57,7 +59,7 @@ section {
 
 .texto {
 
-  font-size: 20px;
+  font-size: 22px;
  
 
 }
@@ -67,9 +69,10 @@ section {
 }
 
 .texto-accordion {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   font-family: var(--link-text);
+  text-align: justify;
 }
 
 
@@ -837,7 +840,7 @@ font-size: 25px;
 
 .accordion {
   flex: 1;
-  gap: 33px;
+  gap: 20px;
   min-width: 469px;
 }
 
@@ -1718,7 +1721,7 @@ font-size: 25px;
 }
 
 .contact-header {
-  width: 448px;
+  width: 550px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1905,7 +1908,7 @@ font-size: 25px;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--gap-base);
-  min-width: 335px;
+  min-width: 250px;
 }
 
 .contact,
@@ -1921,7 +1924,7 @@ font-size: 25px;
   flex-wrap: wrap;
   align-items: center;
   padding: var(--padding-101xl) 150px var(--padding-101xl) 148px;
-  gap: 0 130px;
+  gap: 0 300px;
 
   z-index: 1;
 }
