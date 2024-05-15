@@ -155,17 +155,7 @@ section {
 
 }
 
-/* .item2 {
-  background-color: #F2F0E0;
-  background-size: contain;
-  
-  background-position: center;
-  
-  grid-column: 2 / span 2;
-  grid-row: 1 / span 2;
-  background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/foodhero.png');
 
-}  */
 
 .item2 {
   position: relative;
@@ -237,6 +227,41 @@ section {
 
 
 
+.item5 {
+  position: relative;
+  /* Añade posición relativa para poder posicionar el pseudoelemento */
+  background-color: #F2F0E0;
+  background-size: contain;
+  background-position: center;
+
+
+}
+
+.item5::before {
+  content: "";
+  /* Agrega un pseudoelemento antes del contenido */
+  position: absolute;
+  /* Posiciona el pseudoelemento en relación con el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/foodhero.png'); */
+  background-image: url('/assets/img/kanpom.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  /* Agrega transición para el cambio de filtro */
+}
+
+.item5:hover::before {
+  filter: grayscale(0%);
+  /* Elimina la escala de grises al hacer hover */
+}
+
+
 
 
 /* .item3 {
@@ -248,7 +273,7 @@ section {
 } */
 
 .item4 {
-  background-color: #72bc9e;
+  background-color: #fee400;
   background-size: cover;
   /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
   background-position: center;
@@ -1933,7 +1958,7 @@ section {
   border: 1px solid var(--grey);
   background-color: transparent;
   height: 320px;
-  width: auto;
+  width: 600px;
   outline: 0;
   align-self: stretch;
   border-radius: 0 0 var(--br-5xl) var(--br-5xl);
@@ -1963,6 +1988,8 @@ section {
 }
 
 .button2 {
+      margin-top: 15px;
+    width: 600px;
   cursor: pointer;
   border: 0;
   padding: var(--padding-xl);
