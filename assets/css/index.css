@@ -212,7 +212,8 @@ section {
   height: 100%;
   /* background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/foodhero.png'); */
   background-image: url('/assets/img/buscapalabras.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   filter: grayscale(100%);
   transition: filter 0.5s ease;
@@ -246,8 +247,9 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/foodhero.png'); */
-  background-image: url('/assets/img/kanpom.png');
+  background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/kanpom.png'); 
+  /* background-image: url('/assets/img/kanpom.png'); */
+ 
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;

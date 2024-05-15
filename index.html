@@ -36,6 +36,25 @@
 
     }
 
+
+    .btn-cerrar {
+        background-image: url('/assets/img/cancelar.png');
+        background-size: cover;
+        /* Ajusta el tamaño de la imagen */
+        background-repeat: no-repeat;
+        /* Evita la repetición de la imagen */
+        text-indent: -9999px;
+        /* Oculta el texto del botón */
+        width: 60px;
+        /* Ajusta el ancho de tu imagen */
+        height: 60px;
+        /* Ajusta la altura de tu imagen */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Establece el fondo transparente */
+    }
+
     .et-hero-tabs,
     .et-slide {
         display: flex;
@@ -201,8 +220,8 @@
     .success,
     .error {
         margin-top: 2px;
-    margin-left: 25px;
-    font-size: 30px;
+        margin-left: 25px;
+        font-size: 30px;
     }
 
     /* SOBRE MI */
@@ -389,7 +408,7 @@
         </section>
 
         <!-- Section PORTAFOLIO -->
-        <section class=" fondo3" id="tab-react">
+        <section class=" " id="tab-react">
             <div class="grid-container">
 
                 <div class="grid-item item7 d-flex justify-content-start align-items-end ">
@@ -413,10 +432,11 @@
                         <!-- <p class="caption">Juego para niños, desarrollado en JS, buscando la palabra oculta</p> -->
                     </div>
                 </div>
-                <div class="grid-item item5 d-flex justify-content-end align-items-end ">
-                    <div class="image-caption ">
+                <div class="grid-item item5 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
+                    data-bs-target="#ModalKampom">
+                    <div class="image-caption">
                         <h4 class="heading">KanPom</h4>
-                                         </div>
+                    </div>
                 </div>
                 <div class="grid-item item4 d-flex justify-content-end align-items-end ">
                     <div class="image-caption ">
@@ -569,10 +589,10 @@
                             <div class="input2">
                                 <input class="input-field2" placeholder="Telefono" type="text" name="telefono" />
                             </div>
-                            
+
                             <textarea class="message-input" placeholder="Mensaje" rows="16" cols="28" name="mensaje"
-                                required > </textarea>
-                                    
+                                required> </textarea>
+
                             <button class="button2" type="submit">
                                 <div class="text1">Enviar</div>
                             </button>
@@ -582,7 +602,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </section>
@@ -602,6 +622,35 @@
 
     </main>
 </body>
+
+
+
+<!-- Modal kAMPOM -->
+<div class="modal fade" id="ModalKampom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Proyecto Kampom</h1>
+                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+             
+                <p class="mt-2"><strong>Kampom</strong> es una APP que te permite organizar tu tiempo y tus tareas, de manera efectiva.</p>
+                <p>Desarrollado bajo las tecnicas de trabajo KANBA y Pomodoro, genera un tablero para poder generar 
+                    tareas a realizar y los estados de cada una de ellas. Ademas se complementa con un Temporizador
+                    de tiempo y descanso.
+                </p>
+            </div>
+            <div class="modal-footer d-flex justify-content-start">
+                <p> <strong>Lenguajes: </strong>Html, Css, JavaScript (LocalStorage)</p>
+              </div>
+    </div>
+</div>
+
+
+
 
 </html>
 
