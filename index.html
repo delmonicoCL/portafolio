@@ -36,6 +36,13 @@
 
     }
 
+    .modal-header{
+        background-color: #72bc9e;
+    }
+
+    .modal-footer{
+        background-color: #f9f6e3;
+    }
 
     .btn-cerrar {
         /* background-image: url('/assets/img/cancelar.png'); */
@@ -412,36 +419,40 @@
         <section class=" " id="tab-react">
             <div class="grid-container">
 
-                <div class="grid-item item7 d-flex justify-content-start align-items-end" data-bs-toggle="modal"
-                    data-bs-target="#ModalAutoevaluacion">
+                <div class="grid-item item5 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
+                    data-bs-target="#ModalRompecabezas">
                     <div class="image-caption ">
-                        <h4 class="heading">Autoevaluacion</h4>
+                        <h4 class="heading">Rompecabezas</h4>
                     </div>
                 </div>
 
-                <!-- Modal Autoevaluacion -->
-                <div class="modal fade" id="ModalAutoevaluacion" tabindex="-1" aria-labelledby="autoevaluacionLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="autoevaluacionLabel">Proyecto Autoevaluacion</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="mt-2"><strong>Autoevaluacion</strong> es una APP que permite a profesores y alumnos a completar una autoevaluacion
-                                    en relacion a los modulos (cursos) que el alumno esta registrado</p>
-                                <p> Desarrollado en <strong>Laravel y Vue</strong>, permite los usuarios interactuar con su aplicacion, dependiendo de su rol.
-                                    </p>
-                                <p class="mt-3"><strong>Sitio:</strong> www.xxx.es</p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <p><strong>Lenguajes:</strong> Laravel, VUE, Html, Css y BD</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Modal Rompecabezas -->
+                 <div class="modal fade" id="ModalRompecabezas" tabindex="-1" aria-labelledby="rompecabezasLabel"
+                 aria-hidden="true">
+                 <div class="modal-dialog modal-dialog-centered">
+                     <div class="modal-content">
+                         <div class="modal-header d-flex justify-content-between">
+                             <h1 class="modal-title fs-5" id="rompecabezasLabel">Proyecto Rompecabezas</h1>
+                             <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
+                                 aria-label="Close"></button>
+                         </div>
+                         <div class="modal-body">
+                             <p class="mt-2"><strong>Rompecabezas</strong> es una APP educativa para niños que
+                                 permite armar
+                                 rompecabezas de energías renovables.</p>
+                             <p>Desarrollado en <strong>JavaScript</strong>, permite a los niños aprender mientras juegan, fomentando
+                                 el uso de
+                                 energías renovables a través de una actividad lúdica.</p>
+                             <p class="mt-3"><strong>Sitio:</strong> www.rompecabezas.es</p>
+                         </div>
+                         <div class="modal-footer d-flex justify-content-start">
+                             <p><strong>Lenguajes:</strong> Html, Css, JavaScript (LocalStorage)</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+
 
                 <div class="grid-item item2 imagen d-flex justify-content-end align-items-end" data-bs-toggle="modal"
                     data-bs-target="#ModalFoodHero">
@@ -474,7 +485,7 @@
                     </div>
                 </div>
 
-                <div class="grid-item item3 d-flex justify-content-start align-items-end" data-bs-toggle="modal"
+                <div class="grid-item item3 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
                     data-bs-target="#ModalBuscapalabras">
                     <div class="image-caption ">
                         <h4 class="heading">Buscapalabras</h4>
@@ -504,47 +515,45 @@
                     </div>
                 </div>
 
-                <div class="grid-item item5 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
-                    data-bs-target="#ModalKampom">
+                <div class="grid-item item7 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
+                    data-bs-target="#ModalAutoevaluacion">
                     <div class="image-caption">
-                        <h4 class="heading">KanPom</h4>
+                        <h4 class="heading">Autoevaluacion</h4>
                     </div>
                 </div>
 
                 <div class="grid-item item4 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
-                    data-bs-target="#ModalRompecabezas">
+                    data-bs-target="#ModalKampom">
                     <div class="image-caption">
-                        <h4 class="heading">Rompecabezas</h4>
+                        <h4 class="heading">Kampom</h4>
                     </div>
                 </div>
-                <!-- Modal Rompecabezas -->
-                <div class="modal fade" id="ModalRompecabezas" tabindex="-1" aria-labelledby="rompecabezasLabel"
+                <!-- Modal Autoevaluacion -->
+                <div class="modal fade" id="ModalAutoevaluacion" tabindex="-1" aria-labelledby="autoevaluacionLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="rompecabezasLabel">Proyecto Rompecabezas</h1>
+                                <h1 class="modal-title fs-5" id="autoevaluacionLabel">Proyecto Autoevaluacion</h1>
                                 <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p class="mt-2"><strong>Rompecabezas</strong> es una APP educativa para niños que
-                                    permite armar
-                                    rompecabezas de energías renovables.</p>
-                                <p>Desarrollado en <strong>JavaScript</strong>, permite a los niños aprender mientras juegan, fomentando
-                                    el uso de
-                                    energías renovables a través de una actividad lúdica.</p>
-                                <p class="mt-3"><strong>Sitio:</strong> www.rompecabezas.es</p>
+                                <p class="mt-2"><strong>Autoevaluacion</strong> es una APP que permite a profesores y alumnos a completar una autoevaluacion
+                                    en relacion a los modulos (cursos) que el alumno esta registrado</p>
+                                <p> Desarrollado en <strong>Laravel y Vue</strong>, permite los usuarios interactuar con su aplicacion, dependiendo de su rol.
+                                    </p>
+                                <p class="mt-3"><strong>Sitio:</strong> www.xxx.es</p>
                             </div>
                             <div class="modal-footer d-flex justify-content-start">
-                                <p><strong>Lenguajes:</strong> Html, Css, JavaScript (LocalStorage)</p>
+                                <p><strong>Lenguajes:</strong> Laravel, VUE, Html, Css y BD</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="grid-item item6">6</div>
-                <div class="grid-item item7">7</div>
+                <div class="grid-item item7">Espacio Tierra</div>
+                <div class="grid-item item6">Manual Identidad </div>
                 <div class="grid-item item8" data-bs-toggle="modal" data-bs-target="#ModalRiffo">8</div>
 
                 <!-- Modal RIFFO -->
@@ -591,10 +600,12 @@
                                     tareas a realizar y los estados de cada una de ellas. Ademas se complementa con un
                                     temporizador pomodoro de tiempo y descanso.
                                 </p>
-                                <p class="mt-3"> <strong>Sitio: </strong>www.kanpom.es</p>
+                                
+                                <p> <strong>Lenguajes: </strong>Html, Css, JavaScript (LocalStorage)</p>
                             </div>
                             <div class="modal-footer d-flex justify-content-start">
-                                <p> <strong>Lenguajes: </strong>Html, Css, JavaScript (LocalStorage)</p>
+                                
+                                <p class="mt-3"> <strong>Sitio: </strong>www.kanpom.es</p>
 
                             </div>
                         </div>
