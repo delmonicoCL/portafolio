@@ -35,6 +35,11 @@ border:2px solid ;
   color: #FFFFFF;
 }
 
+.accordion-body{
+  background-color:  #72bc9e;
+
+}
+
 
 .grid-container {
   display: grid;
@@ -194,7 +199,7 @@ background-color:#fabd4d;
 
 }
 .accordion-item{
-  background-color: #000000;
+  background-color: #dd2b2b;
   border-radius: .4rem;
   border: none !important;
 }
