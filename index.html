@@ -222,59 +222,125 @@
         }
     }
 
-    .hidden {
-        display: none;
-    }
+
 
     .success,
     .error {
         margin-top: 2px;
         margin-left: 25px;
         font-size: 30px;
+
+    }
+
+    .hidden{
+display:none;
+
     }
 
     .video-container {
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-    overflow: hidden;
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-@media (max-width: 414px) and (max-height: 896px) {
-    .et-hero-tab {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        color: #000;
-        letter-spacing: 0.1rem;
-        transition: all 0.5s ease;
-        font-size: 0.6rem;
-    }
-
-    .estrella {
-        margin-top: 200px;
-    }
-
-    .accordion, .link {
-        min-width: 161%;
-    }
-
-    .avatar {
-
         display: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
     }
-}
 
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensure video covers the area */
+    }
+
+    #video-desktop {
+        display: block;
+        /* Show the desktop video by default */
+    }
+
+    @media (max-width: 600px) {
+        #video-desktop {
+            display: none;
+        }
+
+        #video-medium {
+            display: none;
+        }
+
+        #video-mobile {
+            display: block;
+        }
+
+        .et-hero-tabs-container {
+            display: none;
+        }
+
+        .avatar {
+            display: none;
+        }
+
+        .accordion-label {
+            border-radius: 2rem !important;
+            height: 110px;
+            width: 500px;
+
+        }
+
+        .col-8 {
+
+            width: 95%;
+        }
+
+        .accordion-button::after {
+            display: none;
+        }
+
+        .contact {
+            margin-top: 320px;
+        }
+
+        #contact-form {
+           
+                width: 385px;
+
+           }
+        .message-input, .button2 {
+
+            width: 385px;
+        }   
+
+
+        }
+   
+        @media (min-width: 601px) and (max-width: 1024px) {
+            #video-desktop {
+                display: none;
+            }
+
+            #video-medium {
+                display: block;
+            }
+
+            #video-mobile {
+                display: none;
+            }
+        }
+
+        .et-hero-tabs {
+            position: relative;
+            height: 100vh;
+            /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* 
+
+    
 
     /* SOBRE MI */
 </style>
@@ -283,14 +349,27 @@
 
     <!-- Hero -->
     <section id="tab-video" class="et-hero-tabs">
-        <div class="video-container">
+        <div id="video-desktop" class="video-container">
             <video autoplay controls loop poster="./assets/img/imagenVideo.png">
                 <source src="./assets/img/video13.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
             </video>
         </div>
+        <div id="video-medium" class="video-container">
+            <video autoplay controls loop poster="./assets/img/imagenVideo.png">
+                <source src="./assets/img/video_medium.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div id="video-mobile" class="video-container">
+            <video autoplay controls loop poster="./assets/img/imagenVideo.png">
+                <source src="./assets/img/video_movil.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
     </section>
-    
+
+
 
     <div class="et-hero-tabs-container">
         <a class="et-hero mt-2" href="#tab-video"><img class="logo" src="./assets/img/logo.png" width="100"
@@ -342,7 +421,6 @@
                                         <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
                                         <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
                                         <span class="subtitulo-accordion me-2 ">#Reconversion</span>
-                                        <span class="subtitulo-accordion">#Desarrollador</span>
                                     </div>
                                 </div>
                             </div>
@@ -353,11 +431,17 @@
                                     <div class="">
                                         <h5 class="texto-accordion mb-3">Mi viaje comenzó en el vibrante <span
                                                 style="background-color:#fee400;"> mundo de la hostelería</span>, donde,
-                                            como chef, no solo perfeccioné mi habilidad para crear
-                                            experiencias culinarias únicas, sino que también aprendí el valor del
-                                            liderazgo y la comunicacion en entornos de alta
-                                            presión. </h5>
-                                        <h5 class="texto-accordion mb-3">Mi espíritu emprendedor siempre buscó más.
+                                            como <span style="background-color:#fee400;"> chef</span>, no solo
+                                            perfeccioné mi habilidad para crear
+                                            experiencias culinarias únicas, sino que también <span
+                                                style="background-color:#fee400;"> aprendí</span> el valor del
+                                            <span style="background-color:#fee400;"> liderazgo</span> y la <span
+                                                style="background-color:#fee400;"> comunicacion</span> en entornos de
+                                            alta
+                                            presión.
+                                        </h5>
+                                        <h5 class="texto-accordion mb-3">Mi espíritu <span
+                                                style="background-color:#fee400;"> emprendedor</span> siempre buscó más.
                                             Fundé y gestioné mi propio restaurante, enfrentándome a desafíos
                                             que me enseñaron la importancia de la <span
                                                 style="background-color:#fee400;">innovación y el trabajo en
@@ -437,7 +521,6 @@
                                         <h2 class="mt-2">Estudios</h2>
                                     </div>
                                     <div class="d-flex">
-                                        <span class="subtitulo-accordion me-2  ">#Hosteleria</span>
                                         <span class="subtitulo-accordion me-2  ">#Emprendimiento</span>
                                         <span class="subtitulo-accordion me-2  ">#Reconversion</span>
                                         <span class="subtitulo-accordion me-5">#Desarrollador</span>
@@ -643,43 +726,99 @@
                     </div>
                 </div>
 
-                 <!-- Modal MANUAL -->
-                 <div class="modal fade" id="ModalManual" tabindex="-1" aria-labelledby="ManualLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header d-flex justify-content-between">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Manual Identidad</h1>
-                                        <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-        
-        
-                                        <p class="mt-2"><strong>Manual de Identidad: </strong>Creacion de presentacion Manual de identidad proyecto FoodHero </p>
-                                        <p>El manual de identidad es una poderosa herramienta inicial en cualquier proyecto. Define las bases del color, diseño, del usuario. 
-                                            Te invito a descargar la presentacion o ver el video en el siguientes enlacesngPage para presentar su propuesta
-                                         
-                                        </p>
-        
-                                        <p> <strong>Descargar Manual: </strong>
-                                        </p>
-                                    </div>
-                                    <div class="modal-footer d-flex justify-content-start">
-                                        <p class="mt-3 text-white">
-                                            <strong>Ver presentacion:</strong>
-                                            <a href="#" target="_blank"></a>
-                                        </p>
-        
-                                    </div>
-                                </div>
+                <!-- Modal MANUAL -->
+                <div class="modal fade" id="ModalManual" tabindex="-1" aria-labelledby="ManualLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header d-flex justify-content-between">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Manual Identidad</h1>
+                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
-                 </div>
+                            <div class="modal-body">
+
+
+                                <p class="mt-2"><strong>Manual de Identidad: </strong>Creacion de presentacion Manual de
+                                    identidad proyecto FoodHero </p>
+                                <p>El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto.
+                                    Define las bases del color, diseño, características del usuario, Mision y Vision,
+                                    entre otros.
+                                    Te invito a descargar la presentacion via PDF o ver el video en el siguiente video
+                                    interactivo
+
+                                </p>
+
+                                <p> <strong>Manual Identidad: </strong>
+                                    <a href="./assets/img/ManualIdentidadFoodHero.pdf"
+                                        download="manual_identidad_FoodHero.pdf">Descargar</a>
+                                </p>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-start">
+                                <p class="mt-3 text-white">
+                                    <strong>Video Presentación:</strong>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#ModalManualIdentidad">Ver video
+                                        interactivo</a>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
 
                 <div class="grid-item item7" data-bs-toggle="modal" data-bs-target="#ModalEspacioTierra">Espacio Tierra
                 </div>
-                <div class="grid-item item6" data-bs-toggle="modal" data-bs-target="#ModalManual">Manual Identidad </div>
+                <div class="grid-item item6" data-bs-toggle="modal" data-bs-target="#ModalManual">Manual Identidad
+                </div>
                 <div class="grid-item item8" data-bs-toggle="modal" data-bs-target="#ModalRiffo">8</div>
-                
+
+                <!-- Modal Video Manual Identidad -->
+                <div class="modal fade" id="ModalManualIdentidad" tabindex="-1" aria-labelledby="ManualIdentidadLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" style="max-width: 1200px;">
+                        <div class="modal-content" style="height: 800px;">
+                            <div class="modal-header d-flex justify-content-between">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">PRESENTACION INTERACTIVA MANUAL
+                                    IDENTIDAD</h1>
+                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="padding: 0;">
+                                <video id="manualVideo" controls style="width: 100%; height: 100%;">
+                                    <source src="./assets/img/ManualdentidadFoodHero.mp4" type="video/mp4">
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-start">
+                                <h4 class="me-2">Selecciona Area de interes:</h4>
+                                <button type="button" class="btn btn-danger me-2"
+                                    onclick="setVideoTime('manualVideo', 1)">Todo el video</button>
+                                <button type="button" class="btn btn-warning me-2"
+                                    onclick="setVideoTime('manualVideo', 173)">MoodBoard</button>
+                                <button type="button" class="btn btn-warning me-2"
+                                    onclick="setVideoTime('manualVideo', 255)">User Persona</button>
+                                <button type="button" class="btn btn-warning me-2"
+                                    onclick="setVideoTime('manualVideo', 375)">Mision/Vision</button>
+                                <button type="button" class="btn btn-warning me-2"
+                                    onclick="setVideoTime('manualVideo', 493)">Manual Identidad</button>
+                                <button type="button" class="btn btn-warning"
+                                    onclick="setVideoTime('manualVideo', 535)">Landing</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function setVideoTime(videoId, timeInSeconds) {
+                        var video = document.getElementById(videoId);
+                        if (video) {
+                            video.currentTime = timeInSeconds;
+                            video.play();
+                        }
+                    }
+                </script>
 
                 <!-- Modal Espacio Tierra -->
                 <div class="modal fade" id="ModalEspacioTierra" tabindex="-1" aria-labelledby="EspacioLabel"
@@ -783,9 +922,9 @@
 
                             </div>
                         </div>
-                </div>
+                    </div>
 
-               
+
 
 
 
@@ -961,9 +1100,38 @@
         </section>
 
     </main>
+
+    <script>
+        function handleVideoSwitch() {
+            var videoDesktop = document.getElementById('video-desktop');
+            var videoMedium = document.getElementById('video-medium');
+            var videoMobile = document.getElementById('video-mobile');
+
+            if (window.innerWidth <= 600) {
+                videoDesktop.style.display = 'none';
+                videoMedium.style.display = 'none';
+                videoMobile.style.display = 'block';
+            } else if (window.innerWidth >= 601 && window.innerWidth <= 1024) {
+                videoDesktop.style.display = 'none';
+                videoMedium.style.display = 'block';
+                videoMobile.style.display = 'none';
+            } else {
+                videoDesktop.style.display = 'block';
+                videoMedium.style.display = 'none';
+                videoMobile.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('load', handleVideoSwitch);
+        window.addEventListener('resize', handleVideoSwitch);
+    </script>
+
+
 </body>
 
 </html>
+
+
 
 
 <script>
