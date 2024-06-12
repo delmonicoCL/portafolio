@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:700">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" />
+    <style>
+        /* CSS */
+
+        .tituloCard{
+            background-color: aquamarine;
+        } 
+        .item {
+            cursor: pointer;
+            backface-visibility: hidden;
+        }
+
+        .item:hover>.overflow>.content-art {
+            transform: translateY(0) translateZ(0);
+        }
+
+        .overflow {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-art {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+            color: #fff;
+            font-weight: 700 !important;
+            text-align: center;
+            /* text-shadow: 0 1px 1px #000; */
+            padding: 10px 15px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            z-index: 100;
+            backface-visibility: hidden;
+            transform: translateY(100%) translateZ(0);
+            transition: transform 450ms ease-out;
+        }
+
+        .nopadding {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+          
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizelegibility;
+        }
+
+        body {
+            background: #1f253d;
+            font-family: 'Century Gothic', sans-serif;
+        }
+        
+    .modal-header {
+        background-color: #f9f6e3;
+    }
+
+
+    .modal-footer {
+        background-color: #72bc9e;
+    }
+
+    .btn-cerrar {
+        /* background-image: url('/assets/img/cancelar.png'); */
+        background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/cancelar.png');
+        background-size: cover;
+        /* Ajusta el tamaño de la imagen */
+        background-repeat: no-repeat;
+        /* Evita la repetición de la imagen */
+        text-indent: -9999px;
+        /* Oculta el texto del botón */
+        width: 60px;
+        /* Ajusta el ancho de tu imagen */
+        height: 60px;
+        /* Ajusta la altura de tu imagen */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Establece el fondo transparente */
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="content" class="row"></div>
+    </div>
+
+<script id="template" type="text/x-handlebars-template">
+  {{#gallery}}
+<div class="col-6 col-md-4 col-lg-3 item nopadding" data-bs-toggle="modal" data-bs-target="#modal-{{@index}}">
+      <div class="overflow">
+        <div class="content-art">
+          <h4>{{title}}</h4>
+        </div>
+        <img src="{{img}}" alt="{{alt}}" class="img-fluid"/>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="modal-{{@index}}" tabindex="-1" aria-labelledby="modalLabel-{{@index}}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between">
+              <h1 class="modal-title fs-5" id="modalLabel-{{@index}}">{{modalTitle}}</h1>
+            <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="mt-2"><strong>{{modalHeader}}</strong> {{modalDescription}}</p>
+              <p>{{modalDetails}}</p>
+              <p><strong>Desarrollado en:</strong> {{modalTech}}</p>
+            </div>
+            <div class="modal-footer d-flex justify-content-start">
+              <p class="mt-3 text-white">
+                <strong>Visitar Proyecto:</strong>
+                <a href="{{modalLink}}" target="_blank">{{modalLinkText}}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/gallery}}
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+ 
+    <script>
+        // JavaScript
+        $(document).ready(function () {
+            var data = {
+                gallery: [
+                    { title: "Rompecabezas", img: "./assets/img/rompecabezas.png", alt: "lorem", texto: "", modalTitle: "Proyecto Rompecabezas",
+                        modalHeader: "Rompecabezas",
+                        modalDescription: "es una APP educativa para niños que permite armar puzzle de energías renovables. Con una variedad de rompecabezas temáticos, los niños pueden explorar y aprender sobre fuentes de energía limpia como solar, eólica.",
+                        modalDetails: "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, fomentando el uso de energías renovables a través de una actividad lúdica.",
+                        modalTech: "Html, Css, JavaScript (LocalStorage)",
+                        modalLink: "https://delmonicocl.github.io/LaiaBCN/",
+                        modalLinkText: "Laia, Salvad al Mundo" },
+
+                        {
+                        "title": "FoodHero",
+                        "img": "./assets/img/foodhero.png",
+                        "alt": "lorem",
+                        "texto": "",
+                        "modalTitle": "Proyecto FOOD HERO",
+                        "modalHeader": "Food Hero",
+                        "modalDescription": "es una aplicación innovadora que combina tecnología con solidaridad. Con el lema 'Salva comida, alimenta corazones', nuestra APP conecta repartidores y proveedores de alimentos voluntarios para distribuir comida a personas necesitadas. Mediante la geolocalización, se registran los procesos de creación y entrega de alimentos.",
+                        "modalDetails": "Características: Creación de Manual de identidad, Marca y propuesta. Integración de tecnologías Laravel y Vue.js para una experiencia de usuario fluida y eficiente. Uso de APIs como MapBox para proporcionar funciones de geolocalización precisas.",
+                        "modalTech": "Laravel, Vue, MapBox, Apis",
+                        "modalLink": "https://delmonicocl.github.io/FoodHero/",
+                        "modalLinkText": "Food Hero"
+                    },
+
+                     {
+                        "title": "KanPom",
+                        "img": "./assets/img/kanpom.png",
+                        "alt": "Kanpom es una APP que te permite organizar tu tiempo y tus tareas, de manera efectiva. Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
+                        "texto": "",
+                        "modalTitle": "Proyecto Kanpom",
+                        "modalHeader": "Kanpom",
+                        "modalDescription": "es una APP que te permite organizar tu tiempo y tus tareas, de manera efectiva. Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
+                        "modalDetails": "Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
+                        "modalTech": "HTML, CSS, JavaScript (LocalStorage)",
+                        "modalLink": "https://delmonicocl.github.io/KenPom/",
+                        "modalLinkText": "Organizador Tareas"
+                    },
+
+               
+                    {
+                        "title": "Buscapalabras",
+                        "img": "./assets/img/buscapalabras.png",
+                        "alt": "lorem",
+                        "texto": "",
+                        "modalTitle": "Proyecto Buscapalabras",
+                        "modalHeader": "Buscapalabras",
+                        "modalDescription": "es un juego educativo interactivo diseñado para niños que desafía su capacidad de encontrar palabras ocultas mientras disfrutan de una experiencia divertida y educativa.",
+                        "modalDetails": "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, contabiliza la cantidad de errores y sus vidas.",
+                        "modalTech": "Html, Css, JavaScript (LocalStorage)",
+                        "modalLink": "https://delmonicocl.github.io/JuegoBuscaPalabra/",
+                        "modalLinkText": "Juego, Buscapalabras"
+                    },
+                     {
+                        "title": "Manual Identidad",
+                        "img": "./assets/img/manualidentidad.png",
+                        "alt": "Manual de Identidad: Creacion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
+                        "texto": "",
+                        "modalTitle": "Manual Identidad",
+                        "modalHeader": "",
+                        "modalDescription": "Presentancion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
+                        "modalDetails": "El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros.",
+                        "modalTech": "HTML, CSS",
+                        "modalLink": "./assets/img/ManualIdentidadFoodHero.pdf",
+                        "modalLinkText": "Descargar Manual"
+                    },
+
+               
+                   {
+                        "title": "Autoevaluacion",
+                        "img": "./assets/img/autoevaluacion.png",
+                        "alt": "Autoevaluacion es una aplicación que facilita a profesores y alumnos completar una autoevaluación en relación a los módulos (cursos) en los que el alumno está registrado. Desarrollada en Laravel y Vue, esta aplicación permite a los usuarios interactuar de manera efectiva según su rol, proporcionando una experiencia personalizada y eficiente. Desarrollado en: Laravel, VUE, Html, Css y BD",
+                        "texto": "",
+                        "modalTitle": "Proyecto Autoevaluacion",
+                        "modalHeader": "Autoevaluacion",
+                        "modalDescription": "es una aplicación que facilita a profesores y alumnos completar una autoevaluación en relación a los módulos (cursos) en los que el alumno está registrado. Desarrollada en Laravel y Vue, esta aplicación permite a los usuarios interactuar de manera efectiva según su rol, proporcionando una experiencia personalizada y eficiente.",
+                        
+                        "modalTech": "Laravel, VUE, Html, Css y BD",
+                        "modalLink": "www.autoevaluacion.es",
+                        "modalLinkText": "Visitar Proyecto"
+                    },
+
+                   {
+                        "title": "Espacio Tierra",
+                        "img": "./assets/img/sanpedro.png",
+                        "alt": "Espacio Tierra: Es un proyecto de la emprendedora Javiera Escobar que ofrece un refugio turístico único en el Desierto de Atacama, Chile. El proyecto incluye el desarrollo de una LandingPage para presentar la propuesta turística de Espacio Tierra, así como la creación de una marca y un sitio web que reflejen la belleza y la serenidad del entorno.",
+                        "texto": "",
+                        "modalTitle": "Proyecto Espacio Tierra",
+                        "modalHeader": "",
+                        "modalDescription": "Espacio Tierra: Es un proyecto de la emprendedora Javiera Escobar que ofrece un refugio turístico único en el Desierto de Atacama, Chile.",
+                        "modalDetails": "El proyecto incluye el desarrollo de una LandingPage para presentar la propuesta turística de Espacio Tierra, así como la creación de una marca y un sitio web que reflejen la belleza y la serenidad del entorno.",
+                        "modalTech": "Wordpress, HTML, CSS, AirBnb",
+                        "modalLink": "https://espaciotierra.cl/",
+                        "modalLinkText": "Espacio Tierra"
+                    },
+
+                    {
+                        "title": "Riffo Eventos",
+                        "img": "./assets/img/eventosriffo.png",
+                        "alt": "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única. El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
+                        "texto": "",
+                        "modalTitle": "Proyecto Eventos Riffo",
+                        "modalHeader": "",
+                        "modalDescription": "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única.",
+                        "modalDetails": "El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
+                        "modalTech": "Wordpress, HTML, CSS, JavaScript (LocalStorage)",
+                        "modalLink": "https://eventosriffo.cl/",
+                        "modalLinkText": "Eventos Riffo"
+                    }
+
+                  
+                ]
+            };
+
+            var source = $('#template').html();
+            var template = Handlebars.compile(source);
+            $('#content').html(template(data));
+        });
+
+        $(window).on('load', function () {
+            var $items = $('.item');
+            $items.on({
+                mousemove: function (e) {
+                    var $that = $(this);
+                    $that.find('.overflow > img').velocity({
+                        translateZ: 0,
+                        translateX: Math.floor((e.pageX - $that.offset().left) - ($that.width() / 2)),
+                        translateY: Math.floor((e.pageY - $that.offset().top) - ($that.height() / 2)),
+                        scale: '2'
+                    }, {
+                        duration: 400,
+                        easing: 'linear',
+                        queue: false
+                    });
+                },
+                mouseleave: function () {
+                    $(this).find('.overflow > img').velocity({
+                        translateZ: 0,
+                        translateX: 0,
+                        translateY: 0,
+                        scale: '1'
+                    }, {
+                        duration: 1000,
+                        easing: 'easeOutSine',
+                        queue: false
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

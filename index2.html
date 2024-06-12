@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton:wght@400&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Libre Baskerville:wght@400;700&display=swap" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+
+    <title>Portafolio - Marcelo Carvajal</title>
+</head>
+<style>
+    body {
+        font-family: "Century Gothic", 'Lato', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .border-me {
+        border-radius: 35px;
+
+    }
+
+    .modal-header {
+        background-color: #f9f6e3;
+    }
+
+
+    .modal-footer {
+        background-color: #72bc9e;
+    }
+
+    .btn-cerrar {
+        /* background-image: url('/assets/img/cancelar.png'); */
+        background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/cancelar.png');
+        background-size: cover;
+        /* Ajusta el tamaño de la imagen */
+        background-repeat: no-repeat;
+        /* Evita la repetición de la imagen */
+        text-indent: -9999px;
+        /* Oculta el texto del botón */
+        width: 60px;
+        /* Ajusta el ancho de tu imagen */
+        height: 60px;
+        /* Ajusta la altura de tu imagen */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Establece el fondo transparente */
+    }
+    
+.subtitulo-accordion {
+    color: #f2533d;
+    font-weight: 300;
+}
+
+    .et-hero-tabs,
+    .et-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+        background: #eee;
+        text-align: center;
+        /* padding: 0 2em; */
+    }
+
+    .barraTitulos {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+        position: relative;
+        background: #f61b26;
+        text-align: center;
+    }
+
+    .et-hero-tabs h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+    }
+
+    .et-hero-tabs h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+
+    .testimonial:hover,
+    .testimonial1:hover,
+    .testimonial2:hover {
+        background-color: #72bc9e;
+        /* Cambia este color al que prefieras */
+        font-size: 1.1em;
+        /* Cambia este valor al que prefieras */
+    }
+
+
+    .fondo {
+        background: #222021;
+
+    }
+
+    .fondo1 {
+
+        background: #F2F0E0;
+    }
+
+    .fondo2 {
+
+        background: #fa8778;
+    }
+
+    .fondo3 {
+
+        background: #F2F0E0;
+    }
+
+
+    .fondo4 {
+
+        background: #264a48;
+        ;
+    }
+
+    .fondo5 {
+
+        background: #FFFFFF;
+        ;
+    }
+
+    .fondo6 {
+
+        background: #B6D9C9;
+        ;
+    }
+
+    .et-hero-tabs-container {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background: #F2F0E0;
+        z-index: 10;
+    }
+
+    .et-hero-tabs-container--top {
+        position: fixed;
+        top: 0;
+    }
+
+    .et-hero-tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #000;
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 1.4rem;
+    }
+
+    .et-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #000;
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 1.4rem;
+
+    }
+
+    .et-hero-tab:hover {
+        color: white;
+        background: #B6D9C9;
+        transition: all 0.5s ease;
+    }
+
+    .et-hero-tab-slider {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 4px;
+        background: #72bc9e;
+        transition: left 0.3s ease;
+    }
+
+
+
+
+    @media (min-width: 800px) {
+        .et-hero-tabs {
+            font-size: 1rem;
+        }
+
+        .et-hero-tabs h3 {
+            font-size: 1rem;
+        }
+
+        .et-hero-tab {
+            font-size: 1.4rem;
+        }
+    }
+
+
+
+    .success,
+    .error {
+        margin-top: 2px;
+        margin-left: 25px;
+        font-size: 30px;
+
+    }
+
+    .hidden {
+        display: none;
+
+    }
+
+    .video-container {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensure video covers the area */
+    }
+
+    #video-desktop {
+        display: block;
+        /* Show the desktop video by default */
+    }
+
+
+    /* CSS */
+
+    .estrella{
+        width: 100px;
+    }
+
+    .tituloCard {
+        background-color: aquamarine;
+    }
+
+    .item {
+        cursor: pointer;
+        backface-visibility: hidden;
+    }
+
+    .item:hover>.overflow>.content-art {
+        transform: translateY(0) translateZ(0);
+    }
+
+    .overflow {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-art {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+        color: #fff;
+        font-weight: 700 !important;
+        text-align: center;
+        /* text-shadow: 0 1px 1px #000; */
+        padding: 10px 15px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        z-index: 100;
+        backface-visibility: hidden;
+        transform: translateY(100%) translateZ(0);
+        transition: transform 450ms ease-out;
+    }
+
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizelegibility;
+    }
+
+    body {
+       
+        font-family: 'Century Gothic', sans-serif;
+    }
+
+    .modal-header {
+        background-color: #f9f6e3;
+    }
+
+
+    .modal-footer {
+        background-color: #72bc9e;
+    }
+
+    .btn-cerrar {
+        /* background-image: url('/assets/img/cancelar.png'); */
+        background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/cancelar.png');
+        background-size: cover;
+        /* Ajusta el tamaño de la imagen */
+        background-repeat: no-repeat;
+        /* Evita la repetición de la imagen */
+        text-indent: -9999px;
+        /* Oculta el texto del botón */
+        width: 60px;
+        /* Ajusta el ancho de tu imagen */
+        height: 60px;
+        /* Ajusta la altura de tu imagen */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Establece el fondo transparente */
+    }
+
+    @media (max-width: 600px) {
+        #video-desktop {
+            display: none;
+        }
+
+        #video-medium {
+            display: none;
+        }
+
+        #video-mobile {
+            display: block;
+        }
+
+        .et-hero-tabs-container {
+            display: none;
+        }
+
+        .avatar {
+            display: none;
+        }
+
+        .accordion-label {
+            border-radius: 2rem !important;
+            height: 110px;
+            width: 400px;
+
+        }
+
+        .col-8 {
+
+            width: 95%;
+        }
+
+        .accordion-button::after {
+            display: none;
+        }
+
+        .contact {
+            margin-top: 320px;
+        }
+
+        #contact-form {
+
+            width: 385px;
+
+        }
+
+        .message-input,
+        .button2 {
+
+            width: 385px;
+        }
+        .list-inline {
+  display: none;
+}
+
+
+
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+        #video-desktop {
+            display: none;
+        }
+
+        #video-medium {
+            display: block;
+        }
+
+        #video-mobile {
+            display: none;
+        }
+    }
+
+    .et-hero-tabs {
+        position: relative;
+        height: 100vh;
+        /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* 
+
+    
+
+    /* SOBRE MI */
+</style>
+
+<body>
+
+    <!-- Hero -->
+    <section id="tab-video" class="et-hero-tabs">
+        <div id="video-desktop" class="video-container">
+            <video autoplay controls loop poster="./assets/img/imagenVideo.png">
+                <source src="./assets/img/video13.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div id="video-medium" class="video-container">
+            <video autoplay controls loop poster="./assets/img/imagenVideo.png">
+                <source src="./assets/img/video_medium.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div id="video-mobile" class="video-container">
+            <video autoplay controls loop poster="./assets/img/imagenVideo.png">
+                <source src="./assets/img/video_movil.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </section>
+
+
+
+    <div class="et-hero-tabs-container">
+        <a class="et-hero mt-2" href="#tab-video"><img class="logo" src="./assets/img/logo.png" width="100"
+                alt="Marcelo Carvajal"></a>
+        <a class="et-hero-tab" href="#tab-flexbox">Sobre Mi</a>
+        <a class="et-hero-tab" href="#tab-react">Portafolio</a>
+        <a class="et-hero-tab" href="#tab-angular">Testimonios</a>
+        <a class="et-hero-tab" href="#tab-other">¿Hablemos?</a>
+        <span class="et-hero-tab-slider"></span>
+    </div>
+    </section>
+
+    <!-- Main -->
+    <main class="et-main">
+        <!-- Section SOBRE MI -->
+        <section class="et-slide fondo3" id="tab-flexbox">
+            <div class=" ">
+                <img class="estrella" loading="lazy" alt="" src="./public/drawn-misc.svg" />
+            </div>
+
+            <div class="container ">
+                <div class=" container fondo3 border-me">
+                    <h1 class="p-3">Soy <span style="background-color:#fee400;">Marcelo Carvajal</span></h1>
+                    <div class=" mt-1 p-2">
+
+                        <p class="texto">
+                            Chef de profesion, Emprendedor y Desarrollador Web especializado en <strong class="">HTML,
+                                CSS, JavaScript y PHP</strong> .
+                            Trabajo bajo la <strong>metodología UX y metodologías agiles</strong> . Te invito a conocer
+                            con mayor
+                            detalle mi historia y experiencia.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-8">
+                        <div class="accordion">
+
+                            <!-- ACCORDION HISTORIA -->
+
+                            <div class="accordion-button collapsed ideas accordion-label " data-bs-toggle="collapse"
+                                data-bs-target="#accordionHistoria" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="row d-flex justify-content-between">
+                                    <div>
+                                        <h2 class="mt-2">Historia</h2>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
+                                        <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
+                                        <span class="subtitulo-accordion me-2 ">#Reconversion</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="accordionHistoria" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <h5 class="texto-accordion mb-3">Mi viaje comenzó en el vibrante <span
+                                                style="background-color:#fee400;"> mundo de la hostelería</span>, donde,
+                                            como <span style="background-color:#fee400;"> chef</span>, no solo
+                                            perfeccioné mi habilidad para crear
+                                            experiencias culinarias únicas, sino que también <span
+                                                style="background-color:#fee400;"> aprendí</span> el valor del
+                                            <span style="background-color:#fee400;"> liderazgo</span> y la <span
+                                                style="background-color:#fee400;"> comunicacion</span> en entornos de
+                                            alta
+                                            presión.
+                                        </h5>
+                                        <h5 class="texto-accordion mb-3">Mi espíritu <span
+                                                style="background-color:#fee400;"> emprendedor</span> siempre buscó más.
+                                            Fundé y gestioné mi propio restaurante, enfrentándome a desafíos
+                                            que me enseñaron la importancia de la <span
+                                                style="background-color:#fee400;">innovación y el trabajo en
+                                                equipo</span> . Pero, en lo profundo, sentía que mi misión no
+                                            estaba completa.</h5>
+                                        <h5 class="texto-accordion mb-3">Un día, descubrí mi pasión por la tecnología y
+                                            decidí embarcarme en un nuevo viaje: <span
+                                                style="background-color:#fee400;">La reconversión a desarrollador
+                                                web</span> .
+                                            A través del aprendizaje constante y la adopción de metodologías ágiles y de
+                                            UX, transformé mis habilidades
+                                            en herramientas para diseñar y desarrollar aplicaciones web intuitivas y
+                                            funcionales.</h5>
+                                        <h5 class="texto-accordion mb-3">Hoy, combino mi <span
+                                                style="background-color:#fee400;">amor por la comunicacion,
+                                                emprendimiento y tecnología</span>, para crear soluciones digitales
+                                            ofrecen una experiencia memorable, reflejando mi compromiso con la
+                                            excelencia y la innovación.</h5>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ACCORDION Habilidades -->
+
+                            <div class="accordion-button collapsed accordion-label" data-bs-toggle="collapse"
+                                data-bs-target="#accordionHabilidades" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="row d-flex justify-content-between">
+                                    <div>
+                                        <h2 class="mt-2">Habilidades</h2>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span class="subtitulo-accordion me-2 ">#Comunicacion</span>
+                                        <span class="subtitulo-accordion me-2 ">#Liderazgo</span>
+                                        <span class="subtitulo-accordion ">#Creatividad</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="accordionHabilidades" class="accordion-collapse collapse"
+                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div>
+
+                                        <div class="texto-accordion">
+                                            <p><span style="background-color:#fee400;">Liderazgo y Manejo de
+                                                    Equipos:</span> Experiencia liderando y motivando equipos como chef,
+                                                comunicador y emprendedor..</p>
+
+                                            <p><span style="background-color:#fee400;">Comunicación Efectiva:</span>
+                                                Capacidad para transmitir ideas de manera clara y precisa.</p>
+
+                                            <p><span style="background-color:#fee400;">Creatividad e Innovación:</span>
+                                                Enfoque creativo para ofrecer soluciones únicas en diseño.</p>
+
+                                            <p><span style="background-color:#fee400;">Habilidades Técnicas en
+                                                    Desarrollo Web:</span> Domínio de HTML, CSS, JavaScript y PHP.
+                                                Experiencia con Laravel, Vue.js, Git, Wordpress, SQL.</p>
+
+
+                                            <p><span style="background-color:#fee400;">Metodologías Ágiles y UX:</span>
+                                                Trabajo con metodologías ágiles y principios de UX para una experiencia
+                                                centrada en el usuario.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ACCORDION Estudios -->
+
+                            <div class=" mb-5 accordion-button collapsed  accordion-label" data-bs-toggle="collapse"
+                                data-bs-target="#accordionEstudios" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="row d-flex justify-content-between">
+                                    <div>
+                                        <h2 class="mt-2">Estudios</h2>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span class="subtitulo-accordion me-2  ">#Emprendimiento</span>
+                                        <span class="subtitulo-accordion me-5">#Desarrollador</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="accordionEstudios" class=" accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div>
+
+                                        <ul class="texto-accordion">
+                                            <li>Cocina y Administracion Internacional - INACAP</li>
+                                            <li>Master de Emprendimiento e Innovacion - UCHILE </li>
+                                            <li>Desarrollo de Aplicaciones Web. Grado Superior - Politecnics Barcelona
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <img class="avatar" src="./assets/img/file.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section PORTAFOLIO -->
+        <section class=" " id="tab-react">
+            <div class="testimonials" style="padding:90px;">
+                <div class="">
+                    <div class="col-10">
+                        <h1 class="">Portafolio</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <h3 class=" ">Mis proyectos...</h3>
+                        </div>
+                        <div class="col-2">
+                            <div class="smiley-face-wrapper">
+                                <img class="smiley-face-icon" loading="lazy" alt="" src="./public/smiley-face.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="container-fluid ">
+               
+                <div id="content" class="row"></div>
+            </div>
+
+
+
+        </section>
+
+        <!-- Section TESTIMONIOS -->
+        <section class="et-slide fondo5 " id="tab-angular">
+            <div class="testimonials" style="padding:90px;">
+                <div class="">
+                    <div class="col-10">
+                        <h1 class="mb-3">Testimonios</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <h3 class="mb-5 ">Se dice de Mi...</h3>
+                        </div>
+                        <div class="col-2">
+                            <div class="smiley-face-wrapper">
+                                <img class="smiley-face-icon" loading="lazy" alt="" src="./public/smiley-face.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-slide-wrapper">
+                    <div class="testimonials-slide">
+                        <div class="testimonial">
+                            <div class="testimonial-text">
+                                “Trabajar con Marcelo ha sido una experiencia excepcional. Su
+                                atención al detalle y su habilidad para capturar la esencia de
+                                nuestra marca nos ha impresionado. ¡Recomiendo a Marcelo a
+                                cualquiera que busque un servicio de desarrollo web de primera
+                                clase!”
+                            </div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-author">Javiera Escobar,</div>
+                                <div class="testimonial-details">Owner - Espacio Tierra</div>
+                            </div>
+                        </div>
+                        <div class="testimonial1">
+                            <div class="testimonial-text1">
+                                "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando
+                                siemopre la experiencia del usuario. Talento y pasión. Si necesitas
+                                diseño web, él es tu profesional."
+                            </div>
+                            <div class="testimonial-info1">
+                                <div class="testimonial-author1">Antonio Domingo</div>
+                                <div class="testimonial-details1">
+                                    Tutor. Politecnics Barcelona
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial2">
+                            <div class="testimonial-text2">
+                                Marcelo es un verdadero profesional en el desarrollo web. Su
+                                creatividad y habilidad técnica han llevado nuestro sitio web
+                                a un nuevo nivel. La facilidad de navegación y el diseño
+                                innovador han recibido elogios constantes de nuestros
+                                clientes.”
+                            </div>
+                            <div class="testimonial-info2">
+                                <div class="testimonial-author2">Matias Riffo,</div>
+                                <div class="testimonial-details2">Chef - Eventos Riffo</div>
+                            </div>
+
+                        </div>
+                        <div class="testimonial1">
+                            <div class="testimonial-text1">
+                                "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y
+                                profesionalismo!""
+                            </div>
+                            <div class="testimonial-info1">
+                                <div class="testimonial-author1">Cristobal Quintana</div>
+                                <div class="testimonial-details1">
+                                    Diseñador. Quintana
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- Section FORMULARIO -->
+        <section class="et-slide fondo " id="tab-other">
+            <div class="contact-wrapper">
+                <div class="contact">
+                    <div class="contact-header">
+                        <!-- <img class="misc-icon" loading="lazy" alt="" src="./public/misc.svg" /> -->
+
+                        <h1 class="heading-23">
+                            <span class="tu-y-yo">¿Interesado en trabajar juntos?</span>
+                            <!-- <span class="tu-y-yo">comunicate </span> -->
+                        </h1>
+                        <!-- <div class="paragraph2">
+                         Comunicate y hablemos
+                    </div> -->
+
+                        <div class="paragraph2 mt-3">
+
+                            <ul class="list-inline ">
+                                <li class="list-inline-item me-2">
+                                    <img src="./assets/img/instagram.png" alt="Instagram" width="50" height="50">
+                                    <a class="text-white" href="https://www.instagram.com/marceloenbcn/"
+                                        target="_blank">
+                                        @marceloenbcn
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <img src="./assets/img/linkedin.png" alt="LinkedIn" width="45" height="45">
+                                    <a class="text-white" href="https://www.linkedin.com/in/mcarvajal/" target="_blank">
+                                        MarceloCarvajal
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h1 class="heading-23">
+                            <img class="misc-icon" loading="lazy" alt="" src="./public/misc.svg" />
+                            <span class="">¿hablemos?</span>
+                        </h1>
+
+                        <form id="contact-form" action="https://formspree.io/f/mnqerooe" method="POST">
+                            <div class="input">
+                                <input class="input-field" placeholder="Nombre" type="text" name="nombre" required />
+                                <img class="input-icon1" alt="" src="./public/input-icon.svg" />
+                            </div>
+                            <div class="input1">
+                                <input class="input-field1" placeholder="Email" type="email" name="email" required />
+                                <img class="input-icon2" alt="" src="./public/input-icon.svg" />
+                            </div>
+                            <div class="input2">
+                                <input class="input-field2" placeholder="Telefono" type="text" name="telefono" />
+                            </div>
+
+                            <textarea class="message-input" placeholder="Mensaje" rows="16" cols="28" name="mensaje"
+                                required> </textarea>
+
+                            <button class="button2" type="submit">
+                                <div class="text1">Enviar</div>
+                            </button>
+                        </form>
+                        <div class="success hidden">¡Tu mensaje ha sido enviado con éxito!</div>
+                        <div class="error hidden">Error al enviar.Inténtalo de nuevo.
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section FOOTER -->
+        <section>
+            <footer class="footer">
+                <div class="small-paragraph1 mt-3">Todos los derechos reservados 2024</div>
+
+                <div class="links-wrapper mt-3">
+                    <div class="link2">Marcelo Carvajal</div>
+
+                </div>
+
+            </footer>
+        </section>
+
+    </main>
+
+    <script>
+        function handleVideoSwitch() {
+            var videoDesktop = document.getElementById('video-desktop');
+            var videoMedium = document.getElementById('video-medium');
+            var videoMobile = document.getElementById('video-mobile');
+
+            if (window.innerWidth <= 600) {
+                videoDesktop.style.display = 'none';
+                videoMedium.style.display = 'none';
+                videoMobile.style.display = 'block';
+            } else if (window.innerWidth >= 601 && window.innerWidth <= 1024) {
+                videoDesktop.style.display = 'none';
+                videoMedium.style.display = 'block';
+                videoMobile.style.display = 'none';
+            } else {
+                videoDesktop.style.display = 'block';
+                videoMedium.style.display = 'none';
+                videoMobile.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('load', handleVideoSwitch);
+        window.addEventListener('resize', handleVideoSwitch);
+    </script>
+    <script id="template" type="text/x-handlebars-template">
+      {{#gallery}}
+    <div class="col-6 col-md-4 col-lg-3 item nopadding" data-bs-toggle="modal" data-bs-target="#modal-{{@index}}">
+          <div class="overflow">
+            <div class="content-art">
+              <h4>{{title}}</h4>
+            </div>
+            <img src="{{img}}" alt="{{alt}}" class="img-fluid"/>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal-{{@index}}" tabindex="-1" aria-labelledby="modalLabel-{{@index}}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                  <h1 class="modal-title fs-5" id="modalLabel-{{@index}}">{{modalTitle}}</h1>
+                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="mt-2"><strong>{{modalHeader}}</strong> {{modalDescription}}</p>
+                  <p>{{modalDetails}}</p>
+                  <p><strong>Desarrollado en:</strong> {{modalTech}}</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                  <p class="mt-3 text-white">
+                    <strong>Visitar Proyecto:</strong>
+                    <a href="{{modalLink}}" target="_blank">{{modalLinkText}}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/gallery}}
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // JavaScript
+        $(document).ready(function () {
+            var data = {
+                gallery: [
+                    {
+                        title: "Rompecabezas", img: "./assets/img/rompecabezas.png", alt: "lorem", texto: "", modalTitle: "Proyecto Rompecabezas",
+                        modalHeader: "Rompecabezas",
+                        modalDescription: "es una APP educativa para niños que permite armar puzzle de energías renovables. Con una variedad de rompecabezas temáticos, los niños pueden explorar y aprender sobre fuentes de energía limpia como solar, eólica.",
+                        modalDetails: "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, fomentando el uso de energías renovables a través de una actividad lúdica.",
+                        modalTech: "Html, Css, JavaScript (LocalStorage)",
+                        modalLink: "https://delmonicocl.github.io/LaiaBCN/",
+                        modalLinkText: "Laia, Salvad al Mundo"
+                    },
+
+                    {
+                        "title": "FoodHero",
+                        "img": "./assets/img/foodhero.png",
+                        "alt": "lorem",
+                        "texto": "",
+                        "modalTitle": "Proyecto FOOD HERO",
+                        "modalHeader": "Food Hero",
+                        "modalDescription": "es una aplicación innovadora que combina tecnología con solidaridad. Con el lema 'Salva comida, alimenta corazones', nuestra APP conecta repartidores y proveedores de alimentos voluntarios para distribuir comida a personas necesitadas. Mediante la geolocalización, se registran los procesos de creación y entrega de alimentos.",
+                        "modalDetails": "Características: Creación de Manual de identidad, Marca y propuesta. Integración de tecnologías Laravel y Vue.js para una experiencia de usuario fluida y eficiente. Uso de APIs como MapBox para proporcionar funciones de geolocalización precisas.",
+                        "modalTech": "Laravel, Vue, MapBox, Apis",
+                        "modalLink": "https://delmonicocl.github.io/FoodHero/",
+                        "modalLinkText": "Food Hero"
+                    },
+
+                    {
+                        "title": "KanPom",
+                        "img": "./assets/img/kanpom.png",
+                        "alt": "Kanpom es una APP que te permite organizar tu tiempo y tus tareas, de manera efectiva. Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
+                        "texto": "",
+                        "modalTitle": "Proyecto Kanpom",
+                        "modalHeader": "Kanpom",
+                        "modalDescription": "es una APP que te permite organizar tu tiempo y tus tareas, de manera efectiva. Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
+                        "modalDetails": "Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
+                        "modalTech": "HTML, CSS, JavaScript (LocalStorage)",
+                        "modalLink": "https://delmonicocl.github.io/KenPom/",
+                        "modalLinkText": "Organizador Tareas"
+                    },
+
+
+                    {
+                        "title": "Buscapalabras",
+                        "img": "./assets/img/buscapalabras.png",
+                        "alt": "lorem",
+                        "texto": "",
+                        "modalTitle": "Proyecto Buscapalabras",
+                        "modalHeader": "Buscapalabras",
+                        "modalDescription": "es un juego educativo interactivo diseñado para niños que desafía su capacidad de encontrar palabras ocultas mientras disfrutan de una experiencia divertida y educativa.",
+                        "modalDetails": "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, contabiliza la cantidad de errores y sus vidas.",
+                        "modalTech": "Html, Css, JavaScript (LocalStorage)",
+                        "modalLink": "https://delmonicocl.github.io/JuegoBuscaPalabra/",
+                        "modalLinkText": "Juego, Buscapalabras"
+                    },
+                    {
+                        "title": "Manual Identidad",
+                        "img": "./assets/img/manualidentidad.png",
+                        "alt": "Manual de Identidad: Creacion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
+                        "texto": "",
+                        "modalTitle": "Manual Identidad",
+                        "modalHeader": "",
+                        "modalDescription": "Presentancion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
+                        "modalDetails": "El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros.",
+                        "modalTech": "HTML, CSS",
+                        "modalLink": "./assets/img/ManualIdentidadFoodHero.pdf",
+                        "modalLinkText": "Descargar Manual"
+                    },
+
+
+                    {
+                        "title": "Autoevaluacion",
+                        "img": "./assets/img/autoevaluacion.png",
+                        "alt": "Autoevaluacion es una aplicación que facilita a profesores y alumnos completar una autoevaluación en relación a los módulos (cursos) en los que el alumno está registrado. Desarrollada en Laravel y Vue, esta aplicación permite a los usuarios interactuar de manera efectiva según su rol, proporcionando una experiencia personalizada y eficiente. Desarrollado en: Laravel, VUE, Html, Css y BD",
+                        "texto": "",
+                        "modalTitle": "Proyecto Autoevaluacion",
+                        "modalHeader": "Autoevaluacion",
+                        "modalDescription": "es una aplicación que facilita a profesores y alumnos completar una autoevaluación en relación a los módulos (cursos) en los que el alumno está registrado. Desarrollada en Laravel y Vue, esta aplicación permite a los usuarios interactuar de manera efectiva según su rol, proporcionando una experiencia personalizada y eficiente.",
+
+                        "modalTech": "Laravel, VUE, Html, Css y BD",
+                        "modalLink": "www.autoevaluacion.es",
+                        "modalLinkText": "Visitar Proyecto"
+                    },
+
+                    {
+                        "title": "Espacio Tierra",
+                        "img": "./assets/img/sanpedro.png",
+                        "alt": "Espacio Tierra: Es un proyecto de la emprendedora Javiera Escobar que ofrece un refugio turístico único en el Desierto de Atacama, Chile. El proyecto incluye el desarrollo de una LandingPage para presentar la propuesta turística de Espacio Tierra, así como la creación de una marca y un sitio web que reflejen la belleza y la serenidad del entorno.",
+                        "texto": "",
+                        "modalTitle": "Proyecto Espacio Tierra",
+                        "modalHeader": "",
+                        "modalDescription": "Espacio Tierra: Es un proyecto de la emprendedora Javiera Escobar que ofrece un refugio turístico único en el Desierto de Atacama, Chile.",
+                        "modalDetails": "El proyecto incluye el desarrollo de una LandingPage para presentar la propuesta turística de Espacio Tierra, así como la creación de una marca y un sitio web que reflejen la belleza y la serenidad del entorno.",
+                        "modalTech": "Wordpress, HTML, CSS, AirBnb",
+                        "modalLink": "https://espaciotierra.cl/",
+                        "modalLinkText": "Espacio Tierra"
+                    },
+
+                    {
+                        "title": "Riffo Eventos",
+                        "img": "./assets/img/eventosriffo.png",
+                        "alt": "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única. El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
+                        "texto": "",
+                        "modalTitle": "Proyecto Eventos Riffo",
+                        "modalHeader": "",
+                        "modalDescription": "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única.",
+                        "modalDetails": "El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
+                        "modalTech": "Wordpress, HTML, CSS, JavaScript (LocalStorage)",
+                        "modalLink": "https://eventosriffo.cl/",
+                        "modalLinkText": "Eventos Riffo"
+                    }
+
+
+                ]
+            };
+
+            var source = $('#template').html();
+            var template = Handlebars.compile(source);
+            $('#content').html(template(data));
+        });
+
+        $(window).on('load', function () {
+            var $items = $('.item');
+            $items.on({
+                mousemove: function (e) {
+                    var $that = $(this);
+                    $that.find('.overflow > img').velocity({
+                        translateZ: 0,
+                        translateX: Math.floor((e.pageX - $that.offset().left) - ($that.width() / 2)),
+                        translateY: Math.floor((e.pageY - $that.offset().top) - ($that.height() / 2)),
+                        scale: '2'
+                    }, {
+                        duration: 400,
+                        easing: 'linear',
+                        queue: false
+                    });
+                },
+                mouseleave: function () {
+                    $(this).find('.overflow > img').velocity({
+                        translateZ: 0,
+                        translateX: 0,
+                        translateY: 0,
+                        scale: '1'
+                    }, {
+                        duration: 1000,
+                        easing: 'easeOutSine',
+                        queue: false
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Selecciona todos los botones del accordion
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Cierra todos los accordions excepto el que se hizo clic
+                accordionButtons.forEach(btn => {
+                    if (btn !== this) {
+                        const target = btn.getAttribute('data-bs-target');
+                        const targetElement = document.querySelector(target);
+                        const isCollapsed = targetElement.classList.contains('show');
+
+                        if (isCollapsed) {
+                            targetElement.classList.remove('show');
+                        }
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+
+
+
+<script>
+
+    class StickyNavigation {
+
+        constructor() {
+            this.currentId = null;
+            this.currentTab = null;
+            this.tabContainerHeight = 70;
+            let self = this;
+            $('.et-hero-tab').click(function () {
+                self.onTabClick(event, $(this));
+            });
+            $(window).scroll(() => { this.onScroll(); });
+            $(window).resize(() => { this.onResize(); });
+        }
+
+        onTabClick(event, element) {
+            event.preventDefault();
+            let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+            $('html, body').animate({ scrollTop: scrollTop }, 600);
+        }
+
+        onScroll() {
+            this.checkTabContainerPosition();
+            this.findCurrentTabSelector();
+        }
+
+        onResize() {
+            if (this.currentId) {
+                this.setSliderCss();
+            }
+        }
+
+        checkTabContainerPosition() {
+            let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+            if ($(window).scrollTop() > offset) {
+                $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
+            }
+            else {
+                $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
+            }
+        }
+
+        findCurrentTabSelector(element) {
+            let newCurrentId;
+            let newCurrentTab;
+            let self = this;
+            $('.et-hero-tab').each(function () {
+                let id = $(this).attr('href');
+                let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+                    newCurrentId = id; newCurrentTab = $(this);
+                }
+            }); if (this.currentId != newCurrentId || this.currentId === null) {
+                this.currentId = newCurrentId;
+                this.currentTab = newCurrentTab; this.setSliderCss();
+            }
+        } setSliderCss() {
+            let width = 0; let left = 0; if
+                (this.currentTab) { width = this.currentTab.css('width'); left = this.currentTab.offset().left; }
+            $('.et-hero-tab-slider').css('width', width); $('.et-hero-tab-slider').css('left', left);
+        }
+    } new
+        StickyNavigation();
+
+</script>
+
+<!-- Script FORMULARIO -->
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var form = event.target;
+        var data = new FormData(form);
+        var request = new XMLHttpRequest();
+        var successMessage = document.querySelector('.success');
+        var errorMessage = document.querySelector('.error');
+
+        request.open(form.method, form.action);
+        request.setRequestHeader("Accept", "application/json");
+
+        request.onreadystatechange = function () {
+            if (request.readyState !== XMLHttpRequest.DONE) return;
+            if (request.status === 200) {
+                form.reset();
+                successMessage.classList.remove('hidden');
+                errorMessage.classList.add('hidden');
+            } else {
+                successMessage.classList.add('hidden');
+                errorMessage.classList.remove('hidden');
+            }
+        };
+
+        request.send(data);
+    });
+</script>
+
+
+
+<!-- Bootstrap JS and Popper.js (Bootstrap 5) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
