@@ -63,7 +63,7 @@
         background-color: transparent;
         /* Establece el fondo transparente */
     }
-    
+
 .subtitulo-accordion {
     color: #f2533d;
     font-weight: 300;
@@ -75,7 +75,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        /* height: 100vh; */
         position: relative;
         background: #eee;
         text-align: center;
@@ -335,7 +335,7 @@
     }
 
     body {
-       
+
         font-family: 'Century Gothic', sans-serif;
     }
 
@@ -417,11 +417,27 @@
         .message-input,
         .button2 {
 
-            width: 385px;
+            width: 348px;
         }
         .list-inline {
-  display: none;
-}
+            display: none;
+        }
+        .input,
+        .input1,
+        .input2
+        {
+            max-width: 90%;
+        }
+        .message-input {
+    height: 220px;
+        }
+        .accordion{
+            display: flex;
+            align-items: center;
+        }
+        .contact-wrapper {
+                margin-top: -250px;
+        }
 
 
 
@@ -451,9 +467,9 @@
     }
 
 
-    /* 
+    /*
 
-    
+
 
     /* SOBRE MI */
 </style>
@@ -496,9 +512,9 @@
     </section>
 
     <!-- Main -->
-    <main class="et-main">
+    <main class="et-main  mb-4">
         <!-- Section SOBRE MI -->
-        <section class="et-slide fondo3" id="tab-flexbox">
+        <section class="et-slide mt-2 fondo3 mb-4" id="tab-flexbox">
             <div class=" ">
                 <img class="estrella" loading="lazy" alt="" src="./public/drawn-misc.svg" />
             </div>
@@ -533,7 +549,7 @@
                                     <div class="d-flex">
                                         <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
                                         <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
-                                        <span class="subtitulo-accordion me-2 ">#Reconversion</span>
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -682,11 +698,11 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
 
             <div class="container-fluid ">
-               
+
                 <div id="content" class="row"></div>
             </div>
 
@@ -845,7 +861,7 @@
         </section>
 
         <!-- Section FOOTER -->
-        <section>
+        <!-- <section>
             <footer class="footer">
                 <div class="small-paragraph1 mt-3">Todos los derechos reservados 2024</div>
 
@@ -855,7 +871,7 @@
                 </div>
 
             </footer>
-        </section>
+        </section> -->
 
     </main>
 
