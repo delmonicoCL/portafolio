@@ -64,10 +64,10 @@
         /* Establece el fondo transparente */
     }
 
-.subtitulo-accordion {
-    color: #f2533d;
-    font-weight: 300;
-}
+    .subtitulo-accordion {
+        color: #f2533d;
+        font-weight: 300;
+    }
 
     .et-hero-tabs,
     .et-slide {
@@ -268,7 +268,7 @@
 
     /* CSS */
 
-    .estrella{
+    .estrella {
         width: 100px;
     }
 
@@ -367,7 +367,66 @@
         /* Establece el fondo transparente */
     }
 
+
+    /* testimonios
+
+    /* Ajusta la separación de las flechas de navegación */
+    .custom-control {
+        width: 5%;
+    }
+
+    /* Cambia el tamaño de la fuente del texto del testimonio */
+    .testimonial-text {
+        font-size: 1.6rem;
+    }
+
+    /* Cambia el tamaño de la fuente del autor del testimonio */
+    .testimonial-author {
+        font-size: 1.2rem;
+        color: #f2533d;
+    }
+
+    /* Espaciado adicional para flechas y contenedor */
+    .carousel-control-prev,
+    .carousel-control-next {
+        margin-top: 0px;
+    }
+
+    /* Ajuste de margen para las flechas */
+    .carousel-control-prev {
+        left: -5px;
+    }
+
+    .carousel-control-next {
+        right: -5px;
+    }
+
+    /* Ajusta la duración de la transición entre los elementos del carrusel */
+    .carousel-item {
+        transition: transform 4s ease;
+        /* Cambia 2s por la duración deseada */
+    }
+
+    .border {
+        border-radius: 50px;
+    }
+
+
+
+
+
     @media (max-width: 600px) {
+
+        /* Cambia el tamaño de la fuente del texto del testimonio */
+.testimonial-text {
+  font-size: 1.2rem;
+}
+
+/* Cambia el tamaño de la fuente del autor del testimonio */
+.testimonial-author {
+  font-size: 1.2rem;
+  color:#f2533d;
+}
         #video-desktop {
             display: none;
         }
@@ -419,35 +478,29 @@
 
             width: 348px;
         }
+
         .list-inline {
             display: none;
         }
+
         .input,
         .input1,
-        .input2
-        {
+        .input2 {
             max-width: 90%;
         }
+
         .message-input {
-    height: 220px;
+            height: 220px;
         }
-        .accordion{
+
+        .accordion {
             display: flex;
             align-items: center;
         }
+
         .contact-wrapper {
-                margin-top: -250px;
+            margin-top: -250px;
         }
-/* Cambia el tamaño de la fuente del texto del testimonio */
-.testimonial-text {
-  font-size: 1rem;
-}
-
-/* Cambia el tamaño de la fuente del autor del testimonio */
-.testimonial-author {
-  font-size: 0.8rem;
-}
-
 
     }
 
@@ -475,44 +528,32 @@
     }
 
 
-    /* testimonios
+   
 
-    /* Ajusta la separación de las flechas de navegación */
-.custom-control {
-  width: 5%;
-}
+    /* Espaciado adicional para flechas y contenedor */
+    .carousel-control-prev,
+    .carousel-control-next {
+        margin-top: 0px;
+    }
 
-/* Cambia el tamaño de la fuente del texto del testimonio */
-.testimonial-text {
-  font-size: 1.8rem;
-}
+    /* Ajuste de margen para las flechas */
+    .carousel-control-prev {
+        left: -5px;
+    }
 
-/* Cambia el tamaño de la fuente del autor del testimonio */
-.testimonial-author {
-  font-size: 1.2rem;
-  color:#f2533d;
-}
+    .carousel-control-next {
+        right: -5px;
+    }
 
-/* Espaciado adicional para flechas y contenedor */
-.carousel-control-prev, .carousel-control-next {
-  margin-top: 0px;
-}
+    /* Ajusta la duración de la transición entre los elementos del carrusel */
+    .carousel-item {
+        transition: transform 4s ease;
+        /* Cambia 2s por la duración deseada */
+    }
 
-/* Ajuste de margen para las flechas */
-.carousel-control-prev {
-  left: -5px;
-}
-
-.carousel-control-next {
-  right: -5px;
-}
-/* Ajusta la duración de la transición entre los elementos del carrusel */
-.carousel-item {
-    transition: transform 4s ease; /* Cambia 2s por la duración deseada */
-}
-.border{
-    border-radius: 50px;
-}
+    .border {
+        border-radius: 50px;
+    }
 
 
 
@@ -595,7 +636,7 @@
                                     <div class="d-flex">
                                         <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
                                         <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
-                                    
+
                                     </div>
                                 </div>
                             </div>
@@ -702,8 +743,8 @@
                                 </div>
                             </div>
 
-                            <div id="accordionEstudios" class=" accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
+                            <div id="accordionEstudios" class=" accordion-collapse collapse"
+                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <div>
 
@@ -774,15 +815,16 @@
                         </div>
                     </div>
                 </div>
-                    <div class="row text-center mb-5 ">
-                        <div class="col-md-6">
-                        
-                            <img class="avatar" src="./assets/img/file.png" alt="">
-                        
-                        </div>
+                <div class="row text-center mb-5 ">
+                    <div class="col-md-6">
+
+                        <img class="avatar" src="./assets/img/file.png" alt="">
+
+                    </div>
                     <div class="col-md-6 border fondo1 d-flex justify-content-center align-items-center mb-5">
                         <!-- Carousel wrapper -->
-                        <div id="carouselBasicExample" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="8000">
+                        <div id="carouselBasicExample" class="carousel slide carousel-dark" data-bs-ride="carousel"
+                            data-bs-interval="8000">
                             <!-- Inner -->
                             <div class="carousel-inner">
                                 <!-- Single item -->
@@ -794,54 +836,61 @@
                                         cualquiera que busque un servicio de desarrollo web de primera
                                         clase!”
                                     </p>
-                                    
-                                    <p class="text-muted mb-0 testimonial-author mt-5 mb-5 text-center text-white">- Javiera Escobar, Owner. Espacio Tierra
+
+                                    <p class="text-muted mb-0 testimonial-author mt-5 mb-5 text-center text-white">-
+                                        Javiera Escobar, Owner. Espacio Tierra
                                     </p>
                                 </div>
-                    
+
                                 <!-- Single item -->
                                 <div class="carousel-item">
                                     <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4  text-center">
-                                        "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando siempre la
-                                        experiencia del usuario. Talento y pasión. Si necesitas diseño web, él es tu profesional."
+                                        "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando siempre la experiencia del usuario.
+                                        Talento y pasión. Si necesitas diseño web, él es tu profesional. Recomiendo ampliamente sus servicios por su dedicación
+                                        y capacidad para innovar constantemente."
                                     </p>
-                                    
-                                    <p class="text-muted mb-0 testimonial-author text-center mt-5 mb-5 ">- Antonio Domingo, Tutor. Politecnics
-                                        Barcelona</p>
+
+                                    <p class="text-muted mb-0 testimonial-author text-center mt-5 mb-5 ">- Antonio
+                                        Domingo, Tutor</p>
                                 </div>
-                    
+
                                 <!-- Single item -->
                                 <div class="carousel-item">
                                     <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4 text-center">
-                                        Marcelo es un verdadero profesional en el desarrollo web. Su creatividad y habilidad técnica han
-                                        llevado nuestro sitio web a un nuevo nivel. La facilidad de navegación y el diseño innovador han
-                                        recibido elogios constantes de nuestros clientes.
+                                        Marcelo es un verdadero profesional en el desarrollo web. Su creatividad y
+                                        habilidad técnica han
+                                        llevado nuestro sitio web a un nuevo nivel. La facilidad de navegación y el
+                                        diseño innovador han
+                                        recibido elogios constantes de nuestros clientes, gracias totales.
                                     </p>
-                                   
-                                    <p class="text-muted mb-0 testimonial-author text-center mt-5 mb-5 ">- Matias Riffo, Chef - Eventos Riffo</p>
+
+                                    <p class="text-muted mb-0 testimonial-author text-center mt-5 mb-5 ">- Matias Riffo,
+                                        Chef </p>
                                 </div>
-                    
+
                                 <!-- Single item -->
                                 <div class="carousel-item">
                                     <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4 text-center">
-                                        "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y profesionalismo!.
-                                        Pudimos desarrollar una Marca potente despues de definir nuestro manual de identidad"
+                                    "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y profesionalismo! Pudimos desarrollar
+                                    una Marca potente después de definir nuestro manual de identidad. Marcelo demostró ser un experto en cada etapa del
+                                    proceso, asegurando resultados excepcionales."
                                     </p>
-                                    
-                                    <p class="text-muted mb-0 testimonial-author mt-5 mb-5  text-center">- Cristobal Quintana, Diseñador.
-                                        Quintana</p>
+
+                                    <p class="text-muted mb-0 testimonial-author mt-5 mb-5  text-center">- Cristobal
+                                        Quintana, Diseñador.
+                                       </p>
                                 </div>
                             </div>
                             <!-- Inner -->
-                    
+
                             <!-- Controls -->
-                            <button class="carousel-control-prev custom-control" type="button" data-bs-target="#carouselBasicExample"
-                                data-bs-slide="prev">
+                            <button class="carousel-control-prev custom-control" type="button"
+                                data-bs-target="#carouselBasicExample" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next custom-control" type="button" data-bs-target="#carouselBasicExample"
-                                data-bs-slide="next">
+                            <button class="carousel-control-next custom-control" type="button"
+                                data-bs-target="#carouselBasicExample" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
@@ -849,8 +898,8 @@
                         <!-- Carousel wrapper -->
                     </div>
 
-                        
-                    </div>
+
+                </div>
 
             </div>
 
