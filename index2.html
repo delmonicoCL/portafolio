@@ -14,552 +14,16 @@
 
     <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 
     <link rel="stylesheet" href="./assets/css/global.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
 
     <title>Portafolio - Marcelo Carvajal</title>
 </head>
-<style>
-    body {
-        font-family: "Century Gothic", 'Lato', sans-serif;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .border-me {
-        border-radius: 35px;
-
-    }
-
-    .modal-header {
-        background-color: #f9f6e3;
-    }
-
-
-    .modal-footer {
-        background-color: #72bc9e;
-    }
-
-    .btn-cerrar {
-        /* background-image: url('/assets/img/cancelar.png'); */
-        background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/cancelar.png');
-        background-size: cover;
-        /* Ajusta el tamaño de la imagen */
-        background-repeat: no-repeat;
-        /* Evita la repetición de la imagen */
-        text-indent: -9999px;
-        /* Oculta el texto del botón */
-        width: 60px;
-        /* Ajusta el ancho de tu imagen */
-        height: 60px;
-        /* Ajusta la altura de tu imagen */
-        border: none;
-        /* Elimina el borde del botón */
-        background-color: transparent;
-        /* Establece el fondo transparente */
-    }
-
-    .subtitulo-accordion {
-        color: #f2533d;
-        font-weight: 300;
-    }
-
-    .et-hero-tabs,
-    .et-slide {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* height: 100vh; */
-        position: relative;
-        background: #eee;
-        text-align: center;
-        /* padding: 0 2em; */
-    }
-
-    .barraTitulos {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 25vh;
-        position: relative;
-        background: #f61b26;
-        text-align: center;
-    }
-
-    .et-hero-tabs h1 {
-        font-size: 2rem;
-        margin: 0;
-        letter-spacing: 1rem;
-    }
-
-    .et-hero-tabs h3 {
-        font-size: 1rem;
-        letter-spacing: 0.3rem;
-        opacity: 0.6;
-    }
-
-    .testimonial:hover,
-    .testimonial1:hover,
-    .testimonial2:hover {
-        background-color: #72bc9e;
-        /* Cambia este color al que prefieras */
-        font-size: 1.1em;
-        /* Cambia este valor al que prefieras */
-    }
-
-
-    .fondo {
-        background: #222021;
-
-    }
-
-    .fondo1 {
-
-        background: #F2F0E0;
-    }
-
-    .fondo2 {
-
-        background: #fa8778;
-    }
-
-    .fondo3 {
-
-        background: #F2F0E0;
-    }
-
-
-    .fondo4 {
-
-        background: #264a48;
-        ;
-    }
-
-    .fondo5 {
-
-        background: #FFFFFF;
-        ;
-    }
-
-    .fondo6 {
-
-        background: #B6D9C9;
-        ;
-    }
-
-    .et-hero-tabs-container {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 70px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        background: #F2F0E0;
-        z-index: 10;
-    }
-
-    .et-hero-tabs-container--top {
-        position: fixed;
-        top: 0;
-    }
-
-    .et-hero-tab {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        color: #000;
-        letter-spacing: 0.1rem;
-        transition: all 0.5s ease;
-        font-size: 1.4rem;
-    }
-
-    .et-hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        color: #000;
-        letter-spacing: 0.1rem;
-        transition: all 0.5s ease;
-        font-size: 1.4rem;
-
-    }
-
-    .et-hero-tab:hover {
-        color: white;
-        background: #B6D9C9;
-        transition: all 0.5s ease;
-    }
-
-    .et-hero-tab-slider {
-        position: absolute;
-        bottom: 0;
-        width: 0;
-        height: 4px;
-        background: #72bc9e;
-        transition: left 0.3s ease;
-    }
-
-
-
-
-    @media (min-width: 800px) {
-        .et-hero-tabs {
-            font-size: 1rem;
-        }
-
-        .et-hero-tabs h3 {
-            font-size: 1rem;
-        }
-
-        .et-hero-tab {
-            font-size: 1.4rem;
-        }
-    }
-
-
-
-    .success,
-    .error {
-        margin-top: 2px;
-        margin-left: 25px;
-        font-size: 30px;
-
-    }
-
-    .hidden {
-        display: none;
-
-    }
-
-    .video-container {
-        display: none;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Ensure video covers the area */
-    }
-
-    #video-desktop {
-        display: block;
-        /* Show the desktop video by default */
-    }
-
-
-    /* CSS */
-
-    .estrella {
-        width: 100px;
-    }
-
-    .tituloCard {
-        background-color: aquamarine;
-    }
-
-    .item {
-        cursor: pointer;
-        backface-visibility: hidden;
-    }
-
-    .item:hover>.overflow>.content-art {
-        transform: translateY(0) translateZ(0);
-    }
-
-    .overflow {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .content-art {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-        color: #fff;
-        font-weight: 700 !important;
-        text-align: center;
-        /* text-shadow: 0 1px 1px #000; */
-        padding: 10px 15px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: auto;
-        z-index: 100;
-        backface-visibility: hidden;
-        transform: translateY(100%) translateZ(0);
-        transition: transform 450ms ease-out;
-    }
-
-    .nopadding {
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    *,
-    *:after,
-    *:before {
-        box-sizing: border-box;
-    }
-
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-
-    }
-
-    html {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizelegibility;
-    }
-
-    body {
-
-        font-family: 'Century Gothic', sans-serif;
-    }
-
-    .modal-header {
-        background-color: #f9f6e3;
-    }
-
-
-    .modal-footer {
-        background-color: #72bc9e;
-    }
-
-    .btn-cerrar {
-        /* background-image: url('/assets/img/cancelar.png'); */
-        background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/cancelar.png');
-        background-size: cover;
-        /* Ajusta el tamaño de la imagen */
-        background-repeat: no-repeat;
-        /* Evita la repetición de la imagen */
-        text-indent: -9999px;
-        /* Oculta el texto del botón */
-        width: 60px;
-        /* Ajusta el ancho de tu imagen */
-        height: 60px;
-        /* Ajusta la altura de tu imagen */
-        border: none;
-        /* Elimina el borde del botón */
-        background-color: transparent;
-        /* Establece el fondo transparente */
-    }
-
-
-    /* testimonios
-
-    /* Ajusta la separación de las flechas de navegación */
-    .custom-control {
-        width: 5%;
-    }
-
-    /* Cambia el tamaño de la fuente del texto del testimonio */
-    .testimonial-text {
-        font-size: 1.6rem;
-    }
-
-    /* Cambia el tamaño de la fuente del autor del testimonio */
-    .testimonial-author {
-        font-size: 1.2rem;
-        color: #f2533d;
-    }
-
-    /* Espaciado adicional para flechas y contenedor */
-    .carousel-control-prev,
-    .carousel-control-next {
-        margin-top: 0px;
-    }
-
-    /* Ajuste de margen para las flechas */
-    .carousel-control-prev {
-        left: -5px;
-    }
-
-    .carousel-control-next {
-        right: -5px;
-    }
-
-    /* Ajusta la duración de la transición entre los elementos del carrusel */
-    .carousel-item {
-        transition: transform 4s ease;
-        /* Cambia 2s por la duración deseada */
-    }
-
-    .border {
-        border-radius: 50px;
-    }
-
-
-
-
-
-    @media (max-width: 600px) {
-
-        /* Cambia el tamaño de la fuente del texto del testimonio */
-.testimonial-text {
-  font-size: 1.2rem;
-}
-
-/* Cambia el tamaño de la fuente del autor del testimonio */
-.testimonial-author {
-  font-size: 1.2rem;
-  color:#f2533d;
-}
-        #video-desktop {
-            display: none;
-        }
-
-        #video-medium {
-            display: none;
-        }
-
-        #video-mobile {
-            display: block;
-        }
-
-        .et-hero-tabs-container {
-            display: none;
-        }
-
-        .avatar {
-            display: none;
-        }
-
-        .accordion-label {
-            border-radius: 2rem !important;
-            height: 110px;
-            width: 350px;
-
-        }
-
-        .col-8 {
-
-            width: 95%;
-        }
-
-        .accordion-button::after {
-            display: none;
-        }
-
-        .contact {
-            margin-top: 320px;
-        }
-
-        #contact-form {
-
-            width: 385px;
-
-        }
-
-        .message-input,
-        .button2 {
-
-            width: 348px;
-        }
-
-        .list-inline {
-            display: none;
-        }
-
-        .input,
-        .input1,
-        .input2 {
-            max-width: 90%;
-        }
-
-        .message-input {
-            height: 220px;
-        }
-
-        .accordion {
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-wrapper {
-            margin-top: -250px;
-        }
-
-    }
-
-    @media (min-width: 601px) and (max-width: 1024px) {
-        #video-desktop {
-            display: none;
-        }
-
-        #video-medium {
-            display: block;
-        }
-
-        #video-mobile {
-            display: none;
-        }
-    }
-
-    .et-hero-tabs {
-        position: relative;
-        height: 100vh;
-        /* Full viewport height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-   
-
-    /* Espaciado adicional para flechas y contenedor */
-    .carousel-control-prev,
-    .carousel-control-next {
-        margin-top: 0px;
-    }
-
-    /* Ajuste de margen para las flechas */
-    .carousel-control-prev {
-        left: -5px;
-    }
-
-    .carousel-control-next {
-        right: -5px;
-    }
-
-    /* Ajusta la duración de la transición entre los elementos del carrusel */
-    .carousel-item {
-        transition: transform 4s ease;
-        /* Cambia 2s por la duración deseada */
-    }
-
-    .border {
-        border-radius: 50px;
-    }
-
-
-
-
-    /* SOBRE MI */
-</style>
 
 <body>
 
@@ -800,8 +264,8 @@
         <!-- Section TESTIMONIOS -->
         <section class="et-slide fondo5 " id="tab-angular">
             <div class="testimonials" style="padding:45px;">
-                <div class="">
-                    <div class="col-10">
+                <div class="ms-5">
+                    <div class="col-10 mt-5">
                         <h1 class="mb-3">Testimonios</h1>
                     </div>
                     <div class="row">
@@ -845,8 +309,10 @@
                                 <!-- Single item -->
                                 <div class="carousel-item">
                                     <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4  text-center">
-                                        "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando siempre la experiencia del usuario.
-                                        Talento y pasión. Si necesitas diseño web, él es tu profesional. Recomiendo ampliamente sus servicios por su dedicación
+                                        "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad,
+                                        mejorando siempre la experiencia del usuario.
+                                        Talento y pasión. Si necesitas diseño web, él es tu profesional. Recomiendo
+                                        ampliamente sus servicios por su dedicación
                                         y capacidad para innovar constantemente."
                                     </p>
 
@@ -871,14 +337,16 @@
                                 <!-- Single item -->
                                 <div class="carousel-item">
                                     <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4 text-center">
-                                    "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y profesionalismo! Pudimos desarrollar
-                                    una Marca potente después de definir nuestro manual de identidad. Marcelo demostró ser un experto en cada etapa del
-                                    proceso, asegurando resultados excepcionales."
+                                        "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento
+                                        y profesionalismo! Pudimos desarrollar
+                                        una Marca potente después de definir nuestro manual de identidad. Marcelo
+                                        demostró ser un experto en cada etapa del
+                                        proceso, asegurando resultados excepcionales."
                                     </p>
 
                                     <p class="text-muted mb-0 testimonial-author mt-5 mb-5  text-center">- Cristobal
                                         Quintana, Diseñador.
-                                       </p>
+                                    </p>
                                 </div>
                             </div>
                             <!-- Inner -->
@@ -992,30 +460,6 @@
 
     </main>
 
-    <script>
-        function handleVideoSwitch() {
-            var videoDesktop = document.getElementById('video-desktop');
-            var videoMedium = document.getElementById('video-medium');
-            var videoMobile = document.getElementById('video-mobile');
-
-            if (window.innerWidth <= 600) {
-                videoDesktop.style.display = 'none';
-                videoMedium.style.display = 'none';
-                videoMobile.style.display = 'block';
-            } else if (window.innerWidth >= 601 && window.innerWidth <= 1024) {
-                videoDesktop.style.display = 'none';
-                videoMedium.style.display = 'block';
-                videoMobile.style.display = 'none';
-            } else {
-                videoDesktop.style.display = 'block';
-                videoMedium.style.display = 'none';
-                videoMobile.style.display = 'none';
-            }
-        }
-
-        window.addEventListener('load', handleVideoSwitch);
-        window.addEventListener('resize', handleVideoSwitch);
-    </script>
     <script id="template" type="text/x-handlebars-template">
       {{#gallery}}
     <div class="col-6 col-md-4 col-lg-3 item nopadding" data-bs-toggle="modal" data-bs-target="#modal-{{@index}}">
@@ -1051,167 +495,8 @@
       {{/gallery}}
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-    <script>
-        // JavaScript
-        $(document).ready(function () {
-            var data = {
-                gallery: [
-                    {
-                        title: "Rompecabezas", img: "./assets/img/rompecabezas.png", alt: "lorem", texto: "", modalTitle: "Proyecto Rompecabezas",
-                        modalHeader: "Rompecabezas",
-                        modalDescription: "es una APP educativa para niños que permite armar puzzle de energías renovables. Con una variedad de rompecabezas temáticos, los niños pueden explorar y aprender sobre fuentes de energía limpia como solar, eólica.",
-                        modalDetails: "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, fomentando el uso de energías renovables a través de una actividad lúdica.",
-                        modalTech: "Html, Css, JavaScript (LocalStorage)",
-                        modalLink: "https://delmonicocl.github.io/LaiaBCN/",
-                        modalLinkText: "Laia, Salvad al Mundo"
-                    },
-
-                    {
-                        "title": "FoodHero",
-                        "img": "./assets/img/foodhero.png",
-                        "alt": "lorem",
-                        "texto": "",
-                        "modalTitle": "Proyecto FOOD HERO",
-                        "modalHeader": "Food Hero",
-                        "modalDescription": "es una aplicación innovadora que combina tecnología con solidaridad. Con el lema 'Salva comida, alimenta corazones', nuestra APP conecta repartidores y proveedores de alimentos voluntarios para distribuir comida a personas necesitadas. Mediante la geolocalización, se registran los procesos de creación y entrega de alimentos.",
-                        "modalDetails": "Características: Creación de Manual de identidad, Marca y propuesta. Integración de tecnologías Laravel y Vue.js para una experiencia de usuario fluida y eficiente. Uso de APIs como MapBox para proporcionar funciones de geolocalización precisas.",
-                        "modalTech": "Laravel, Vue, MapBox, Apis",
-                        "modalLink": "https://delmonicocl.github.io/FoodHero/",
-                        "modalLinkText": "Food Hero"
-                    },
-
-                    {
-                        "title": "KanPom",
-                        "img": "./assets/img/kanpom.png",
-                        "alt": "Kanpom es una APP que te permite organizar tu tiempo y tus tareas, de manera efectiva. Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
-                        "texto": "",
-                        "modalTitle": "Proyecto Kanpom",
-                        "modalHeader": "Kanpom",
-                        "modalDescription": "es una APP que te permite organizar tu tiempo y tus tareas, de manera efectiva. Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
-                        "modalDetails": "Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde puedes crear y gestionar tus tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro para ayudarte a mantener un enfoque productivo, alternando entre períodos de trabajo y descanso.",
-                        "modalTech": "HTML, CSS, JavaScript (LocalStorage)",
-                        "modalLink": "https://delmonicocl.github.io/KenPom/",
-                        "modalLinkText": "Organizador Tareas"
-                    },
 
 
-                    {
-                        "title": "Buscapalabras",
-                        "img": "./assets/img/buscapalabras.png",
-                        "alt": "lorem",
-                        "texto": "",
-                        "modalTitle": "Proyecto Buscapalabras",
-                        "modalHeader": "Buscapalabras",
-                        "modalDescription": "es un juego educativo interactivo diseñado para niños que desafía su capacidad de encontrar palabras ocultas mientras disfrutan de una experiencia divertida y educativa.",
-                        "modalDetails": "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, contabiliza la cantidad de errores y sus vidas.",
-                        "modalTech": "Html, Css, JavaScript (LocalStorage)",
-                        "modalLink": "https://delmonicocl.github.io/JuegoBuscaPalabra/",
-                        "modalLinkText": "Juego, Buscapalabras"
-                    },
-                    {
-                        "title": "Manual Identidad",
-                        "img": "./assets/img/manualidentidad.png",
-                        "alt": "Manual de Identidad: Creacion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
-                        "texto": "",
-                        "modalTitle": "Manual Identidad",
-                        "modalHeader": "",
-                        "modalDescription": "Presentancion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
-                        "modalDetails": "El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros.",
-                        "modalTech": "HTML, CSS",
-                        "modalLink": "./assets/img/ManualIdentidadFoodHero.pdf",
-                        "modalLinkText": "Descargar Manual"
-                    },
-
-
-                    {
-                        "title": "Autoevaluacion",
-                        "img": "./assets/img/autoevaluacion.png",
-                        "alt": "Autoevaluacion es una aplicación que facilita a profesores y alumnos completar una autoevaluación en relación a los módulos (cursos) en los que el alumno está registrado. Desarrollada en Laravel y Vue, esta aplicación permite a los usuarios interactuar de manera efectiva según su rol, proporcionando una experiencia personalizada y eficiente. Desarrollado en: Laravel, VUE, Html, Css y BD",
-                        "texto": "",
-                        "modalTitle": "Proyecto Autoevaluacion",
-                        "modalHeader": "Autoevaluacion",
-                        "modalDescription": "es una aplicación que facilita a profesores y alumnos completar una autoevaluación en relación a los módulos (cursos) en los que el alumno está registrado. Desarrollada en Laravel y Vue, esta aplicación permite a los usuarios interactuar de manera efectiva según su rol, proporcionando una experiencia personalizada y eficiente.",
-
-                        "modalTech": "Laravel, VUE, Html, Css y BD",
-                        "modalLink": "www.autoevaluacion.es",
-                        "modalLinkText": "Visitar Proyecto"
-                    },
-
-                    {
-                        "title": "Espacio Tierra",
-                        "img": "./assets/img/sanpedro.png",
-                        "alt": "Espacio Tierra: Es un proyecto de la emprendedora Javiera Escobar que ofrece un refugio turístico único en el Desierto de Atacama, Chile. El proyecto incluye el desarrollo de una LandingPage para presentar la propuesta turística de Espacio Tierra, así como la creación de una marca y un sitio web que reflejen la belleza y la serenidad del entorno.",
-                        "texto": "",
-                        "modalTitle": "Proyecto Espacio Tierra",
-                        "modalHeader": "",
-                        "modalDescription": "Espacio Tierra: Es un proyecto de la emprendedora Javiera Escobar que ofrece un refugio turístico único en el Desierto de Atacama, Chile.",
-                        "modalDetails": "El proyecto incluye el desarrollo de una LandingPage para presentar la propuesta turística de Espacio Tierra, así como la creación de una marca y un sitio web que reflejen la belleza y la serenidad del entorno.",
-                        "modalTech": "Wordpress, HTML, CSS, AirBnb",
-                        "modalLink": "https://espaciotierra.cl/",
-                        "modalLinkText": "Espacio Tierra"
-                    },
-
-                    {
-                        "title": "Riffo Eventos",
-                        "img": "./assets/img/eventosriffo.png",
-                        "alt": "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única. El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
-                        "texto": "",
-                        "modalTitle": "Proyecto Eventos Riffo",
-                        "modalHeader": "",
-                        "modalDescription": "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única.",
-                        "modalDetails": "El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
-                        "modalTech": "Wordpress, HTML, CSS, JavaScript (LocalStorage)",
-                        "modalLink": "https://eventosriffo.cl/",
-                        "modalLinkText": "Eventos Riffo"
-                    }
-
-
-                ]
-            };
-
-            var source = $('#template').html();
-            var template = Handlebars.compile(source);
-            $('#content').html(template(data));
-        });
-
-        $(window).on('load', function () {
-            var $items = $('.item');
-            $items.on({
-                mousemove: function (e) {
-                    var $that = $(this);
-                    $that.find('.overflow > img').velocity({
-                        translateZ: 0,
-                        translateX: Math.floor((e.pageX - $that.offset().left) - ($that.width() / 2)),
-                        translateY: Math.floor((e.pageY - $that.offset().top) - ($that.height() / 2)),
-                        scale: '2'
-                    }, {
-                        duration: 400,
-                        easing: 'linear',
-                        queue: false
-                    });
-                },
-                mouseleave: function () {
-                    $(this).find('.overflow > img').velocity({
-                        translateZ: 0,
-                        translateX: 0,
-                        translateY: 0,
-                        scale: '1'
-                    }, {
-                        duration: 1000,
-                        easing: 'easeOutSine',
-                        queue: false
-                    });
-                }
-            });
-        });
-    </script>
 
 </body>
 
@@ -1353,4 +638,10 @@
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>

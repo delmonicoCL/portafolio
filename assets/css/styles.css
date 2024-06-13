@@ -1,0 +1,536 @@
+body {
+    font-family: "Century Gothic", 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.border-me {
+    border-radius: 35px;
+
+}
+
+.modal-header {
+    background-color: #f9f6e3;
+}
+
+
+.modal-footer {
+    background-color: #72bc9e;
+}
+
+.btn-cerrar {
+    /* background-image: url('/assets/img/cancelar.png'); */
+    background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/cancelar.png');
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    text-indent: -9999px;
+    /* Oculta el texto del botón */
+    width: 60px;
+    /* Ajusta el ancho de tu imagen */
+    height: 60px;
+    /* Ajusta la altura de tu imagen */
+    border: none;
+    /* Elimina el borde del botón */
+    background-color: transparent;
+    /* Establece el fondo transparente */
+}
+
+.subtitulo-accordion {
+    color: #f2533d;
+    font-weight: 300;
+}
+
+.et-hero-tabs,
+.et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    position: relative;
+    background: #eee;
+    text-align: center;
+    /* padding: 0 2em; */
+}
+
+.barraTitulos {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    position: relative;
+    background: #f61b26;
+    text-align: center;
+}
+
+.et-hero-tabs h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1rem;
+}
+
+.et-hero-tabs h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+}
+
+.testimonial:hover,
+.testimonial1:hover,
+.testimonial2:hover {
+    background-color: #72bc9e;
+    /* Cambia este color al que prefieras */
+    font-size: 1.1em;
+    /* Cambia este valor al que prefieras */
+}
+
+
+.fondo {
+    background: #222021;
+
+}
+
+.fondo1 {
+
+    background: #F2F0E0;
+}
+
+.fondo2 {
+
+    background: #fa8778;
+}
+
+.fondo3 {
+
+    background: #F2F0E0;
+}
+
+
+.fondo4 {
+
+    background: #264a48;
+    ;
+}
+
+.fondo5 {
+
+    background: #FFFFFF;
+    ;
+}
+
+.fondo6 {
+
+    background: #B6D9C9;
+    ;
+}
+
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #F2F0E0;
+    z-index: 10;
+}
+
+.et-hero-tabs-container--top {
+    position: fixed;
+    top: 0;
+}
+
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 1.4rem;
+}
+
+.et-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 1.4rem;
+
+}
+
+.et-hero-tab:hover {
+    color: white;
+    background: #B6D9C9;
+    transition: all 0.5s ease;
+}
+
+.et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background: #72bc9e;
+    transition: left 0.3s ease;
+}
+
+
+
+
+@media (min-width: 800px) {
+    .et-hero-tabs {
+        font-size: 1rem;
+    }
+
+    .et-hero-tabs h3 {
+        font-size: 1rem;
+    }
+
+    .et-hero-tab {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+.success,
+.error {
+    margin-top: 2px;
+    margin-left: 25px;
+    font-size: 30px;
+
+}
+
+.hidden {
+    display: none;
+
+}
+
+.video-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure video covers the area */
+}
+
+#video-desktop {
+    display: block;
+    /* Show the desktop video by default */
+}
+
+
+/* CSS */
+
+.estrella {
+    width: 100px;
+}
+
+.tituloCard {
+    background-color: aquamarine;
+}
+
+.item {
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+
+.item:hover>.overflow>.content-art {
+    transform: translateY(0) translateZ(0);
+}
+
+.overflow {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.content-art {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    color: #fff;
+    font-weight: 700 !important;
+    text-align: center;
+    /* text-shadow: 0 1px 1px #000; */
+    padding: 10px 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    backface-visibility: hidden;
+    transform: translateY(100%) translateZ(0);
+    transition: transform 450ms ease-out;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+}
+
+body {
+
+    font-family: 'Century Gothic', sans-serif;
+}
+
+.modal-header {
+    background-color: #f9f6e3;
+}
+
+
+.modal-footer {
+    background-color: #72bc9e;
+}
+
+.btn-cerrar {
+    /* background-image: url('/assets/img/cancelar.png'); */
+    background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/cancelar.png');
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    text-indent: -9999px;
+    /* Oculta el texto del botón */
+    width: 60px;
+    /* Ajusta el ancho de tu imagen */
+    height: 60px;
+    /* Ajusta la altura de tu imagen */
+    border: none;
+    /* Elimina el borde del botón */
+    background-color: transparent;
+    /* Establece el fondo transparente */
+}
+
+
+/* testimonios
+
+    /* Ajusta la separación de las flechas de navegación */
+.custom-control {
+    width: 5%;
+}
+
+/* Cambia el tamaño de la fuente del texto del testimonio */
+.testimonial-text {
+    font-size: 1.6rem;
+}
+
+/* Cambia el tamaño de la fuente del autor del testimonio */
+.testimonial-author {
+    font-size: 1.2rem;
+    color: #f2533d;
+}
+
+/* Espaciado adicional para flechas y contenedor */
+.carousel-control-prev,
+.carousel-control-next {
+    margin-top: 0px;
+}
+
+/* Ajuste de margen para las flechas */
+.carousel-control-prev {
+    left: -5px;
+}
+
+.carousel-control-next {
+    right: -5px;
+}
+
+/* Ajusta la duración de la transición entre los elementos del carrusel */
+.carousel-item {
+    transition: transform 4s ease;
+    /* Cambia 2s por la duración deseada */
+}
+
+.border {
+    border-radius: 50px;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+
+    /* Cambia el tamaño de la fuente del texto del testimonio */
+    .testimonial-text {
+        font-size: 1.2rem;
+    }
+
+    /* Cambia el tamaño de la fuente del autor del testimonio */
+    .testimonial-author {
+        font-size: 1.2rem;
+        color: #f2533d;
+    }
+
+    #video-desktop {
+        display: none;
+    }
+
+    #video-medium {
+        display: none;
+    }
+
+    #video-mobile {
+        display: block;
+    }
+
+    .et-hero-tabs-container {
+        display: none;
+    }
+
+    .avatar {
+        display: none;
+    }
+
+    .accordion-label {
+        border-radius: 2rem !important;
+        height: 110px;
+        width: 350px;
+
+    }
+
+    .col-8 {
+
+        width: 95%;
+    }
+
+    .accordion-button::after {
+        display: none;
+    }
+
+    .contact {
+        margin-top: 320px;
+    }
+
+    #contact-form {
+
+        width: 385px;
+
+    }
+
+    .message-input,
+    .button2 {
+
+        width: 348px;
+    }
+
+    .list-inline {
+        display: none;
+    }
+
+    .input,
+    .input1,
+    .input2 {
+        max-width: 90%;
+    }
+
+    .message-input {
+        height: 220px;
+    }
+
+    .accordion {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-wrapper {
+        margin-top: -250px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #video-desktop {
+        display: none;
+    }
+
+    #video-medium {
+        display: block;
+    }
+
+    #video-mobile {
+        display: none;
+    }
+}
+
+.et-hero-tabs {
+    position: relative;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Espaciado adicional para flechas y contenedor */
+.carousel-control-prev,
+.carousel-control-next {
+    margin-top: 0px;
+}
+
+/* Ajuste de margen para las flechas */
+.carousel-control-prev {
+    left: -5px;
+}
+
+.carousel-control-next {
+    right: -5px;
+}
+
+/* Ajusta la duración de la transición entre los elementos del carrusel */
+.carousel-item {
+    transition: transform 4s ease;
+    /* Cambia 2s por la duración deseada */
+}
+
+.border {
+    border-radius: 50px;
+}
+
+
+
+
