@@ -467,7 +467,42 @@
     }
 
 
-    /*
+    /* testimonios
+
+    /* Ajusta la separación de las flechas de navegación */
+.custom-control {
+  width: 5%;
+}
+
+/* Cambia el tamaño de la fuente del texto del testimonio */
+.testimonial-text {
+  font-size: 1.6rem;
+}
+
+/* Cambia el tamaño de la fuente del autor del testimonio */
+.testimonial-author {
+  font-size: 1rem;
+}
+
+/* Espaciado adicional para flechas y contenedor */
+.carousel-control-prev, .carousel-control-next {
+  margin-top: 0px;
+}
+
+/* Ajuste de margen para las flechas */
+.carousel-control-prev {
+  left: -25px;
+}
+
+.carousel-control-next {
+  right: -25px;
+}
+/* Ajusta la duración de la transición entre los elementos del carrusel */
+.carousel-item {
+    transition: transform 4s ease; /* Cambia 2s por la duración deseada */
+}
+
+
 
 
 
@@ -728,62 +763,81 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonials-slide-wrapper">
-                    <div class="testimonials-slide">
-                        <div class="testimonial">
-                            <div class="testimonial-text">
-                                “Trabajar con Marcelo ha sido una experiencia excepcional. Su
-                                atención al detalle y su habilidad para capturar la esencia de
-                                nuestra marca nos ha impresionado. ¡Recomiendo a Marcelo a
-                                cualquiera que busque un servicio de desarrollo web de primera
-                                clase!”
-                            </div>
-                            <div class="testimonial-info">
-                                <div class="testimonial-author">Javiera Escobar,</div>
-                                <div class="testimonial-details">Owner - Espacio Tierra</div>
-                            </div>
-                        </div>
-                        <div class="testimonial1">
-                            <div class="testimonial-text1">
-                                "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando
-                                siemopre la experiencia del usuario. Talento y pasión. Si necesitas
-                                diseño web, él es tu profesional."
-                            </div>
-                            <div class="testimonial-info1">
-                                <div class="testimonial-author1">Antonio Domingo</div>
-                                <div class="testimonial-details1">
-                                    Tutor. Politecnics Barcelona
+                    <div class="row text-center fondo1">
+                        <div class="col-md-12">
+                            <!-- Carousel wrapper -->
+                            <div id="carouselBasicExample" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="8000">
+                                <!-- Inner -->
+                                <div class="carousel-inner">
+                                    <!-- Single item -->
+                                    <div class="carousel-item active">
+                                        <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-5">
+                                            “Trabajar con Marcelo ha sido una experiencia excepcional. Su
+                                            atención al detalle y su habilidad para capturar la esencia de
+                                            nuestra marca nos ha impresionado. ¡Recomiendo a Marcelo a
+                                            cualquiera que busque un servicio de desarrollo web de primera
+                                            clase!”
+                                        </p>
+                                        <div class="mt-5 mb-4">
+                                            <!-- Imagen o ícono representativo del autor (opcional) -->
+                                        </div>
+                                        <p class="text-muted mb-0 testimonial-author mb-5">- Javiera Escobar, Owner. Espacio Tierra</p>
+                                    </div>
+                    
+                                    <!-- Single item -->
+                                    <div class="carousel-item">
+                                        <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-5">
+                                            "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando siempre la
+                                            experiencia del usuario. Talento y pasión. Si necesitas diseño web, él es tu profesional."
+                                        </p>
+                                        <div class="mt-5 mb-4">
+                                            <!-- Imagen o ícono representativo del autor (opcional) -->
+                                        </div>
+                                        <p class="text-muted mb-0 testimonial-author mb-5">- Antonio Domingo, Tutor. Politecnics Barcelona</p>
+                                    </div>
+                    
+                                    <!-- Single item -->
+                                    <div class="carousel-item">
+                                        <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-5">
+                                            Marcelo es un verdadero profesional en el desarrollo web. Su creatividad y habilidad técnica han
+                                            llevado nuestro sitio web a un nuevo nivel. La facilidad de navegación y el diseño innovador han
+                                            recibido elogios constantes de nuestros clientes.
+                                        </p>
+                                        <div class="mt-5 mb-4">
+                                            <!-- Imagen o ícono representativo del autor (opcional) -->
+                                        </div>
+                                        <p class="text-muted mb-0 testimonial-author  mb-5">- Matias Riffo, Chef - Eventos Riffo</p>
+                                    </div>
+                    
+                                    <!-- Single item -->
+                                    <div class="carousel-item">
+                                        <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-5">
+                                            "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y profesionalismo!. Pudimos desarrollar una Marca potente despues de definir nuestro manual de identidad"
+                                        </p>
+                                        <div class="mt-5 mb-4">
+                                            <!-- Imagen o ícono representativo del autor (opcional) -->
+                                        </div>
+                                        <p class="text-muted mb-0 testimonial-author  mb-5">- Cristobal Quintana, Diseñador. Quintana</p>
+                                    </div>
                                 </div>
+                                <!-- Inner -->
+                    
+                                <!-- Controls -->
+                                <button class="carousel-control-prev custom-control" type="button" data-bs-target="#carouselBasicExample"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next custom-control" type="button" data-bs-target="#carouselBasicExample"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                        </div>
-                        <div class="testimonial2">
-                            <div class="testimonial-text2">
-                                Marcelo es un verdadero profesional en el desarrollo web. Su
-                                creatividad y habilidad técnica han llevado nuestro sitio web
-                                a un nuevo nivel. La facilidad de navegación y el diseño
-                                innovador han recibido elogios constantes de nuestros
-                                clientes.”
-                            </div>
-                            <div class="testimonial-info2">
-                                <div class="testimonial-author2">Matias Riffo,</div>
-                                <div class="testimonial-details2">Chef - Eventos Riffo</div>
-                            </div>
-
-                        </div>
-                        <div class="testimonial1">
-                            <div class="testimonial-text1">
-                                "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y
-                                profesionalismo!""
-                            </div>
-                            <div class="testimonial-info1">
-                                <div class="testimonial-author1">Cristobal Quintana</div>
-                                <div class="testimonial-details1">
-                                    Diseñador. Quintana
-                                </div>
-                            </div>
+                            <!-- Carousel wrapper -->
                         </div>
                     </div>
-                </div>
+
             </div>
 
         </section>
