@@ -2122,7 +2122,8 @@ section {
   position: relative;
   letter-spacing: -0.03em;
   line-height: 140%;
-  font-weight: 300;
+  font-weight: 600;
+  color: #F2533D;
 }
 
 .link2,

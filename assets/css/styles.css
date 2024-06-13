@@ -378,7 +378,7 @@ body {
 
 /* Ajusta la duración de la transición entre los elementos del carrusel */
 .carousel-item {
-    transition: transform 4s ease;
+    transition: transform 5s ease;
     /* Cambia 2s por la duración deseada */
 }
 
