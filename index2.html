@@ -438,7 +438,15 @@
         .contact-wrapper {
                 margin-top: -250px;
         }
+/* Cambia el tamaño de la fuente del texto del testimonio */
+.testimonial-text {
+  font-size: 1rem;
+}
 
+/* Cambia el tamaño de la fuente del autor del testimonio */
+.testimonial-author {
+  font-size: 0.8rem;
+}
 
 
     }
@@ -476,12 +484,13 @@
 
 /* Cambia el tamaño de la fuente del texto del testimonio */
 .testimonial-text {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 /* Cambia el tamaño de la fuente del autor del testimonio */
 .testimonial-author {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color:#f2533d;
 }
 
 /* Espaciado adicional para flechas y contenedor */
@@ -491,17 +500,19 @@
 
 /* Ajuste de margen para las flechas */
 .carousel-control-prev {
-  left: -25px;
+  left: -5px;
 }
 
 .carousel-control-next {
-  right: -25px;
+  right: -5px;
 }
 /* Ajusta la duración de la transición entre los elementos del carrusel */
 .carousel-item {
     transition: transform 4s ease; /* Cambia 2s por la duración deseada */
 }
-
+.border{
+    border-radius: 50px;
+}
 
 
 
@@ -526,7 +537,7 @@
             </video>
         </div>
         <div id="video-mobile" class="video-container">
-            <video autoplay controls loop poster="./assets/img/imagenVideo.png">
+            <video autoplay controls loop poster="./assets/img/imagenVideoMobile.png">
                 <source src="./assets/img/video_movil.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
             </video>
@@ -708,7 +719,7 @@
                         </div>
 
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 mb-5">
                         <img class="avatar" src="./assets/img/file.png" alt="">
                     </div>
                 </div>
@@ -747,7 +758,7 @@
 
         <!-- Section TESTIMONIOS -->
         <section class="et-slide fondo5 " id="tab-angular">
-            <div class="testimonials" style="padding:90px;">
+            <div class="testimonials" style="padding:45px;">
                 <div class="">
                     <div class="col-10">
                         <h1 class="mb-3">Testimonios</h1>
@@ -763,79 +774,82 @@
                         </div>
                     </div>
                 </div>
-                    <div class="row text-center fondo1">
-                        <div class="col-md-12">
-                            <!-- Carousel wrapper -->
-                            <div id="carouselBasicExample" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="8000">
-                                <!-- Inner -->
-                                <div class="carousel-inner">
-                                    <!-- Single item -->
-                                    <div class="carousel-item active">
-                                        <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-5">
-                                            “Trabajar con Marcelo ha sido una experiencia excepcional. Su
-                                            atención al detalle y su habilidad para capturar la esencia de
-                                            nuestra marca nos ha impresionado. ¡Recomiendo a Marcelo a
-                                            cualquiera que busque un servicio de desarrollo web de primera
-                                            clase!”
-                                        </p>
-                                        <div class="mt-5 mb-4">
-                                            <!-- Imagen o ícono representativo del autor (opcional) -->
-                                        </div>
-                                        <p class="text-muted mb-0 testimonial-author mb-5">- Javiera Escobar, Owner. Espacio Tierra</p>
-                                    </div>
-                    
-                                    <!-- Single item -->
-                                    <div class="carousel-item">
-                                        <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-5">
-                                            "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando siempre la
-                                            experiencia del usuario. Talento y pasión. Si necesitas diseño web, él es tu profesional."
-                                        </p>
-                                        <div class="mt-5 mb-4">
-                                            <!-- Imagen o ícono representativo del autor (opcional) -->
-                                        </div>
-                                        <p class="text-muted mb-0 testimonial-author mb-5">- Antonio Domingo, Tutor. Politecnics Barcelona</p>
-                                    </div>
-                    
-                                    <!-- Single item -->
-                                    <div class="carousel-item">
-                                        <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-5">
-                                            Marcelo es un verdadero profesional en el desarrollo web. Su creatividad y habilidad técnica han
-                                            llevado nuestro sitio web a un nuevo nivel. La facilidad de navegación y el diseño innovador han
-                                            recibido elogios constantes de nuestros clientes.
-                                        </p>
-                                        <div class="mt-5 mb-4">
-                                            <!-- Imagen o ícono representativo del autor (opcional) -->
-                                        </div>
-                                        <p class="text-muted mb-0 testimonial-author  mb-5">- Matias Riffo, Chef - Eventos Riffo</p>
-                                    </div>
-                    
-                                    <!-- Single item -->
-                                    <div class="carousel-item">
-                                        <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-5">
-                                            "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y profesionalismo!. Pudimos desarrollar una Marca potente despues de definir nuestro manual de identidad"
-                                        </p>
-                                        <div class="mt-5 mb-4">
-                                            <!-- Imagen o ícono representativo del autor (opcional) -->
-                                        </div>
-                                        <p class="text-muted mb-0 testimonial-author  mb-5">- Cristobal Quintana, Diseñador. Quintana</p>
-                                    </div>
-                                </div>
-                                <!-- Inner -->
-                    
-                                <!-- Controls -->
-                                <button class="carousel-control-prev custom-control" type="button" data-bs-target="#carouselBasicExample"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next custom-control" type="button" data-bs-target="#carouselBasicExample"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <!-- Carousel wrapper -->
+                    <div class="row text-center mb-5 ">
+                        <div class="col-md-6">
+                        
+                            <img class="avatar" src="./assets/img/file.png" alt="">
+                        
                         </div>
+                    <div class="col-md-6 border fondo1 d-flex justify-content-center align-items-center mb-5">
+                        <!-- Carousel wrapper -->
+                        <div id="carouselBasicExample" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="8000">
+                            <!-- Inner -->
+                            <div class="carousel-inner">
+                                <!-- Single item -->
+                                <div class="carousel-item active mt-4">
+                                    <p class="lead font-italic testimonial-text mx-4 mx-md-5 text-center">
+                                        “Trabajar con Marcelo ha sido una experiencia excepcional. Su
+                                        atención al detalle y su habilidad para capturar la esencia de
+                                        nuestra marca nos ha impresionado. ¡Recomiendo a Marcelo a
+                                        cualquiera que busque un servicio de desarrollo web de primera
+                                        clase!”
+                                    </p>
+                                    
+                                    <p class="text-muted mb-0 testimonial-author mt-5 mb-5 text-center text-white">- Javiera Escobar, Owner. Espacio Tierra
+                                    </p>
+                                </div>
+                    
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4  text-center">
+                                        "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando siempre la
+                                        experiencia del usuario. Talento y pasión. Si necesitas diseño web, él es tu profesional."
+                                    </p>
+                                    
+                                    <p class="text-muted mb-0 testimonial-author text-center mt-5 mb-5 ">- Antonio Domingo, Tutor. Politecnics
+                                        Barcelona</p>
+                                </div>
+                    
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4 text-center">
+                                        Marcelo es un verdadero profesional en el desarrollo web. Su creatividad y habilidad técnica han
+                                        llevado nuestro sitio web a un nuevo nivel. La facilidad de navegación y el diseño innovador han
+                                        recibido elogios constantes de nuestros clientes.
+                                    </p>
+                                   
+                                    <p class="text-muted mb-0 testimonial-author text-center mt-5 mb-5 ">- Matias Riffo, Chef - Eventos Riffo</p>
+                                </div>
+                    
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4 text-center">
+                                        "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y profesionalismo!.
+                                        Pudimos desarrollar una Marca potente despues de definir nuestro manual de identidad"
+                                    </p>
+                                    
+                                    <p class="text-muted mb-0 testimonial-author mt-5 mb-5  text-center">- Cristobal Quintana, Diseñador.
+                                        Quintana</p>
+                                </div>
+                            </div>
+                            <!-- Inner -->
+                    
+                            <!-- Controls -->
+                            <button class="carousel-control-prev custom-control" type="button" data-bs-target="#carouselBasicExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next custom-control" type="button" data-bs-target="#carouselBasicExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- Carousel wrapper -->
+                    </div>
+
+                        
                     </div>
 
             </div>
