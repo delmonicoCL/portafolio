@@ -118,7 +118,7 @@ window.addEventListener("resize", handleVideoSwitch);
 
                   modalTech: "Wordpress, HTML, CSS",
                   modalLink: "https://tinyurl.com/quintanadiseno",
-                  modalLinkText: "Visitar Proyecto",
+                  modalLinkText: "Quintana Diseños",
                 },
 
                 {
