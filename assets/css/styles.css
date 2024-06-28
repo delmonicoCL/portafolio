@@ -387,7 +387,10 @@ body {
 }
 
 
+.testimonials {
+    padding: 90px;
 
+}
 
 
 @media (max-width: 600px) {
@@ -486,6 +489,10 @@ body {
        margin-left: 3px;
 }
 
+.testimonials {
+    padding: 25px;
+
+}
 
 
 
@@ -678,5 +685,21 @@ body {
             transition: font-size 0.3s ease, color 0.3s ease;
             /* Transición suave para el efecto hover */
         }
+
+                .tituloFooter{
+text-align: left !important;
+    /* Alinear texto a la izquierda */
+    font-size: 4rem;
+    /* Tamaño de fuente de 1.5 rem */
+
+    letter-spacing: -0.03em;
+    line-height: 100%;
+    font-weight: 700;
+    font-family: inherit;
+    color: #f9fcff;
+    transition: font-size 0.3s ease, color 0.3s ease;
+    /* Transición suave para el efecto hover */
+
+                }
 
 
