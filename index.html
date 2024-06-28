@@ -4,346 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton:wght@400&display=swap" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Libre Baskerville:wght@400;700&display=swap" />
+    <meta name="author" content="Marcelo Carvajal - Barcelona">
+    <meta name="description"
+        content="Desde la alta cocina a la tecnología web, he transformado mi habilidad para liderar equipos y mi pasión por la innovación en la creación de aplicaciones web intuitivas. Con dominio en HTML, CSS, JavaScript y más, ofrezco soluciones creativas y eficaces para tus proyectos digitales.">
+
+    <title>Marcelo Carvajal - Desarrollador Web: Transformando Experiencia en Soluciones Digitales</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton:wght@400&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 
     <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-    <link rel="stylesheet" href="./assets/css/global.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-
-
-    <title>Portafolio - Marcelo Carvajal</title>
+    <script src="./assets/js/script.js"></script>
 </head>
-<style>
-    body {
-        font-family: "Century Gothic", 'Lato', sans-serif;
-    }
 
-    a {
-        text-decoration: none;
-    }
-
-    .border-me {
-        border-radius: 35px;
-
-    }
-
-    .modal-header {
-        background-color: #f9f6e3;
-    }
-
-
-    .modal-footer {
-        background-color: #72bc9e;
-    }
-
-    .btn-cerrar {
-        /* background-image: url('/assets/img/cancelar.png'); */
-        background-image: url('https://raw.githubusercontent.com/delmonicoCL/portafolio/main/assets/img/cancelar.png');
-        background-size: cover;
-        /* Ajusta el tamaño de la imagen */
-        background-repeat: no-repeat;
-        /* Evita la repetición de la imagen */
-        text-indent: -9999px;
-        /* Oculta el texto del botón */
-        width: 60px;
-        /* Ajusta el ancho de tu imagen */
-        height: 60px;
-        /* Ajusta la altura de tu imagen */
-        border: none;
-        /* Elimina el borde del botón */
-        background-color: transparent;
-        /* Establece el fondo transparente */
-    }
-
-    .et-hero-tabs,
-    .et-slide {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        position: relative;
-        background: #eee;
-        text-align: center;
-        /* padding: 0 2em; */
-    }
-
-    .barraTitulos {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 25vh;
-        position: relative;
-        background: #f61b26;
-        text-align: center;
-    }
-
-    .et-hero-tabs h1 {
-        font-size: 2rem;
-        margin: 0;
-        letter-spacing: 1rem;
-    }
-
-    .et-hero-tabs h3 {
-        font-size: 1rem;
-        letter-spacing: 0.3rem;
-        opacity: 0.6;
-    }
-
-    .testimonial:hover,
-    .testimonial1:hover,
-    .testimonial2:hover {
-        background-color: #72bc9e;
-        /* Cambia este color al que prefieras */
-        font-size: 1.1em;
-        /* Cambia este valor al que prefieras */
-    }
-
-
-    .fondo {
-        background: #222021;
-
-    }
-
-    .fondo1 {
-
-        background: #F2F0E0;
-    }
-
-    .fondo2 {
-
-        background: #fa8778;
-    }
-
-    .fondo3 {
-
-        background: #F2F0E0;
-    }
-
-
-    .fondo4 {
-
-        background: #264a48;
-        ;
-    }
-
-    .fondo5 {
-
-        background: #FFFFFF;
-        ;
-    }
-
-    .fondo6 {
-
-        background: #B6D9C9;
-        ;
-    }
-
-    .et-hero-tabs-container {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 70px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        background: #F2F0E0;
-        z-index: 10;
-    }
-
-    .et-hero-tabs-container--top {
-        position: fixed;
-        top: 0;
-    }
-
-    .et-hero-tab {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        color: #000;
-        letter-spacing: 0.1rem;
-        transition: all 0.5s ease;
-        font-size: 1.4rem;
-    }
-
-    .et-hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        color: #000;
-        letter-spacing: 0.1rem;
-        transition: all 0.5s ease;
-        font-size: 1.4rem;
-
-    }
-
-    .et-hero-tab:hover {
-        color: white;
-        background: #B6D9C9;
-        transition: all 0.5s ease;
-    }
-
-    .et-hero-tab-slider {
-        position: absolute;
-        bottom: 0;
-        width: 0;
-        height: 4px;
-        background: #72bc9e;
-        transition: left 0.3s ease;
-    }
-
-
-
-
-    @media (min-width: 800px) {
-        .et-hero-tabs {
-            font-size: 1rem;
-        }
-
-        .et-hero-tabs h3 {
-            font-size: 1rem;
-        }
-
-        .et-hero-tab {
-            font-size: 1.4rem;
-        }
-    }
-
-
-
-    .success,
-    .error {
-        margin-top: 2px;
-        margin-left: 25px;
-        font-size: 30px;
-
-    }
-
-    .hidden{
-display:none;
-
-    }
-
-    .video-container {
-        display: none;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Ensure video covers the area */
-    }
-
-    #video-desktop {
-        display: block;
-        /* Show the desktop video by default */
-    }
-
-    @media (max-width: 600px) {
-        #video-desktop {
-            display: none;
-        }
-
-        #video-medium {
-            display: none;
-        }
-
-        #video-mobile {
-            display: block;
-        }
-
-        .et-hero-tabs-container {
-            display: none;
-        }
-
-        .avatar {
-            display: none;
-        }
-
-        .accordion-label {
-            border-radius: 2rem !important;
-            height: 110px;
-            width: 500px;
-
-        }
-
-        .col-8 {
-
-            width: 95%;
-        }
-
-        .accordion-button::after {
-            display: none;
-        }
-
-        .contact {
-            margin-top: 320px;
-        }
-
-        #contact-form {
-           
-                width: 385px;
-
-           }
-        .message-input, .button2 {
-
-            width: 385px;
-        }   
-
-
-        }
-   
-        @media (min-width: 601px) and (max-width: 1024px) {
-            #video-desktop {
-                display: none;
-            }
-
-            #video-medium {
-                display: block;
-            }
-
-            #video-mobile {
-                display: none;
-            }
-        }
-
-        .et-hero-tabs {
-            position: relative;
-            height: 100vh;
-            /* Full viewport height */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        /* 
-
-    
-
-    /* SOBRE MI */
-</style>
 
 <body>
 
@@ -355,21 +35,19 @@ display:none;
                 Tu navegador no soporta el elemento de video.
             </video>
         </div>
-        <div id="video-medium" class="video-container">
+        <!-- <div id="video-medium" class="video-container">
             <video autoplay controls loop poster="./assets/img/imagenVideo.png">
                 <source src="./assets/img/video_medium.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
             </video>
-        </div>
+        </div> -->
         <div id="video-mobile" class="video-container">
-            <video autoplay controls loop poster="./assets/img/imagenVideo.png">
+            <video autoplay controls loop poster="./assets/img/imagenVideoMobile.png">
                 <source src="./assets/img/video_movil.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
             </video>
         </div>
     </section>
-
-
 
     <div class="et-hero-tabs-container">
         <a class="et-hero mt-2" href="#tab-video"><img class="logo" src="./assets/img/logo.png" width="100"
@@ -383,170 +61,142 @@ display:none;
     </section>
 
     <!-- Main -->
-    <main class="et-main">
+    <main class="et-main  mb-4">
+
         <!-- Section SOBRE MI -->
-        <section class="et-slide fondo3" id="tab-flexbox">
-            <div class=" mb-2">
-                <img class="estrella" loading="lazy" alt="" src="./public/drawn-misc.svg" />
+        <section class="et-slide mt-2 fondo3 mb-4" id="tab-flexbox">
+            <div class=" ">
+                <img class="estrella mt-3" loading="lazy" alt="" src="./public/drawn-misc.svg" />
             </div>
 
             <div class="container ">
-                <div class=" container mb-2 fondo3 border-me">
+                <div class=" container fondo3 border-me">
                     <h1 class="p-3">Soy <span style="background-color:#fee400;">Marcelo Carvajal</span></h1>
                     <div class=" mt-1 p-2">
-
                         <p class="texto">
-                            Chef de profesion, Emprendedor y Desarrollador Web especializado en <strong class="">HTML,
+                            Comunicador, Emprendedor y Desarrollador Web especializado en <strong class="">HTML,
                                 CSS, JavaScript y PHP</strong> .
-                            Trabajo bajo la <strong>metodología UX y metodologías agiles</strong> . Te invito a conocer
+                            Trabajo bajo la <strong>metodología UX y metodologías ágiles</strong> . Te invito a conocer
                             con mayor
                             detalle mi historia y experiencia.
                         </p>
 
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-2">
                     <div class="col-8">
-                        <div class="accordion">
+                        <div class="mt-5">
+                            <ul>
+                                <!-- ACCORDION Habilidades -->
+                                <li>
+                                    <input type="checkbox" checked>
+                                    <i></i>
+                                    <h2 class="tituloAccordion ">Habilidades</h2>
+                                    <p class="mt-3"><span style="background-color:#fee400;">Liderazgo y Manejo de
+                                            Equipos:</span> Experiencia liderando y motivando equipos como chef,
+                                        comunicador y emprendedor..</p>
 
-                            <!-- ACCORDION HISTORIA -->
+                                    <p><span style="background-color:#fee400;">Comunicación Efectiva:</span>
+                                        Capacidad para transmitir ideas de manera clara y precisa.</p>
 
-                            <div class="accordion-button collapsed ideas accordion-label " data-bs-toggle="collapse"
-                                data-bs-target="#accordionHistoria" aria-expanded="true" aria-controls="collapseOne">
-                                <div class="row d-flex justify-content-between">
-                                    <div>
-                                        <h2 class="mt-2">Historia</h2>
-                                    </div>
-                                    <div class="d-flex">
-                                        <span class="subtitulo-accordion me-2 ">#Hosteleria</span>
-                                        <span class="subtitulo-accordion me-2 ">#Emprendimiento</span>
-                                        <span class="subtitulo-accordion me-2 ">#Reconversion</span>
-                                    </div>
-                                </div>
-                            </div>
+                                    <p><span style="background-color:#fee400;">Creatividad e Innovación:</span>
+                                        Enfoque creativo para ofrecer soluciones únicas en tu diseño.</p>
 
-                            <div id="accordionHistoria" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="">
-                                        <h5 class="texto-accordion mb-3">Mi viaje comenzó en el vibrante <span
-                                                style="background-color:#fee400;"> mundo de la hostelería</span>, donde,
-                                            como <span style="background-color:#fee400;"> chef</span>, no solo
-                                            perfeccioné mi habilidad para crear
-                                            experiencias culinarias únicas, sino que también <span
-                                                style="background-color:#fee400;"> aprendí</span> el valor del
-                                            <span style="background-color:#fee400;"> liderazgo</span> y la <span
-                                                style="background-color:#fee400;"> comunicacion</span> en entornos de
-                                            alta
-                                            presión.
-                                        </h5>
-                                        <h5 class="texto-accordion mb-3">Mi espíritu <span
-                                                style="background-color:#fee400;"> emprendedor</span> siempre buscó más.
-                                            Fundé y gestioné mi propio restaurante, enfrentándome a desafíos
-                                            que me enseñaron la importancia de la <span
-                                                style="background-color:#fee400;">innovación y el trabajo en
-                                                equipo</span> . Pero, en lo profundo, sentía que mi misión no
-                                            estaba completa.</h5>
-                                        <h5 class="texto-accordion mb-3">Un día, descubrí mi pasión por la tecnología y
-                                            decidí embarcarme en un nuevo viaje: <span
-                                                style="background-color:#fee400;">La reconversión a desarrollador
-                                                web</span> .
-                                            A través del aprendizaje constante y la adopción de metodologías ágiles y de
-                                            UX, transformé mis habilidades
-                                            en herramientas para diseñar y desarrollar aplicaciones web intuitivas y
-                                            funcionales.</h5>
-                                        <h5 class="texto-accordion mb-3">Hoy, combino mi <span
-                                                style="background-color:#fee400;">amor por la comunicacion,
-                                                emprendimiento y tecnología</span>, para crear soluciones digitales
-                                            ofrecen una experiencia memorable, reflejando mi compromiso con la
-                                            excelencia y la innovación.</h5>
+                                    <p><span style="background-color:#fd431b;" class="text-white">Habilidades y
+                                            Técnicas en
+                                            Desarrollo Web:</span> Domínio de HTML, CSS, JavaScript y PHP.
+                                        Experiencia con Laravel, Vue.js, Git, Wordpress, SQL.</p>
 
 
+                                    <p><span style="background-color:#fd431b;" class="text-white">Metodologías
+                                            Ágiles y UX:</span>
+                                        Trabajo con metodologías ágiles y principios de UX para una experiencia
+                                        centrada en el usuario.</p>
+                                </li>
+                                <!-- ACCORDION Historia -->
+                                <li>
+                                    <input type="checkbox" checked>
+                                    <i></i>
+                                    <h2 class="tituloAccordion">Historia</h2>
+                                    <p class="mt-3">Mi viaje comenzó en el vibrante <span
+                                            style="background-color:#fee400;"> mundo de
+                                            la hostelería</span>,
+                                        donde,
+                                        como <span style="background-color:#fee400;"> chef</span>,
+                                        perfeccioné mi habilidad para crear
+                                        experiencias únicas, como también <span style="background-color:#fee400;">
+                                            aprendí</span> el
+                                        valor del
+                                        <span style="background-color:#fee400;"> liderazgo</span> y la <span
+                                            style="background-color:#fee400;">
+                                            comunicacion</span> en entornos de
+                                        alta
+                                        presión.
+                                    </p>
 
-                                    </div>
-                                </div>
-                            </div>
+                                    <p>Mi espíritu <span style="background-color:#fee400;"> emprendedor</span> siempre
+                                        buscó más.
+                                        Fundé y gestioné mi propio restaurante, enfrentándome a desafíos
+                                        que me enseñaron la importancia de la <span
+                                            style="background-color:#fee400;">innovación y el trabajo en
+                                            equipo</span> </p>
+                                    <p class="mb-3">
+                                        Un día, descubrí mi pasión por la tecnología y
+                                        decidí embarcarme en un nuevo viaje: <span style="background-color:#fee400;">La
+                                            reconversión a desarrollador
+                                            web</span> .
+                                        A través del aprendizaje constante y la adopción de metodologías ágiles y de
+                                        UX, transformé mis habilidades
+                                        en herramientas para diseñar y desarrollar aplicaciones web intuitivas y
+                                        funcionales.
 
-                            <!-- ACCORDION Habilidades -->
-
-                            <div class="accordion-button collapsed accordion-label" data-bs-toggle="collapse"
-                                data-bs-target="#accordionHabilidades" aria-expanded="true" aria-controls="collapseOne">
-                                <div class="row d-flex justify-content-between">
-                                    <div>
-                                        <h2 class="mt-2">Habilidades</h2>
-                                    </div>
-                                    <div class="d-flex">
-                                        <span class="subtitulo-accordion me-2 ">#Comunicacion</span>
-                                        <span class="subtitulo-accordion me-2 ">#Liderazgo</span>
-                                        <span class="subtitulo-accordion ">#Creatividad</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="accordionHabilidades" class="accordion-collapse collapse"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div>
-
-                                        <div class="texto-accordion">
-                                            <p><span style="background-color:#fee400;">Liderazgo y Manejo de
-                                                    Equipos:</span> Experiencia liderando y motivando equipos como chef,
-                                                comunicador y emprendedor..</p>
-
-                                            <p><span style="background-color:#fee400;">Comunicación Efectiva:</span>
-                                                Capacidad para transmitir ideas de manera clara y precisa.</p>
-
-                                            <p><span style="background-color:#fee400;">Creatividad e Innovación:</span>
-                                                Enfoque creativo para ofrecer soluciones únicas en diseño.</p>
-
-                                            <p><span style="background-color:#fee400;">Habilidades Técnicas en
-                                                    Desarrollo Web:</span> Domínio de HTML, CSS, JavaScript y PHP.
-                                                Experiencia con Laravel, Vue.js, Git, Wordpress, SQL.</p>
+                                    </p>
 
 
-                                            <p><span style="background-color:#fee400;">Metodologías Ágiles y UX:</span>
-                                                Trabajo con metodologías ágiles y principios de UX para una experiencia
-                                                centrada en el usuario.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                </li>
+                                <!-- ACCORDION Estudios -->
+                                <li>
+                                    <input type="checkbox" checked>
+                                    <i></i>
+                                    <h2 class="tituloAccordion">Estudios</h2>
+                                    <p class="mt-3"><span style="background-color:#fee400;">Cocina y Administracion
+                                            Internacional</span> INACAP</p>
+                                    <p><span style="background-color:#fd431b;" class="text-white">Master de
+                                            Emprendimiento e
+                                            Innovacion</span>
+                                        UCHILE</p>
 
-                            <!-- ACCORDION Estudios -->
-
-                            <div class="accordion-button collapsed  accordion-label" data-bs-toggle="collapse"
-                                data-bs-target="#accordionEstudios" aria-expanded="true" aria-controls="collapseOne">
-                                <div class="row d-flex justify-content-between">
-                                    <div>
-                                        <h2 class="mt-2">Estudios</h2>
-                                    </div>
-                                    <div class="d-flex">
-                                        <span class="subtitulo-accordion me-2  ">#Emprendimiento</span>
-                                        <span class="subtitulo-accordion me-2  ">#Reconversion</span>
-                                        <span class="subtitulo-accordion me-5">#Desarrollador</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="accordionEstudios" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div>
-
-                                        <ul class="texto-accordion">
-                                            <li>Cocina y Administracion Internacional - INACAP</li>
-                                            <li>Master de Emprendimiento e Innovacion - UCHILE </li>
-                                            <li>Desarrollo de Aplicaciones Web. Grado Superior - Politecnics Barcelona
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                                    <p class="mb-3"><span style="background-color:#fee400;">Desarrollo de
+                                            Aplicaciones Web. Grado Superior</span> Politecnics Barcelona</p>
+                                </li>
+                            </ul>
                         </div>
-
+                        <div>
+                        </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 mb-5">
                         <img class="avatar" src="./assets/img/file.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Llamada Accion -->
+        <section class="et-slide mt-5 fondo3 mb-5">
+            <div class=" container fondo3 border-me">
+                <div class=" mt-1 p-2">
+                    <div class="mb-3 ">
+                        <img class="estrella mt-3" loading="lazy" alt="" src="./assets/img/cotizar.png" />
+                    </div>
+                    <p class="texto">
+                        "Con habilidades destacadas en <span style="background-color:#fee400;">comunicación y
+                            creatividad,</span> combino mi experiencia, con tecnología para ofrecer soluciones creativas
+                        e
+                        innovadoras. Implemento <span style="background-color:#fee400;">metodologías ágiles y principios
+                            de UX</span> en cada proyecto, centrándome en las necesidades del
+                        usuario."
+                    </p>
+                    <div class="mb-5 ">
+                        <img class="estrella mt-3" loading="lazy" alt="" src="./assets/img/www-haga-clic-en.png" />
                     </div>
                 </div>
             </div>
@@ -554,389 +204,36 @@ display:none;
 
         <!-- Section PORTAFOLIO -->
         <section class=" " id="tab-react">
-            <div class="grid-container">
-
-                <div class="grid-item item5 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
-                    data-bs-target="#ModalRompecabezas">
-                    <div class="image-caption ">
-                        <h4 class="heading">Rompecabezas</h4>
+            <div class="testimonials" style="padding:90px;">
+                <div class="">
+                    <div class="col-10">
+                        <h1 class="tituloSection">Portafolio</h1>
                     </div>
-                </div>
-
-                <!-- Modal Rompecabezas -->
-                <div class="modal fade" id="ModalRompecabezas" tabindex="-1" aria-labelledby="rompecabezasLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="rompecabezasLabel">Proyecto Rompecabezas</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="mt-2"><strong>Rompecabezas</strong> es una APP educativa para niños que
-                                    permite armar
-                                    puzzle de energías renovables. Con una variedad de rompecabezas temáticos, los
-                                    niños pueden explorar y aprender sobre fuentes de energía limpia como
-                                    solar, eólica</p>
-                                <p>Desarrollado en <strong>JavaScript</strong>, permite a los niños aprender mientras
-                                    juegan, fomentando
-                                    el uso de
-                                    energías renovables a través de una actividad lúdica.</p>
-                                <p><strong>Desarrollado en:</strong> Html, Css, JavaScript (LocalStorage)</p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <p class="mt-3 text-white">
-                                    <strong>Visitar Proyecto:</strong>
-                                    <a href="https://delmonicocl.github.io/LaiaBCN/" target="_blank">Laia, Salvad al
-                                        Mundo</a>
-                                </p>
+                    <div class="row">
+                        <div class="col-10">
+                            <h3 class=" ">Mis proyectos...</h3>
+                        </div>
+                        <div class="col-2">
+                            <div class="smiley-face-wrapper">
+                                <img class="smiley-face-icon" loading="lazy" alt="" src="./public/smiley-face.svg" />
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-
-
-                <div class="grid-item item2 imagen d-flex justify-content-end align-items-end" data-bs-toggle="modal"
-                    data-bs-target="#ModalFoodHero">
-                    <div class="image-caption  ">
-                        <h4 class="heading">Food Hero</h4>
-
-                    </div>
-                </div>
-
-                <!-- Modal FoodHero-->
-                <div class="modal fade" id="ModalFoodHero" tabindex="-1" aria-labelledby="foodHeroLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="foodHeroLabel">Proyecto FOOD HERO</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="mt-2"><strong>Food Hero</strong> es una aplicación innovadora que combina
-                                    tecnología con solidaridad. Con el lema <strong>"Salva comida, alimenta
-                                        corazones"</strong>,
-                                    nuestra APP conecta repartidores y proveedores de alimentos voluntarios para
-                                    distribuir comida a personas necesitadas.
-                                    Mediante la geolocalización, se registran los procesos de creación y entrega de
-                                    alimentos.</p>
-
-                                <p> <strong>Características:</strong>
-                                <ul>
-                                    <li>Creacion de Manual de identidad, Marca y propuesta.</li>
-                                    <li>Integración de tecnologías Laravel y Vue.js para una experiencia de usuario
-                                        fluida y eficiente.
-                                    </li>
-                                    <li>Uso de APIs como MapBox para proporcionar funciones de geolocalización precisas
-                                    </li>
-                                </ul>
-
-                                <p class="mt-4"><strong>Desarrollado en:</strong> Laravel, Vue, MapBox, Apis</p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <p class="mt-3 text-white">
-                                    <strong>Visitar Proyecto:</strong>
-                                    <a href="https://delmonicocl.github.io/FoodHero/" target="_blank">Food Hero</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item item3 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
-                    data-bs-target="#ModalBuscapalabras">
-                    <div class="image-caption ">
-                        <h4 class="heading">Buscapalabras</h4>
-                    </div>
-                </div>
-
-                <!-- Modal Buscapalabras-->
-                <div class="modal fade" id="ModalBuscapalabras" tabindex="-1" aria-labelledby="buscapalabrasLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="buscapalabrasLabel">Proyecto Buscapalabras</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="mt-2"><strong>Buscapalabras</strong> es un juego educativo interactivo
-                                    diseñado para niños que desafía su capacidad de encontrar palabras
-                                    ocultas mientras disfrutan de una experiencia divertida y educativa.</p>
-                                <p>Desarrollado en <strong>JavaScript</strong>, permite a los niños aprender mientras
-                                    juegan, contabiliza la cantidad de errores y sus vidas.</p>
-
-                                <p><strong>Desarrollado en:</strong> Html, Css, JavaScript (LocalStorage)</p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <p class="mt-3 text-white">
-                                    <strong>Visitar Proyecto:</strong>
-                                    <a href="https://delmonicocl.github.io/JuegoBuscaPalabra/" target="_blank">Juego,
-                                        Buscapalabras</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item item d-flex justify-content-end align-items-end" data-bs-toggle="modal"
-                    data-bs-target="#ModalAutoevaluacion">
-                    <div class="image-caption">
-                        <h4 class="heading">Autoevaluacion</h4>
-                    </div>
-                </div>
-
-                <div class="grid-item item4 d-flex justify-content-end align-items-end" data-bs-toggle="modal"
-                    data-bs-target="#ModalKampom">
-                    <div class="image-caption">
-                        <h4 class="heading">Kampom</h4>
-                    </div>
-                </div>
-                <!-- Modal Autoevaluacion -->
-                <div class="modal fade" id="ModalAutoevaluacion" tabindex="-1" aria-labelledby="autoevaluacionLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="autoevaluacionLabel">Proyecto Autoevaluacion</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="mt-2"><strong>Autoevaluacion</strong> es una aplicación que facilita a
-                                    profesores y alumnos completar una autoevaluación en relación a los
-                                    módulos (cursos) en los que el alumno está registrado. </p>
-                                <p>Desarrollada en Laravel y Vue, esta aplicación permite a los
-                                    usuarios interactuar de manera efectiva según su rol, proporcionando una experiencia
-                                    personalizada y eficiente.</p>
-
-
-
-                                <p><strong>Desarrollado en:</strong> Laravel, VUE, Html, Css y BD</p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <p class="mt-3 text-white"><strong>Visitar Proyecto:</strong> www.autoevaluacion.es</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal MANUAL -->
-                <div class="modal fade" id="ModalManual" tabindex="-1" aria-labelledby="ManualLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Manual Identidad</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-
-
-                                <p class="mt-2"><strong>Manual de Identidad: </strong>Creacion de presentacion Manual de
-                                    identidad proyecto FoodHero </p>
-                                <p>El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto.
-                                    Define las bases del color, diseño, características del usuario, Mision y Vision,
-                                    entre otros.
-                                    Te invito a descargar la presentacion via PDF o ver el video en el siguiente video
-                                    interactivo
-
-                                </p>
-
-                                <p> <strong>Manual Identidad: </strong>
-                                    <a href="./assets/img/ManualIdentidadFoodHero.pdf"
-                                        download="manual_identidad_FoodHero.pdf">Descargar</a>
-                                </p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <p class="mt-3 text-white">
-                                    <strong>Video Presentación:</strong>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#ModalManualIdentidad">Ver video
-                                        interactivo</a>
-                                </p>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div class="grid-item item7" data-bs-toggle="modal" data-bs-target="#ModalEspacioTierra">Espacio Tierra
-                </div>
-                <div class="grid-item item6" data-bs-toggle="modal" data-bs-target="#ModalManual">Manual Identidad
-                </div>
-                <div class="grid-item item8" data-bs-toggle="modal" data-bs-target="#ModalRiffo">8</div>
-
-                <!-- Modal Video Manual Identidad -->
-                <div class="modal fade" id="ModalManualIdentidad" tabindex="-1" aria-labelledby="ManualIdentidadLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" style="max-width: 1200px;">
-                        <div class="modal-content" style="height: 800px;">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">PRESENTACION INTERACTIVA MANUAL
-                                    IDENTIDAD</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body" style="padding: 0;">
-                                <video id="manualVideo" controls style="width: 100%; height: 100%;">
-                                    <source src="./assets/img/ManualdentidadFoodHero.mp4" type="video/mp4">
-                                    Tu navegador no soporta el elemento de video.
-                                </video>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <h4 class="me-2">Selecciona Area de interes:</h4>
-                                <button type="button" class="btn btn-danger me-2"
-                                    onclick="setVideoTime('manualVideo', 1)">Todo el video</button>
-                                <button type="button" class="btn btn-warning me-2"
-                                    onclick="setVideoTime('manualVideo', 173)">MoodBoard</button>
-                                <button type="button" class="btn btn-warning me-2"
-                                    onclick="setVideoTime('manualVideo', 255)">User Persona</button>
-                                <button type="button" class="btn btn-warning me-2"
-                                    onclick="setVideoTime('manualVideo', 375)">Mision/Vision</button>
-                                <button type="button" class="btn btn-warning me-2"
-                                    onclick="setVideoTime('manualVideo', 493)">Manual Identidad</button>
-                                <button type="button" class="btn btn-warning"
-                                    onclick="setVideoTime('manualVideo', 535)">Landing</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <script>
-                    function setVideoTime(videoId, timeInSeconds) {
-                        var video = document.getElementById(videoId);
-                        if (video) {
-                            video.currentTime = timeInSeconds;
-                            video.play();
-                        }
-                    }
-                </script>
-
-                <!-- Modal Espacio Tierra -->
-                <div class="modal fade" id="ModalEspacioTierra" tabindex="-1" aria-labelledby="EspacioLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Proyecto Espacio Tierra</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-
-
-                                <p class="mt-2"><strong>Espacio Tierra: </strong>Es un proyecto de la emprendedora
-                                    Javiera Escobar que ofrece un refugio turístico único en el Desierto de Atacama,
-                                    Chile. </p>
-                                <p>El proyecto incluye el desarrollo de una LandingPage para presentar la propuesta
-                                    turística de Espacio Tierra, así como
-                                    la creación de una marca y un sitio web que reflejen la belleza y la serenidad del
-                                    entorno. </p>
-
-                                <p> <strong>Desarrollado en: </strong> Wordpress, Html, Css, AirBnb</p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <p class="mt-3 text-white">
-                                    <strong>Visitar Proyecto:</strong>
-                                    <a href="https://espaciotierra.cl/" target="_blank">Espacio Tierra</a>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal RIFFO -->
-                <div class="modal fade" id="ModalRiffo" tabindex="-1" aria-labelledby="riffoLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Proyecto Eventos Riffo</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-
-
-                                <p class="mt-2"><strong>Riffo Eventos: </strong>Es un proyecto del chef chileno Matías
-                                    Riffo, que ofrece una propuesta gastronómica única </p>
-                                <p>El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta
-                                    culinaria, así como la creación de una
-                                    marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.
-                                </p>
-
-                                <p> <strong>Desarrollado en: </strong> Wordpress, Html, Css, JavaScript (LocalStorage)
-                                </p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-                                <p class="mt-3 text-white">
-                                    <strong>Visitar Proyecto:</strong>
-                                    <a href="https://eventosriffo.cl/" target="_blank">Eventos Riffo</a>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal kAMPOM -->
-                <div class="modal fade" id="ModalKampom" tabindex="-1" aria-labelledby="kampomLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex justify-content-between">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Proyecto Kanpom</h1>
-                                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-
-
-                                <p class="mt-2"><strong>Kanpom</strong> es una APP que te permite organizar tu tiempo y
-                                    tus tareas, de
-                                    manera efectiva.</p>
-                                <p>Utilizando las técnicas de trabajo Kanban y Pomodoro, Kanpom genera un tablero donde
-                                    puedes crear y gestionar tus
-                                    tareas, así como controlar su estado. Además, cuenta con un temporizador Pomodoro
-                                    para ayudarte a mantener un enfoque
-                                    productivo, alternando entre períodos de trabajo y descanso.
-                                </p>
-
-                                <p> <strong>Desarrollado en: </strong>Html, Css, JavaScript (LocalStorage)</p>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-start">
-
-                                <p class="mt-3 text-white">
-                                    <strong>Visitar Proyecto:</strong>
-                                    <a href="https://delmonicocl.github.io/KenPom/" target="_blank">Organizador
-                                        Tareas</a>
-                                </p>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
+            <div class="container-fluid ">
+                <div id="content" class="row"></div>
+            </div>
 
         </section>
 
         <!-- Section TESTIMONIOS -->
         <section class="et-slide fondo5 " id="tab-angular">
-            <div class="testimonials" style="padding:90px;">
-                <div class="">
-                    <div class="col-10">
-                        <h1 class="mb-3">Testimonios</h1>
+            <div class="testimonials" style="padding:45px;">
+                <div class="ms-5">
+                    <div class="col-10 mt-5">
+                        <h1 class="mb-3 tituloSection">Testimonios</h1>
                     </div>
                     <div class="row">
                         <div class="col-10">
@@ -949,90 +246,110 @@ display:none;
                         </div>
                     </div>
                 </div>
-                <div class="testimonials-slide-wrapper">
-                    <div class="testimonials-slide">
-                        <div class="testimonial">
-                            <div class="testimonial-text">
-                                “Trabajar con Marcelo ha sido una experiencia excepcional. Su
-                                atención al detalle y su habilidad para capturar la esencia de
-                                nuestra marca nos ha impresionado. ¡Recomiendo a Marcelo a
-                                cualquiera que busque un servicio de desarrollo web de primera
-                                clase!”
-                            </div>
-                            <div class="testimonial-info">
-                                <div class="testimonial-author">Javiera Escobar,</div>
-                                <div class="testimonial-details">Owner - Espacio Tierra</div>
-                            </div>
-                        </div>
-                        <div class="testimonial1">
-                            <div class="testimonial-text1">
-                                "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad, mejorando
-                                siemopre la experiencia del usuario. Talento y pasión. Si necesitas
-                                diseño web, él es tu profesional."
-                            </div>
-                            <div class="testimonial-info1">
-                                <div class="testimonial-author1">Antonio Domingo</div>
-                                <div class="testimonial-details1">
-                                    Tutor. Politecnics Barcelona
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial2">
-                            <div class="testimonial-text2">
-                                Marcelo es un verdadero profesional en el desarrollo web. Su
-                                creatividad y habilidad técnica han llevado nuestro sitio web
-                                a un nuevo nivel. La facilidad de navegación y el diseño
-                                innovador han recibido elogios constantes de nuestros
-                                clientes.”
-                            </div>
-                            <div class="testimonial-info2">
-                                <div class="testimonial-author2">Matias Riffo,</div>
-                                <div class="testimonial-details2">Chef - Eventos Riffo</div>
-                            </div>
+                <div class="row text-center mb-5 ">
+                    <div class="col-md-6">
 
-                        </div>
-                        <div class="testimonial1">
-                            <div class="testimonial-text1">
-                                "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento y
-                                profesionalismo!""
-                            </div>
-                            <div class="testimonial-info1">
-                                <div class="testimonial-author1">Cristobal Quintana</div>
-                                <div class="testimonial-details1">
-                                    Diseñador. Quintana
+                        <img class="avatar" src="./assets/img/file.png" alt="">
+
+                    </div>
+                    <div class="col-md-6 border fondo1 d-flex justify-content-center align-items-center mb-5">
+                        <!-- Carousel wrapper -->
+                        <div id="carouselBasicExample" class="carousel slide carousel-dark" data-bs-ride="carousel"
+                            data-bs-interval="12000">
+                            <!-- Inner -->
+                            <div class="carousel-inner">
+                                <!-- Single item -->
+                                <div class="carousel-item active mt-4">
+                                    <p class="lead font-italic testimonial-text mx-4 mx-md-5 text-center">
+                                        “Trabajar con Marcelo ha sido una experiencia excepcional. Su
+                                        atención al detalle y su habilidad para capturar la esencia de
+                                        nuestra marca nos ha impresionado. ¡Recomiendo a Marcelo a
+                                        cualquiera que busque un servicio de desarrollo web de primera
+                                        clase!”
+                                    </p>
+
+                                    <p class="text-muted mb-0 testimonial-author mt-5 mb-5 text-center text-white">-
+                                        Javiera Escobar, Owner. Espacio Tierra
+                                    </p>
+                                </div>
+
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4  text-center">
+                                        "Como tutor he visto el desarrollo de Marcelo, sus ideas y creatividad,
+                                        mejorando siempre la experiencia del usuario.
+                                        Talento y pasión. Si necesitas diseño web, él es tu profesional. Recomiendo
+                                        ampliamente sus servicios por su dedicación
+                                        y capacidad para innovar constantemente."
+                                    </p>
+
+                                    <p class="text-muted mb-0 testimonial-author text-center mt-5 mb-5 ">- Antonio
+                                        Domingo, Tutor</p>
+                                </div>
+
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4 text-center">
+                                        Marcelo es un verdadero profesional en el desarrollo web. Su creatividad y
+                                        habilidad técnica han
+                                        llevado nuestro sitio web a un nuevo nivel. La facilidad de navegación y el
+                                        diseño innovador han
+                                        recibido elogios constantes de nuestros clientes, gracias totales.
+                                    </p>
+
+                                    <p class="text-muted mb-0 testimonial-author text-center mt-5 mb-5 ">- Matias Riffo,
+                                        Chef </p>
+                                </div>
+
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <p class="lead font-italic testimonial-text mx-4 mx-md-5 mt-4 text-center">
+                                        "¡Increíble! Mi sitio web es exactamente lo que quería. ¡Gracias por tu talento
+                                        y profesionalismo! Pudimos desarrollar
+                                        una Marca potente después de definir nuestro manual de identidad. Marcelo
+                                        demostró ser un experto en cada etapa del
+                                        proceso, asegurando resultados excepcionales."
+                                    </p>
+
+                                    <p class="text-muted mb-0 testimonial-author mt-5 mb-5  text-center">- Cristobal
+                                        Quintana, Diseñador.
+                                    </p>
                                 </div>
                             </div>
+                            <!-- Inner -->
+
+                            <!-- Controls -->
+                            <button class="carousel-control-prev custom-control" type="button"
+                                data-bs-target="#carouselBasicExample" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next custom-control" type="button"
+                                data-bs-target="#carouselBasicExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
+                        <!-- Carousel wrapper -->
                     </div>
+
+
                 </div>
+
             </div>
 
         </section>
-
-        <!-- Section BARRA COMUNICATE -->
-        <!-- <section class="barraTitulos fondo3 " id="tab-angular">
-                <div class=" d-flex justify-content-center">
-                    <h1>COMUNICATE </h1>
-                </div>
-        </section> -->
 
         <!-- Section FORMULARIO -->
         <section class="et-slide fondo " id="tab-other">
             <div class="contact-wrapper">
                 <div class="contact">
                     <div class="contact-header">
-                        <!-- <img class="misc-icon" loading="lazy" alt="" src="./public/misc.svg" /> -->
-
-                        <h1 class="heading-23">
-                            <span class="tu-y-yo">¿Interesado en trabajar juntos?</span>
-                            <!-- <span class="tu-y-yo">comunicate </span> -->
+                            <h1 class="heading-23">
+                            <span class="tu-y-yo">¿Interesado en trabajar juntos?</span>                        
                         </h1>
-                        <!-- <div class="paragraph2">
-                         Comunicate y hablemos
-                    </div> -->
-
+                       
                         <div class="paragraph2 mt-3">
-
                             <ul class="list-inline ">
                                 <li class="list-inline-item me-2">
                                     <img src="./assets/img/instagram.png" alt="Instagram" width="50" height="50">
@@ -1050,13 +367,13 @@ display:none;
                             </ul>
                         </div>
                     </div>
-                    <div class="contact-form">
+                    <div class="contact-form ">
                         <h1 class="heading-23">
                             <img class="misc-icon" loading="lazy" alt="" src="./public/misc.svg" />
-                            <span class="">¿hablemos?</span>
+                            <span class=" "> hablemos :) </span>
                         </h1>
 
-                        <form id="contact-form" action="https://formspree.io/f/mnqerooe" method="POST">
+                        <form class="mt-3" id="contact-form" action="https://formspree.io/f/mnqerooe" method="POST">
                             <div class="input">
                                 <input class="input-field" placeholder="Nombre" type="text" name="nombre" required />
                                 <img class="input-icon1" alt="" src="./public/input-icon.svg" />
@@ -1088,11 +405,11 @@ display:none;
 
         <!-- Section FOOTER -->
         <section>
-            <footer class="footer">
-                <div class="small-paragraph1 mt-3">Todos los derechos reservados 2024</div>
+            <footer class="footer fondo1">
+                <div class="small-paragraph1 mt-5">Developer with Love++ - CopyRight 2024 -</div>
 
-                <div class="links-wrapper mt-3">
-                    <div class="link2">Marcelo Carvajal</div>
+                <div class="small-paragraph1 mt-5">
+                    <div class="link2">Barcelona</div>
 
                 </div>
 
@@ -1101,38 +418,44 @@ display:none;
 
     </main>
 
-    <script>
-        function handleVideoSwitch() {
-            var videoDesktop = document.getElementById('video-desktop');
-            var videoMedium = document.getElementById('video-medium');
-            var videoMobile = document.getElementById('video-mobile');
-
-            if (window.innerWidth <= 600) {
-                videoDesktop.style.display = 'none';
-                videoMedium.style.display = 'none';
-                videoMobile.style.display = 'block';
-            } else if (window.innerWidth >= 601 && window.innerWidth <= 1024) {
-                videoDesktop.style.display = 'none';
-                videoMedium.style.display = 'block';
-                videoMobile.style.display = 'none';
-            } else {
-                videoDesktop.style.display = 'block';
-                videoMedium.style.display = 'none';
-                videoMobile.style.display = 'none';
-            }
-        }
-
-        window.addEventListener('load', handleVideoSwitch);
-        window.addEventListener('resize', handleVideoSwitch);
+    <script id="template" type="text/x-handlebars-template">
+      {{#gallery}}
+    <div class="col-6 col-md-4 col-lg-3 item nopadding" data-bs-toggle="modal" data-bs-target="#modal-{{@index}}">
+          <div class="overflow">
+            <div class="content-art">
+              <h4>{{title}}</h4>
+            </div>
+            <img src="{{img}}" alt="{{alt}}" class="img-fluid"/>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal-{{@index}}" tabindex="-1" aria-labelledby="modalLabel-{{@index}}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                  <h1 class="modal-title fs-5" id="modalLabel-{{@index}}">{{modalTitle}}</h1>
+                <button type="button" title="Cerrar Ventana" class="btn-cerrar" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="mt-2"><strong>{{modalHeader}}</strong> {{modalDescription}}</p>
+                  <p>{{modalDetails}}</p>
+                  <p><strong>Desarrollado en:</strong> {{modalTech}}</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                  <p class="mt-3 text-white">
+                    <strong>Visitar Proyecto:</strong>
+                    <a href="{{modalLink}}" target="_blank">{{modalLinkText}}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/gallery}}
     </script>
-
 
 </body>
 
 </html>
-
-
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1157,9 +480,6 @@ display:none;
         });
     });
 </script>
-
-
-
 
 <script>
 
@@ -1259,12 +579,16 @@ display:none;
     });
 </script>
 
-
-
 <!-- Bootstrap JS and Popper.js (Bootstrap 5) -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
