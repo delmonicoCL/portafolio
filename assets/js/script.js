@@ -5,15 +5,15 @@ function handleVideoSwitch() {
 
   if (window.innerWidth <= 600) {
     videoDesktop.style.display = "none";
-    videoMedium.style.display = "none";
+    // videoMedium.style.display = "none";
     videoMobile.style.display = "block";
   } else if (window.innerWidth >= 601 && window.innerWidth <= 1024) {
     videoDesktop.style.display = "none";
-    videoMedium.style.display = "block";
+    // videoMedium.style.display = "block";
     videoMobile.style.display = "none";
   } else {
     videoDesktop.style.display = "block";
-    videoMedium.style.display = "none";
+    // videoMedium.style.display = "none";
     videoMobile.style.display = "none";
   }
 }
@@ -36,9 +36,9 @@ window.addEventListener("resize", handleVideoSwitch);
                     "es una APP educativa para niños que permite armar puzzle de energías renovables. Con una variedad de rompecabezas temáticos, los niños pueden explorar y aprender sobre fuentes de energía limpia como solar, eólica.",
                   modalDetails:
                     "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, fomentando el uso de energías renovables a través de una actividad lúdica.",
-                  modalTech: "Html, Css, JavaScript (LocalStorage)",
+                  modalTech: "Html, Css, JavaScript.",
                   modalLink: "https://delmonicocl.github.io/LaiaBCN/",
-                  modalLinkText: "Laia, Salvad al Mundo",
+                  modalLinkText: "Desarrollado para Escritorio",
                 },
 
                 {
@@ -52,9 +52,10 @@ window.addEventListener("resize", handleVideoSwitch);
                     "es una aplicación innovadora que combina tecnología con solidaridad. Con el lema 'Salva comida, alimenta corazones', nuestra APP conecta repartidores y proveedores de alimentos voluntarios para distribuir comida a personas necesitadas. Mediante la geolocalización, se registran los procesos de creación y entrega de alimentos.",
                   modalDetails:
                     "Características: Creación de Manual de identidad, Marca y propuesta. Integración de tecnologías Laravel y Vue.js para una experiencia de usuario fluida y eficiente. Uso de APIs como MapBox para proporcionar funciones de geolocalización precisas.",
-                  modalTech: "Laravel, Vue, MapBox, Apis",
+                  modalTech:
+                    "Laravel, Vue, MapBox, Apis, SITIO PARA ESCRITORIO",
                   modalLink: "https://delmonicocl.github.io/FoodHero/",
-                  modalLinkText: "Food Hero",
+                  modalLinkText: "Desarrollado para Escritorio",
                 },
 
                 {
@@ -97,8 +98,7 @@ window.addEventListener("resize", handleVideoSwitch);
                   modalHeader: "",
                   modalDescription:
                     "Manual de Identidad: Creacion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
-                  modalDetails:
-                    "",
+                  modalDetails: "",
                   modalTech: "HTML, CSS, UX",
                   modalLink: "./assets/img/ManualIdentidadFoodHero.pdf",
                   modalLinkText: "Descargar Manual",

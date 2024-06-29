@@ -90,6 +90,9 @@ a {
     /* Cambia este valor al que prefieras */
 }
 
+.testimonios{
+    width:60%
+}
 
 .fondo {
     background: #222021;
@@ -392,6 +395,63 @@ body {
 
 }
 
+.tituloAccordion {
+    text-align: left !important;
+    /* Alinear texto a la izquierda */
+    font-size: 3.2rem;
+    /* Tamaño de fuente de 1.5 rem */
+    margin-left: 20px;
+    letter-spacing: -0.03em;
+    line-height: 100%;
+    font-weight: 700;
+    font-family: inherit;
+    color: #383333;
+    /* background-color: #72bc9e86; 
+         display: inline; 
+           padding: 15px;  */
+
+    transition: font-size 0.3s ease, color 0.3s ease;
+    /* Transición suave para el efecto hover */
+}
+
+.tituloAccordion:hover {
+    color: #f2533d;
+    /* Cambiar a tu color preferido */
+    font-size: 3.5rem;
+    /* Aumentar el tamaño de la fuente */
+}
+
+.tituloSection {
+    text-align: left !important;
+    /* Alinear texto a la izquierda */
+    font-size: 3.3rem;
+    /* Tamaño de fuente de 1.5 rem */
+
+    letter-spacing: -0.03em;
+    line-height: 100%;
+    font-weight: 700;
+    font-family: inherit;
+    color: #252627;
+    transition: font-size 0.3s ease, color 0.3s ease;
+    /* Transición suave para el efecto hover */
+}
+
+.tituloFooter {
+    text-align: left !important;
+    /* Alinear texto a la izquierda */
+    font-size: 4rem;
+    /* Tamaño de fuente de 1.5 rem */
+
+    letter-spacing: -0.03em;
+    line-height: 100%;
+    font-weight: 700;
+    font-family: inherit;
+    color: #f9fcff;
+    transition: font-size 0.3s ease, color 0.3s ease;
+    /* Transición suave para el efecto hover */
+
+}
+
 
 @media (max-width: 600px) {
 
@@ -483,6 +543,7 @@ body {
 
     .tituloAccordion {
         margin-left: 35px;
+        font-size: 3rem;
     }
 
     .ul li p {
@@ -493,6 +554,13 @@ body {
         padding: 25px;
 
     }
+    .tituloTestimonio {
+        font-size: 2.8rem;
+    }
+
+        .testimonios {
+            width: 85%;
+            margin-left:30px;        }
 
 
 
@@ -511,6 +579,9 @@ body {
         display: none;
     }
 }
+
+
+
 
 .et-hero-tabs {
     position: relative;
@@ -645,59 +716,3 @@ ul li i {
     /* Separar el checkbox y el icono del contenido */
 }
 
-.tituloAccordion {
-    text-align: left !important;
-    /* Alinear texto a la izquierda */
-    font-size: 3.5rem;
-    /* Tamaño de fuente de 1.5 rem */
-    margin-left: 20px;
-    letter-spacing: -0.03em;
-    line-height: 100%;
-    font-weight: 700;
-    font-family: inherit;
-    color: #383333;
-    /* background-color: #72bc9e86; 
-         display: inline; 
-           padding: 15px;  */
-
-    transition: font-size 0.3s ease, color 0.3s ease;
-    /* Transición suave para el efecto hover */
-}
-
-.tituloAccordion:hover {
-    color: #007bff;
-    /* Cambiar a tu color preferido */
-    font-size: 3.5rem;
-    /* Aumentar el tamaño de la fuente */
-}
-
-.tituloSection {
-    text-align: left !important;
-    /* Alinear texto a la izquierda */
-    font-size: 4rem;
-    /* Tamaño de fuente de 1.5 rem */
-
-    letter-spacing: -0.03em;
-    line-height: 100%;
-    font-weight: 700;
-    font-family: inherit;
-    color: #252627;
-    transition: font-size 0.3s ease, color 0.3s ease;
-    /* Transición suave para el efecto hover */
-}
-
-.tituloFooter {
-    text-align: left !important;
-    /* Alinear texto a la izquierda */
-    font-size: 3.5rem;
-    /* Tamaño de fuente de 1.5 rem */
-
-    letter-spacing: -0.03em;
-    line-height: 100%;
-    font-weight: 700;
-    font-family: inherit;
-    color: #f9fcff;
-    transition: font-size 0.3s ease, color 0.3s ease;
-    /* Transición suave para el efecto hover */
-
-}

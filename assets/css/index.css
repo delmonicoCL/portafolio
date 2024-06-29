@@ -2063,7 +2063,7 @@ section {
   cursor: pointer;
   border: 0;
   padding: var(--padding-xl);
-  /* background-color: var(--yellow); */
+  background-color: var(--white); 
   align-self: stretch;
   border-radius: var(--br-29xl);
   display: flex;
