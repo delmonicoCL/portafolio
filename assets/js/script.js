@@ -26,19 +26,18 @@ window.addEventListener("resize", handleVideoSwitch);
             var data = {
               gallery: [
                 {
-                  title: "Rompecabezas",
-                  img: "./assets/img/rompecabezas.png",
-                  alt: "lorem",
+                  title: "Manual Identidad",
+                  img: "./assets/img/manualidentidad.png",
+                  alt: "Manual de Identidad: Creacion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
                   texto: "",
-                  modalTitle: "Proyecto Rompecabezas",
-                  modalHeader: "Rompecabezas",
+                  modalTitle: "Manual Identidad",
+                  modalHeader: "",
                   modalDescription:
-                    "es una APP educativa para niños que permite armar puzzle de energías renovables. Con una variedad de rompecabezas temáticos, los niños pueden explorar y aprender sobre fuentes de energía limpia como solar, eólica.",
-                  modalDetails:
-                    "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, fomentando el uso de energías renovables a través de una actividad lúdica.",
-                  modalTech: "Html, Css, JavaScript.",
-                  modalLink: "https://delmonicocl.github.io/LaiaBCN/",
-                  modalLinkText: "Desarrollado para Escritorio",
+                    "Manual de Identidad: Creacion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
+                  modalDetails: "",
+                  modalTech: "HTML, CSS, UX",
+                  modalLink: "./assets/img/ManualIdentidadFoodHero.pdf",
+                  modalLinkText: "Descargar Manual",
                 },
 
                 {
@@ -75,36 +74,6 @@ window.addEventListener("resize", handleVideoSwitch);
                 },
 
                 {
-                  title: "Buscapalabras",
-                  img: "./assets/img/buscapalabras.png",
-                  alt: "lorem",
-                  texto: "",
-                  modalTitle: "Proyecto Buscapalabras",
-                  modalHeader: "Buscapalabras",
-                  modalDescription:
-                    "es un juego educativo interactivo diseñado para niños que desafía su capacidad de encontrar palabras ocultas mientras disfrutan de una experiencia divertida y educativa.",
-                  modalDetails:
-                    "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, contabiliza la cantidad de errores y sus vidas.",
-                  modalTech: "Html, Css, JavaScript (LocalStorage)",
-                  modalLink: "https://delmonicocl.github.io/JuegoBuscaPalabra/",
-                  modalLinkText: "Juego, Buscapalabras",
-                },
-                {
-                  title: "Manual Identidad",
-                  img: "./assets/img/manualidentidad.png",
-                  alt: "Manual de Identidad: Creacion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
-                  texto: "",
-                  modalTitle: "Manual Identidad",
-                  modalHeader: "",
-                  modalDescription:
-                    "Manual de Identidad: Creacion de presentacion Manual de identidad proyecto FoodHero. El manual de identidad es una poderosa herramienta, inicial en cualquier proyecto. Define las bases del color, diseño, características del usuario, Mision y Vision, entre otros. Te invito a descargar la presentacion via PDF o ver el video en el siguiente video interactivo",
-                  modalDetails: "",
-                  modalTech: "HTML, CSS, UX",
-                  modalLink: "./assets/img/ManualIdentidadFoodHero.pdf",
-                  modalLinkText: "Descargar Manual",
-                },
-
-                {
                   title: "Quintana Diseños",
                   img: "./assets/img/quintanadisenos.png",
                   alt: "Autoevaluacion es una aplicación que facilita a profesores y alumnos completar una autoevaluación en relación a los módulos (cursos) en los que el alumno está registrado. Desarrollada en Laravel y Vue, esta aplicación permite a los usuarios interactuar de manera efectiva según su rol, proporcionando una experiencia personalizada y eficiente. Desarrollado en: Laravel, VUE, Html, Css y BD",
@@ -119,6 +88,22 @@ window.addEventListener("resize", handleVideoSwitch);
                   modalTech: "Wordpress, HTML, CSS",
                   modalLink: "https://tinyurl.com/quintanadiseno",
                   modalLinkText: "Quintana Diseños",
+                },
+
+                {
+                  title: "Rompecabezas",
+                  img: "./assets/img/rompecabezas.png",
+                  alt: "lorem",
+                  texto: "",
+                  modalTitle: "Proyecto Rompecabezas",
+                  modalHeader: "Rompecabezas",
+                  modalDescription:
+                    "es una APP educativa para niños que permite armar puzzle de energías renovables. Con una variedad de rompecabezas temáticos, los niños pueden explorar y aprender sobre fuentes de energía limpia como solar, eólica.",
+                  modalDetails:
+                    "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, fomentando el uso de energías renovables a través de una actividad lúdica.",
+                  modalTech: "Html, Css, JavaScript.",
+                  modalLink: "https://delmonicocl.github.io/LaiaBCN/",
+                  modalLinkText: "Desarrollado para Escritorio",
                 },
 
                 {
@@ -138,19 +123,52 @@ window.addEventListener("resize", handleVideoSwitch);
                 },
 
                 {
-                  title: "Riffo Eventos",
-                  img: "./assets/img/eventosriffo.png",
-                  alt: "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única. El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
+                  title: "Buscapalabras",
+                  img: "./assets/img/buscapalabras.png",
+                  alt: "lorem",
                   texto: "",
-                  modalTitle: "Proyecto Eventos Riffo",
+                  modalTitle: "Proyecto Buscapalabras",
+                  modalHeader: "Buscapalabras",
+                  modalDescription:
+                    "es un juego educativo interactivo diseñado para niños que desafía su capacidad de encontrar palabras ocultas mientras disfrutan de una experiencia divertida y educativa.",
+                  modalDetails:
+                    "Desarrollado en JavaScript, permite a los niños aprender mientras juegan, contabiliza la cantidad de errores y sus vidas.",
+                  modalTech: "Html, Css, JavaScript (LocalStorage)",
+                  modalLink: "https://delmonicocl.github.io/JuegoBuscaPalabra/",
+                  modalLinkText: "Juego, Buscapalabras",
+                },
+
+                // EventosRiffo
+                // {
+                //   title: "Riffo Eventos",
+                //   img: "./assets/img/eventosriffo.png",
+                //   alt: "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única. El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
+                //   texto: "",
+                //   modalTitle: "Proyecto Eventos Riffo",
+                //   modalHeader: "",
+                //   modalDescription:
+                //     "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única.",
+                //   modalDetails:
+                //     "El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
+                //   modalTech: "Wordpress, HTML, CSS",
+                //   modalLink: "https://eventosriffo.cl/",
+                //   modalLinkText: "Eventos Riffo",
+                // },
+
+                {
+                  title: "CausaZ",
+                  img: "./assets/img/causaz.png",
+                  alt: "CausaZ: Es un proyecto del estudio de Abogados Ponce Labbe especializados en derecho de Familia. El proyecto, se desarrolla el pack Lanzamiento Digital, que incluye el desarrollo de una Manual de Identidad, Sitio Web, SEO, Redes Sociales.",
+                  texto: "",
+                  modalTitle: "Causa Z - Estudio Juridico",
                   modalHeader: "",
                   modalDescription:
-                    "Riffo Eventos: Es un proyecto del chef chileno Matías Riffo, que ofrece una propuesta gastronómica única.",
+                    "Causa Z: Estudio jurídico de abogados en derecho de familia",
                   modalDetails:
-                    "El proyecto incluye el desarrollo de una LandingPage para presentar su propuesta culinaria, así como la creación de una marca, logotipo y sitio web que reflejen la esencia y el estilo de Matías Riffo.",
-                  modalTech: "Wordpress, HTML, CSS",
-                  modalLink: "https://eventosriffo.cl/",
-                  modalLinkText: "Eventos Riffo",
+                    "El proyecto, se desarrolla el pack Lanzamiento Digital, que incluye el desarrollo de una Manual de Identidad, Sitio Web, SEO, Redes Sociales.",
+                  modalTech: "Wordpress, HTML, CSS, Figma",
+                  modalLink: "https://causaz.cl/",
+                  modalLinkText: "Causa Z",
                 },
               ],
             };
